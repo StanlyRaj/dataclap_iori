@@ -7,6 +7,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
     const [isLanguageToggled, setLanguageToggled] = useState(false);
     const toggleSearchTrueFalse = () => setSearchToggled(!isSearchToggled);
     const toggleLanguageTrueFalse = () => setLanguageToggled(!isLanguageToggled);
+
     useEffect(() => {
         document.addEventListener("scroll", () => {
             const scrollCheck = window.scrollY > 100
@@ -15,29 +16,56 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
             }
         })
     })
+    
     return (
         <>
             <header className={`${scroll ? "header sticky-bar stick" : "header sticky-bar"} ${addClass}`}>
                 <div className="container">
                     <div className="main-header">
                         <div className="header-left">
-                            <div className="header-logo"><Link className="d-flex" href="/index-3"><img alt="Ecom" src="assets/imgs/template/logo.svg" /></Link></div>
+                            <div className="header-logo">
+                                <Link className="d-flex" href="/index-3">
+                                    <img alt="Ecom" src="assets/imgs/template/logo.svg" />
+                                </Link>
+                            </div>
                             <div className="header-nav">
                                 <nav className="nav-main-menu d-none d-xl-block">
                                     <ul className="main-menu">
-                                        <li className="has-children"><Link className="active" href="/">Services</Link>
-                                            <ul className="menu-inner">
-                                                <li><Link href="/index-11">HUMAN DATA </Link></li>
-                                                <li><Link href="/index-11">LLM EVALUATIONS</Link></li>
-                                                <li><Link href="/index-11">SUPERVISED FINE TUNING</Link></li>
-                                                <li><Link href="/index-11">OCR/IDP </Link></li>
-                                                <li><Link href="/index-11">GENERATIVE AI</Link></li>
-                                                <li><Link href="/index-11">CONTENT MODERATION</Link></li>
-                                                <li><Link href="/index-11">TRAINING AS A SERVICE</Link></li>
-                                                <li><Link href="/index-11">SEARCH AND PERSONALIZATION</Link></li>
-                                            </ul>
+                                        {/* SERVICES - MEGA DROPDOWN */}
+                                        <li className="has-children has-mega-dropdown">
+                                            <Link className="active" href="/">Services</Link>
+                                            <div className="mega-dropdown">
+                                                <div className="mega-dropdown-content">
+                                                    <div className="dropdown-column">
+                                                        <h3>Pre-trained</h3>
+                                                        <ul>
+                                                            <li><Link href="/index-11">LLM EVALUATIONS</Link></li>
+                                                            <li><Link href="/index-11">GENERATIVE AI</Link></li>
+                                                            <li><Link href="/index-11">SEARCH AND PERSONALIZATION</Link></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className="dropdown-column">
+                                                        <h3>Post-trained</h3>
+                                                        <ul>
+                                                            <li><Link href="/index-11">SUPERVISED FINE TUNING</Link></li>
+                                                            <li><Link href="/index-11">TRAINING AS A SERVICE</Link></li>
+                                                            <li><Link href="/index-11">CONTENT MODERATION</Link></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className="dropdown-column">
+                                                        <h3>Other</h3>
+                                                        <ul>
+                                                            <li><Link href="/index-11">HUMAN DATA</Link></li>
+                                                            <li><Link href="/index-11">OCR/IDP</Link></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </li>
-                                        <li className="has-children"><Link href="#">Industries</Link>
+                                        
+                                        {/* INDUSTRIES - REGULAR DROPDOWN */}
+                                        <li className="has-children">
+                                            <Link href="#">Industries</Link>
                                             <ul className="sub-menu">
                                                 <li><Link href="/index-11">ADAS</Link></li>
                                                 <li><Link href="/index-11">Retail</Link></li>
@@ -55,19 +83,24 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                                 <li><Link href="/index-11">Physical AI</Link></li>
                                             </ul>
                                         </li>
-                                        <li className="has-children"><Link href="#">Resources</Link>
+                                        
+                                        {/* OTHER MENUS - UNCHANGED */}
+                                        <li className="has-children">
+                                            <Link href="#">Resources</Link>
                                             <ul className="sub-menu">
                                                 <li><Link href="/blog">Blog</Link></li>
                                                 <li><Link href="/blog-detail">Blog Details</Link></li>
                                             </ul>
                                         </li>
-                                        <li className="has-children"><Link href="#">Company</Link>
+                                        <li className="has-children">
+                                            <Link href="#">Company</Link>
                                             <ul className="sub-menu">
                                                 <li><Link href="/about">About us</Link></li>
                                                 <li><Link href="/career">Careers</Link></li>
                                             </ul>
                                         </li>
-                                        <li className="has-children"><Link href="#">Pages</Link>
+                                        <li className="has-children">
+                                            <Link href="#">Pages</Link>
                                             <ul className="sub-menu">
                                                 <li><Link href="/register">Register</Link></li>
                                                 <li><Link href="/login">Login</Link></li>
@@ -103,24 +136,32 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                     <span className="font-lg icon-list search-post" onClick={toggleSearchTrueFalse}>
                                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                        </svg></span>
+                                        </svg>
+                                    </span>
                                 </div>
-                                <div className="d-inline-block box-dropdown-cart" onClick={toggleLanguageTrueFalse}><span className="font-lg icon-list icon-account"><span className="font-lg color-grey-900 arrow-down">EN</span></span>
+                                <div className="d-inline-block box-dropdown-cart" onClick={toggleLanguageTrueFalse}>
+                                    <span className="font-lg icon-list icon-account">
+                                        <span className="font-lg color-grey-900 arrow-down">EN</span>
+                                    </span>
                                     <div className={isLanguageToggled ? "dropdown-account dropdown-open" : "dropdown-account"}>
                                         <ul>
-                                            <li><Link className="font-md" href="#"><img src="assets/imgs/template/icons/en.png" alt="iori" />
-                                                English</Link></li>
+                                            <li>
+                                                <Link className="font-md" href="#">
+                                                    <img src="assets/imgs/template/icons/en.png" alt="iori" />
+                                                    English
+                                                </Link>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="d-none d-sm-inline-block"><Link className="btn btn-brand-1 hover-up" href="register">Get Started</Link></div>
+                                <div className="d-none d-sm-inline-block">
+                                    <Link className="btn btn-brand-1 hover-up" href="register">Get Started</Link>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
-
-
         </>
     );
 };

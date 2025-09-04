@@ -9698,6 +9698,315 @@ footer.footer-4 {
 }
 
 
+
+/* mega-dropdown.css - Place this in your styles folder or add to globals.css */
+
+/* =================================
+   MEGA DROPDOWN OVERRIDE STYLES
+   ================================= */
+
+/* Target only the mega dropdown container - prevents affecting other menus */
+.has-mega-dropdown {
+  position: relative;
+}
+
+/* Main mega dropdown container - overrides template global styles */
+.mega-dropdown {
+  /* Override inherited sub-menu/menu-inner styles */
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  background: #fff !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  
+  /* Critical: Reset ALL inherited padding and margins */
+  padding: 0 !important;
+  margin: 0 !important;
+  
+  /* Set mega dropdown dimensions */
+  width: 800px;
+  max-width: 90vw;
+  min-height: auto !important;
+  
+  /* Reset list styles that might be inherited */
+  list-style: none !important;
+  
+  /* Positioning and animation */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-15px);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 9999;
+  
+  /* Ensure it doesn't inherit flex properties */
+  display: block !important;
+  flex-direction: initial !important;
+}
+
+/* Show mega dropdown on hover */
+.has-mega-dropdown:hover .mega-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Inner content wrapper for flexbox layout */
+.mega-dropdown-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px 32px 32px 32px;
+  gap: 40px;
+  
+  /* Reset any inherited properties */
+  margin: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Individual dropdown columns */
+.dropdown-column {
+  flex: 1;
+  min-width: 0; /* Prevent overflow */
+  
+  /* Reset ALL inherited styles */
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  background: none !important;
+  list-style: none !important;
+  
+  /* Ensure column doesn't inherit positioning */
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+/* Column headings */
+.dropdown-column h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 20px 0 !important;
+  padding: 0 0 12px 0 !important;
+  border-bottom: 3px solid #0070f3;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  /* Reset inherited heading styles */
+  line-height: 1.3 !important;
+  font-family: inherit !important;
+}
+
+/* Column lists - CRITICAL RESETS */
+.dropdown-column ul {
+  /* Override ALL inherited ul styles */
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  padding-left: 0 !important; /* Browser default override */
+  margin-left: 0 !important;
+  
+  /* Ensure it's block layout, not flex */
+  display: block !important;
+  flex-direction: initial !important;
+  
+  /* Reset positioning */
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  
+  /* Reset dimensions */
+  width: auto !important;
+  min-width: auto !important;
+  max-width: none !important;
+  
+  /* Reset background and borders */
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Column list items - AGGRESSIVE RESETS */
+.dropdown-column li {
+  /* Reset ALL inherited li styles from template */
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-bottom: none !important;
+  background: none !important;
+  list-style: none !important;
+  
+  /* Add our own spacing */
+  margin-bottom: 8px !important;
+  
+  /* Reset positioning */
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  
+  /* Reset display properties */
+  display: block !important;
+  flex: none !important;
+  
+  /* Reset dimensions */
+  width: auto !important;
+  min-width: auto !important;
+  height: auto !important;
+}
+
+.dropdown-column li:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Column links */
+.dropdown-column a {
+  display: block !important;
+  padding: 10px 0 !important;
+  color: #666 !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  
+  /* Reset inherited link styles */
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  
+  /* Reset positioning */
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  
+  /* Reset dimensions */
+  width: auto !important;
+  height: auto !important;
+  line-height: 1.5 !important;
+}
+
+.dropdown-column a:hover {
+  color: #0070f3 !important;
+  padding-left: 8px !important;
+  background: rgba(0, 112, 243, 0.05) !important;
+  border-radius: 6px !important;
+  transform: none !important; /* Reset any inherited transforms */
+}
+
+/* CRITICAL: Override specific template selectors that might conflict */
+.main-menu .mega-dropdown ul {
+  position: static !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  min-width: auto !important;
+}
+
+.main-menu .mega-dropdown li {
+  float: none !important;
+  width: auto !important;
+  border-right: none !important;
+}
+
+.main-menu .mega-dropdown a {
+  padding: 10px 0 !important;
+  border-bottom: none !important;
+  white-space: normal !important;
+}
+
+/* Reset any inherited hover states from template */
+.main-menu .has-mega-dropdown:hover > a,
+.main-menu .has-mega-dropdown.active > a {
+  color: #0070f3 !important;
+}
+
+/* Mobile responsive design */
+@media (max-width: 1199px) {
+  .mega-dropdown {
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    background: #f8f9fa !important;
+    border-radius: 0 !important;
+    margin-top: 10px !important;
+  }
+  
+  .mega-dropdown-content {
+    flex-direction: column;
+    padding: 20px;
+    gap: 24px;
+  }
+  
+  .dropdown-column {
+    flex: none;
+  }
+  
+  .dropdown-column h3 {
+    margin-bottom: 12px !important;
+    padding-bottom: 8px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .mega-dropdown-content {
+    padding: 16px;
+    gap: 20px;
+  }
+  
+  .dropdown-column h3 {
+    font-size: 14px;
+    margin-bottom: 10px !important;
+  }
+  
+  .dropdown-column a {
+    font-size: 13px !important;
+    padding: 8px 0 !important;
+  }
+}
+
+/* Debug helper - uncomment to see column boundaries during development */
+/*
+.mega-dropdown-content {
+  border: 2px dashed red;
+}
+.dropdown-column {
+  border: 1px dashed blue;
+  background: rgba(0,0,255,0.05);
+}
+.dropdown-column h3 {
+  background: rgba(255,0,0,0.1);
+}
+*/
+
+/* Additional specificity overrides for stubborn template styles */
+.nav-main-menu .main-menu .has-mega-dropdown .mega-dropdown {
+  position: absolute !important;
+}
+
+.nav-main-menu .main-menu .has-mega-dropdown .mega-dropdown ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.nav-main-menu .main-menu .has-mega-dropdown .mega-dropdown li {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
 @media (min-width: 1400px) {
   .container.wide {
     max-width: 1544px;
