@@ -12,16 +12,31 @@ const HomePage11 = () => {
     return (
         <>
             <Layout>
-                <section className="section banner-11">
-                    <div className="box-banner-home11">
-                        <div className="box-swiper">
-                            <div className="swiper-container swiper-group-1 right-pagination">
+                    <section className="section banner-5">
+                        <div className="container">
+                            <div className="mt-65 mb-100">
+                            <div className="row align-items-end">
+                                <div className="col-lg-6 mb-20">
+                                <span className="title-line color-brand-2">Great sales platform</span>
+                                <h2 className="color-brand-2 mt-10">
+                                    #1 Intelligence Software to Accelerate Your SaaS Sales
+                                </h2>
+                                </div>
+                                <div className="col-lg-6 mb-20">
+                                <p className="font-md color-grey-50">
+                                    We're lively, not corporate. We have the energy and boldness of a startup 
+                                    and the expertise and pragmatism of a scale-up. All in one place.
+                                </p>
+                                </div>
+                            </div>
+                            
+                            {/* VideoSlider replaces the original video banner */}
+                            <div className="box-video-banner">
                                 <VideoSlider />
                             </div>
+                            </div>
                         </div>
-                        <div className="swiper-pagination right-pagination swiper-pagination-group-11" />
-                    </div>
-                </section>
+                        </section>
                 <section className="section bg-brand-1 box-why-trusted-11">
                     <div className="container">
                         <div className="row">
@@ -257,7 +272,27 @@ const HomePage11 = () => {
                         </div>
                     </div>
                 </section>
-                <section className="section mt-50">
+                <section className="section mt-50 pt-50 pb-40">
+                    <div className="container">
+                        <div className="box-cover-border">
+                            <div className="row align-items-center">
+                                <div className="col-lg-6"><img className="d-block" src="assets/imgs/page/homepage2/img-marketing.png" alt="iori" /></div>
+                                <div className="col-lg-6">
+                                    <div className="box-info-video"><span className="btn btn-tag">Get in touch</span>
+                                        <h2 className="color-brand-1 mt-15 mb-20">Want to talk to a marketing expert?</h2>
+                                        <p className="font-md color-grey-500">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum — semper quis lectus nulla. Interactively transform magnetic growth strategies whereas prospective "outside the box" thinking.</p>
+                                        <div className="box-button text-start mt-65"> <Link className="btn btn-brand-1 hover-up" href="#">Contact Us</Link><a className="btn btn-default font-sm-bold hover-up" href="#">
+                                            Support Center
+                                            <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                            </svg></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* <section className="section mt-50">
                     <div className="container">
                         <div className="box-newsletter">
                             <div className="row align-items-center">
@@ -273,7 +308,7 @@ const HomePage11 = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
             </Layout>
         </>
     );

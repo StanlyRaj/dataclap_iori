@@ -1,146 +1,259 @@
-"use client";
-import React, { useRef, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-
+import React, { useRef, useEffect, useState } from "react";
 
 const VideoSlider = () => {
-  const swiperRef = useRef(null);
-  // Put your files in /public/videos and reference with leading slash
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const videoRefs = useRef([]);
+  const containerRef = useRef(null);
+  
   const videos = [
     { id: 1, src: "/videos/video1.mp4" },
     { id: 2, src: "/videos/video2.mp4" },
     { id: 3, src: "/videos/video3.mp4" },
   ];
-  // When a video ends → go to next slide
-  const handleVideoEnd = () => {
-    const swiper = swiperRef.current;
-    if (swiper) swiper.slideNext();
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % videos.length);
   };
-  // Play only the active slide's video; pause/reset others
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + videos.length) % videos.length);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  // Handle video playback
   useEffect(() => {
-    const swiper = swiperRef.current;
-    if (!swiper) return;
-    const syncVideos = () => {
-      swiper.slides.forEach((slide, i) => {
-        const vid = slide.querySelector("video");
-        if (!vid) return;
-        if (i === swiper.activeIndex) {
-          vid.muted = true; // keep autoplay reliable
-          const p = vid.play?.();
-          if (p?.catch) p.catch(() => {});
+    videoRefs.current.forEach((video, index) => {
+      if (video) {
+        if (index === currentSlide) {
+          video.muted = true;
+          video.currentTime = 0;
+          video.play().catch(() => {});
         } else {
-          vid.pause?.();
-          try { vid.currentTime = 0; } catch (_) {}
+          video.pause();
+          video.currentTime = 0;
         }
-      });
-    };
-    // initial sync once swiper is ready
-    syncVideos();
-    swiper.on("slideChange", syncVideos);
-    return () => swiper.off("slideChange", syncVideos);
-  }, []);
+      }
+    });
+  }, [currentSlide]);
+
+  // Handle slider positioning
+  useEffect(() => {
+    if (containerRef.current) {
+      const translateValue = -currentSlide * (100 / videos.length);
+      containerRef.current.style.transform = `translateX(${translateValue}%)`;
+    }
+  }, [currentSlide, videos.length]);
+
   return (
-    <div className="video-slider-shell">
-      <div className="video-frame">
-        <Swiper
-          modules={[Navigation]}
-          navigation
-          loop
-          slidesPerView={1}
-          onSwiper={(s) => (swiperRef.current = s)}
-          className="video-swiper"
+    <div className="video-slider-wrapper">
+      <div className="video-slider-container">
+        <div 
+          ref={containerRef}
+          className="video-slides"
+          style={{ width: `${videos.length * 100}%` }}
         >
-          {videos.map((v) => (
-            <SwiperSlide key={v.id}>
-              <div className="video-container">
-                <video
-                  src={v.src}
-                  className="video-el"
-                  playsInline
-                  autoPlay
-                  muted
-                  controls={false}
-                  onEnded={handleVideoEnd}
-                />
-              </div>
-            </SwiperSlide>
+          {videos.map((video, index) => (
+            <div 
+              key={video.id}
+              className="video-slide"
+              style={{ width: `${100 / videos.length}%` }}
+            >
+              <video
+                ref={(el) => (videoRefs.current[index] = el)}
+                src={video.src}
+                className="slider-video"
+                muted
+                loop
+                playsInline
+                onEnded={nextSlide}
+              />
+            </div>
           ))}
-        </Swiper>
+        </div>
       </div>
-      {/* Component-scoped styles (styled-jsx) */}
+      
+      <div className="slider-controls">
+        <button onClick={prevSlide} className="control-btn prev-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        
+        <div className="slide-dots">
+          {videos.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`dot ${index === currentSlide ? 'active' : ''}`}
+            />
+          ))}
+        </div>
+        
+        <button onClick={nextSlide} className="control-btn next-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
       <style jsx>{`
-        .video-slider-shell {
+        .video-slider-wrapper {
           width: 100%;
-          display: flex;
-          justify-content: center;
-          padding: 60px 16px; /* space around like HeroSlider sections */
-          background: #F6F7FB; /* subtle section bg */
-        }
-        .video-frame {
+          max-width: 1200px;
+          margin: 0 auto;
           position: relative;
-          width: 90%; /* large but not full-width width: min(100%, 1000px); */
-          height:  900px; /* big, responsive clamp(340px, 60vh, 620px); */
-          border-radius: 20px;
-          box-shadow: 0 16px 40px rgba(17, 24, 39, 0.2);
-          background: #000;
-          overflow: hidden;
+          padding: 0 20px;
         }
-        .video-container,
-        :global(.video-swiper),
-        :global(.swiper),
-        :global(.swiper-wrapper),
-        :global(.swiper-slide) {
+
+        .video-slider-container {
+          width: 100%;
+          height: 600px;
+          overflow: hidden;
+          border-radius: 20px;
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+          position: relative;
+          background: #000;
+        }
+
+        .video-slides {
+          height: 100%;
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+        }
+
+        .video-slide {
+          height: 100%;
+          flex-shrink: 0;
+          position: relative;
+        }
+
+        .slider-video {
           width: 100%;
           height: 100%;
+          object-fit: cover;
+          display: block;
         }
-        .video-container {
+
+        .slider-controls {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 25px;
+          margin-top: 25px;
+          padding: 18px 30px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 50px;
+          backdrop-filter: blur(10px);
+          width: fit-content;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .control-btn {
+          width: 55px;
+          height: 55px;
+          border: none;
+          border-radius: 50%;
+          background: #007bff;
+          color: white;
+          cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #000;
+          transition: all 0.3s ease;
         }
-        .video-el {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; /* cinematic fill */
+
+        .control-btn:hover {
+          background: #0056b3;
+          transform: scale(1.1);
         }
-        /* Position Swiper default arrows at left/right, vertically centered */
-        .video-frame :global(.swiper-button-prev),
-        .video-frame :global(.swiper-button-next) {
-          width: 44px;
-          height: 44px;
-          border-radius: 9999px;
-          background: rgba(0, 0, 0, 0.55);
-          color: #fff;
-          backdrop-filter: blur(2px);
-          transition: background 0.2s ease;
+
+        .control-btn:active {
+          transform: scale(0.95);
         }
-        .video-frame :global(.swiper-button-prev:hover),
-        .video-frame :global(.swiper-button-next:hover) {
-          background: rgba(0, 0, 0, 0.9);
+
+        .slide-dots {
+          display: flex;
+          gap: 12px;
         }
-        .video-frame :global(.swiper-button-prev),
-        .video-frame :global(.swiper-button-next) {
-          top: 50%;
-          transform: translateY(-50%);
+
+        .dot {
+          width: 14px;
+          height: 14px;
+          border: none;
+          border-radius: 50%;
+          background: rgba(81, 96, 153, 1);
+          cursor: pointer;
+          transition: all 0.3s ease;
         }
-        .video-frame :global(.swiper-button-prev) {
-          left: 12px;
+
+        .dot:hover {
+          background: rgba(162, 177, 215, 0.8);
+          transform: scale(1.2);
         }
-        .video-frame :global(.swiper-button-next) {
-          right: 12px;
+
+        .dot.active {
+          background: #007bff;
+          transform: scale(1.3);
         }
-        /* Make default arrow icons a bit bolder */
-        .video-frame :global(.swiper-button-prev::after),
-        .video-frame :global(.swiper-button-next::after) {
-          font-size: 18px;
-          font-weight: 700;
+
+        @media (max-width: 1024px) {
+          .video-slider-wrapper {
+            max-width: 1000px;
+          }
+          
+          .video-slider-container {
+            height: 500px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .video-slider-wrapper {
+            max-width: 100%;
+            padding: 0 15px;
+          }
+          
+          .video-slider-container {
+            height: 400px;
+          }
+          
+          .control-btn {
+            width: 45px;
+            height: 45px;
+          }
+          
+          .slider-controls {
+            gap: 20px;
+            padding: 15px 25px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .video-slider-container {
+            height: 300px;
+          }
+          
+          .control-btn {
+            width: 40px;
+            height: 40px;
+          }
+          
+          .slider-controls {
+            gap: 15px;
+            padding: 12px 20px;
+          }
+          
+          .dot {
+            width: 12px;
+            height: 12px;
+          }
         }
       `}</style>
     </div>
   );
 };
+
 export default VideoSlider;
