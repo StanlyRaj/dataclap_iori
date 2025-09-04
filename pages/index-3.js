@@ -49,58 +49,12 @@ const HomePage3 = () => {
                         </div>
                     </div>
                 </section>
-                <section className="section banner-12">
-                    <div className="asset-1 shape-1" />
-                    <div className="asset-2 shape-2" />
-                    <div className="asset-3 shape-3" />
-                    <div className="asset-4 shape-1" />
-                    <div className="asset-5 shape-2" />
-                    <div className="container text-center">
-                        <div className="row mt-150">
-                            <div className="col-xl-8 col-lg-10 m-auto"><span className="font-md color-grey-400">Think. Creative. Solve</span>
-                                <h1 className="color-brand-1 mb-25 mt-10">Innovative Solution to Move Your Business Forward</h1>
-                                <p className="font-md color-grey-500 mb-25">Collaborate, plan projects and manage resources with powerful features that your whole team<br className="d-none d-lg-block" />can use.  The latest news, tips and advice to help you run your business with less fuss.</p><Link href="/#"><img className="mr-10" src="assets/imgs/template/appstore.png" alt="iori" /></Link><Link href="/#"><img src="assets/imgs/template/google-play.png" alt="iori" /></Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 <section className="members">
                     <div className="image-slideshow">
                         <div className="mover-1" />
                         <div className="mover-2" />
                     </div>
                 </section>
-                <section className="section">
-                    <div className="box-radius-bottom">
-                        <div className="container">
-                            <div className="text-center">
-                                <h3 className="color-brand-1 mb-15">Loved By Developers, Trusted By Enterprises</h3>
-                                <p className="font-lg color-grey-500">We helped these brands turn online assessments into success stories.<br className="d-none d-lg-block" />Join them. Elevate your testing.</p>
-                            </div>
-                            <div className="mt-30">
-                                <div className="box-swiper">
-                                    <div className="swiper-container swiper-group-8">
-                                        <div className="swiper-wrapper">
-                                            <Brand />
-                                        </div>
-                                        <div className="swiper-pagination swiper-pagination-group-8" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/* <section className="section banner-8 mt-100">
-                    <div className="box-banner-home8">
-                        <div className="mt-100">
-                            <div className="box-swiper">
-                                <div className="swiper-container swiper-group-7-center">
-                                    <Team />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section> */}
                 <section className="section mt-100">
                     <div className="container">
                         <div className="row align-items-end">
@@ -423,23 +377,6 @@ const HomePage3 = () => {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg></a></div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className="section mt-50">
-                    <div className="container">
-                        <div className="box-newsletter">
-                            <div className="row align-items-center">
-                                <div className="col-lg-5 col-md-12">
-                                    <div className="box-image-newsletter"> <img className="img-main" src="assets/imgs/template/newsletter_img.png" alt="iori" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 col-md-12"><span className="font-lg color-brand-1">Newsletter</span>
-                                    <h2 className="color-brand-1 mb-15 mt-5">Subcribe our newsletter</h2>
-                                    <p className="font-md color-grey-500">By clicking the button, you are agreeing with our Term &amp; Conditions</p>
-                                    <button class="contact-button">Contact Us</button>
                                 </div>
                             </div>
                         </div>
