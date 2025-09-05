@@ -47,6 +47,11 @@ const VideoSlider = () => {
     }
   }, [currentSlide, videos.length]);
 
+  // Handle video end event for auto-swipe
+  const handleVideoEnd = () => {
+    nextSlide();
+  };
+
   return (
     <div className="video-slider-wrapper">
       <div className="video-slider-container">
@@ -66,37 +71,37 @@ const VideoSlider = () => {
                 src={video.src}
                 className="slider-video"
                 muted
-                loop
                 playsInline
-                onEnded={nextSlide}
+                onEnded={handleVideoEnd}
               />
             </div>
           ))}
         </div>
-      </div>
-      
-      <div className="slider-controls">
-        <button onClick={prevSlide} className="control-btn prev-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
         
-        <div className="slide-dots">
-          {videos.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`dot ${index === currentSlide ? 'active' : ''}`}
-            />
-          ))}
+        {/* Overlay Controls */}
+        <div className="slider-controls-overlay">
+          <button onClick={prevSlide} className="control-btn prev-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+          
+          <div className="slide-dots">
+            {videos.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`dot ${index === currentSlide ? 'active' : ''}`}
+              />
+            ))}
+          </div>
+          
+          <button onClick={nextSlide} className="control-btn next-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
         </div>
-        
-        <button onClick={nextSlide} className="control-btn next-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
       </div>
 
       <style jsx>{`
@@ -137,19 +142,20 @@ const VideoSlider = () => {
           display: block;
         }
 
-        .slider-controls {
+        .slider-controls-overlay {
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 25px;
-          margin-top: 25px;
           padding: 18px 30px;
-          background: rgba(255, 255, 255, 0.1);
+          background-color: transparent;
           border-radius: 50px;
-          backdrop-filter: blur(10px);
           width: fit-content;
-          margin-left: auto;
-          margin-right: auto;
+          z-index: 10;
         }
 
         .control-btn {
@@ -157,18 +163,21 @@ const VideoSlider = () => {
           height: 55px;
           border: none;
           border-radius: 50%;
-          background: #007bff;
+          background: transparent;
           color: white;
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
           transition: all 0.3s ease;
+          backdrop-filter: blur(5px);
+          border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
         .control-btn:hover {
-          background: #0056b3;
+          background: rgba(255, 255, 255, 0.2);
           transform: scale(1.1);
+          border-color: rgba(255, 255, 255, 0.5);
         }
 
         .control-btn:active {
@@ -185,18 +194,18 @@ const VideoSlider = () => {
           height: 14px;
           border: none;
           border-radius: 50%;
-          background: rgba(81, 96, 153, 1);
+          background: rgba(255, 255, 255, 0.5);
           cursor: pointer;
           transition: all 0.3s ease;
         }
 
         .dot:hover {
-          background: rgba(162, 177, 215, 0.8);
+          background: rgba(255, 255, 255, 0.7);
           transform: scale(1.2);
         }
 
         .dot.active {
-          background: #007bff;
+          background: rgba(255, 255, 255, 0.9);
           transform: scale(1.3);
         }
 
@@ -225,9 +234,11 @@ const VideoSlider = () => {
             height: 45px;
           }
           
-          .slider-controls {
+          .slider-controls-overlay {
             gap: 20px;
+            background-color: transparent;
             padding: 15px 25px;
+            bottom: 15px;
           }
         }
 
@@ -241,9 +252,11 @@ const VideoSlider = () => {
             height: 40px;
           }
           
-          .slider-controls {
+          .slider-controls-overlay {
             gap: 15px;
+            background-color: transparent;
             padding: 12px 20px;
+            bottom: 10px;
           }
           
           .dot {
