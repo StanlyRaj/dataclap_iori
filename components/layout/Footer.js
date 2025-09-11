@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-3 my-margin-3 width-20 mb-50">
-                                <div className="mb-10"><img alt="dataclap" src="images/logo_white.svg" /></div>
+                                <div className="mb-10"><img alt="dataclap" src="/assets/logo_white.svg" /></div>
                                 <p className="font-md mb-20 color-grey-400">4517 Washington Ave.<br className="d-none d-lg-block" />Manchester, Kentucky 39495</p>
                                 <div className="font-md mb-20 color-grey-400"><strong className="font-md-bold">Hours:</strong> 8:00 - 17:00, Mon - Sat</div>
                                 <h6 className="color-brand-1">Follow Us</h6>
