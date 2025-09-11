@@ -25,7 +25,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                         <div className="header-left">
                             <div className="header-logo">
                                 <Link className="d-flex" href="/index-3">
-                                    <img alt="Ecom" src="assets/images/logo_white.svg" />
+                                    <img alt="Ecom" src="images/logo_white.svg" />
                                 </Link>
                             </div>
                             <div className="header-nav">
