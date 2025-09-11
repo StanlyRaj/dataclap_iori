@@ -35,27 +35,7 @@ const HomePage3 = () => {
                         <div className="swiper-pagination right-pagination swiper-pagination-group-11" />
                     </div>
                 </section>
-                <section className="section mb-50 bg-brand-1 pt-100 pb-100 bg-explore">
-                    <div className="container">
-                        <div className="text-center">
-                            <span className="font-xl-bold color-white text-uppercase">explore network</span>
-                            <h2 className="color-brand-2 mb-60 mt-15">
-                                Ready to capture every <br className="d-none d-lg-block" />wonderful
-                                moment
-                            </h2>
-                        </div>
-                        <div className="mt-30 mb-60">
-                            <Tab/>
-                        </div>
-                    </div>
-                </section>
-                <section className="members">
-                    <div className="image-slideshow">
-                        <div className="mover-1" />
-                        <div className="mover-2" />
-                    </div>
-                </section>
-                <section className="section mt-100">
+                <section className="section mt-100 mb-50">
                     <div className="container">
                         <div className="row align-items-end">
                             <div className="col-lg-12 text-center">
@@ -66,171 +46,452 @@ const HomePage3 = () => {
                             <div className="box-social-media">
                                 <ul className="tabs-plan change-media" role="tablist">
                                     <li> <a className={social === 1 ? "active" : ""} onClick={() => handleSocial(1)}>Personal</a></li>
-                                    <li> <a className={social === 2 ? "active" : ""} onClick={() => handleSocial(2)}>Enterprise</a></li>
+                                    <li> <a className={social === 2 ? "active" : ""} onClick={() => handleSocial(2)}>Company</a></li>
+                                    <li> <a className={social === 3 ? "active" : ""} onClick={() => handleSocial(3)}>Enterprise</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="row mt-50">
-
                             {social == 1 && <>
-                                <div className="col-lg-4 col-md-6 social-media enterprise">
-                                    <div className="card-offer-style-2">
-                                        <div className="card-offer hover-up">
-                                            <div className="card-image"><img src="assets/imgs/page/homepage1/cross2.png" alt="iori" /></div>
-                                            <div className="card-info">
-                                                <h4 className="color-brand-1 mb-15">Cross-Platform</h4>
-                                                <p className="font-md color-grey-500 mb-15">Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.</p>
-                                                <div className="box-button-offer"><a className="btn btn-default font-sm-bold pl-0 color-brand-1">Learn More
-                                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage1/cross2.png" alt="Cross Platform" />
+                                            </div>
+                                            <h4 className="left-card-title">Cross-Platform</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg></a></div>
+                                                    </svg>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 social-media enterprise">
-                                    <div className="card-offer-style-2 bg-5">
-                                        <div className="card-offer hover-up">
-                                            <div className="card-image"><img src="assets/imgs/page/homepage1/cross.png" alt="iori" /></div>
-                                            <div className="card-info">
-                                                <h4 className="color-brand-1 mb-15">Social Media</h4>
-                                                <p className="font-md color-grey-500 mb-15">Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.</p>
-                                                <div className="box-button-offer"><a className="btn btn-default font-sm-bold pl-0 color-brand-1">Learn More
-                                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage1/cross.png" alt="Social Media" />
+                                            </div>
+                                            <h4 className="left-card-title">Social Media</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg></a></div>
+                                                    </svg>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 social-media personal">
-                                    <div className="card-offer-style-2">
-                                        <div className="card-offer hover-up">
-                                            <div className="card-image"><img src="assets/imgs/page/homepage1/cross2.png" alt="iori" /></div>
-                                            <div className="card-info">
-                                                <h4 className="color-brand-1 mb-15">Cross-Platform</h4>
-                                                <p className="font-md color-grey-500 mb-15">Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.</p>
-                                                <div className="box-button-offer"><a className="btn btn-default font-sm-bold pl-0 color-brand-1">Learn More
-                                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage2/identity.png" alt="Brand Identity" />
+                                            </div>
+                                            <h4 className="left-card-title">Brand Identity</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg></a></div>
+                                                    </svg>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 social-media personal">
-                                    <div className="card-offer-style-2 bg-5">
-                                        <div className="card-offer hover-up">
-                                            <div className="card-image"><img src="assets/imgs/page/homepage1/cross.png" alt="iori" /></div>
-                                            <div className="card-info">
-                                                <h4 className="color-brand-1 mb-15">Social Media</h4>
-                                                <p className="font-md color-grey-500 mb-15">Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.</p>
-                                                <div className="box-button-offer"><a className="btn btn-default font-sm-bold pl-0 color-brand-1">Learn More
-                                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage1/cross4.png" alt="Customer Service" />
+                                            </div>
+                                            <h4 className="left-card-title">Customer Service</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg></a></div>
+                                                    </svg>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 social-media personal">
-                                    <div className="card-offer-style-2 bg-2">
-                                        <div className="card-offer hover-up">
-                                            <div className="card-image"><img src="assets/imgs/page/homepage2/identity.png" alt="iori" /></div>
-                                            <div className="card-info">
-                                                <h4 className="color-brand-1 mb-15">Brand Identity</h4>
-                                                <p className="font-md color-grey-500 mb-15">Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.</p>
-                                                <div className="box-button-offer"><a className="btn btn-default font-sm-bold pl-0 color-brand-1">Learn More
-                                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage1/cross5.png" alt="Analytics & Insights" />
+                                            </div>
+                                            <h4 className="left-card-title">Analytics & Insights</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg></a></div>
+                                                    </svg>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 social-media enterprise">
-                                    <div className="card-offer-style-2 bg-1">
-                                        <div className="card-offer hover-up">
-                                            <div className="card-image"><img src="assets/imgs/page/homepage1/cross4.png" alt="iori" /></div>
-                                            <div className="card-info">
-                                                <h4 className="color-brand-1 mb-15">Customer Service</h4>
-                                                <p className="font-md color-grey-500 mb-15">Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.</p>
-                                                <div className="box-button-offer"><a className="btn btn-default font-sm-bold pl-0 color-brand-1">Learn More
-                                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage2/creation.png" alt="Content Planning" />
+                                            </div>
+                                            <h4 className="left-card-title">Content Planning</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg></a></div>
+                                                    </svg>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </>}
+
                             {social == 2 && <>
-                                <div className="col-lg-4 col-md-6 social-media personal">
-                                    <div className="card-offer-style-2 bg-1">
-                                        <div className="card-offer hover-up">
-                                            <div className="card-image"><img src="assets/imgs/page/homepage1/cross4.png" alt="iori" /></div>
-                                            <div className="card-info">
-                                                <h4 className="color-brand-1 mb-15">Customer Service</h4>
-                                                <p className="font-md color-grey-500 mb-15">Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.</p>
-                                                <div className="box-button-offer"><a className="btn btn-default font-sm-bold pl-0 color-brand-1">Learn More
-                                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage2/creation.png" alt="Team Collaboration" />
+                                            </div>
+                                            <h4 className="left-card-title">Team Collaboration</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Streamline your team's workflow with advanced collaboration tools. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg></a></div>
+                                                    </svg>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 social-media personal">
-                                    <div className="card-offer-style-2 bg-7">
-                                        <div className="card-offer hover-up">
-                                            <div className="card-image"><img src="assets/imgs/page/homepage1/cross5.png" alt="iori" /></div>
-                                            <div className="card-info">
-                                                <h4 className="color-brand-1 mb-15">Social advertising</h4>
-                                                <p className="font-md color-grey-500 mb-15">Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.</p>
-                                                <div className="box-button-offer"><a className="btn btn-default font-sm-bold pl-0 color-brand-1">Learn More
-                                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                
+                                {/* Continue with other Company cards using the same structure... */}
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage1/cross4.png" alt="Multi-Brand Management" />
+                                            </div>
+                                            <h4 className="left-card-title">Multi-Brand Management</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Manage multiple brand accounts seamlessly from one dashboard. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg></a></div>
+                                                    </svg>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 social-media enterprise">
-                                    <div className="card-offer-style-2 bg-4">
-                                        <div className="card-offer hover-up">
-                                            <div className="card-image"><img src="assets/imgs/page/homepage2/creation.png" alt="iori" /></div>
-                                            <div className="card-info">
-                                                <h4 className="color-brand-1 mb-15">Content creation</h4>
-                                                <p className="font-md color-grey-500 mb-15">Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.</p>
-                                                <div className="box-button-offer"><a className="btn btn-default font-sm-bold pl-0 color-brand-1">Learn More
-                                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage1/cross.png" alt="Social Media" />
+                                            </div>
+                                            <h4 className="left-card-title">Social Media</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg></a></div>
+                                                    </svg>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 social-media personal">
-                                    <div className="card-offer-style-2 bg-4">
-                                        <div className="card-offer hover-up">
-                                            <div className="card-image"><img src="assets/imgs/page/homepage2/creation.png" alt="iori" /></div>
-                                            <div className="card-info">
-                                                <h4 className="color-brand-1 mb-15">Content creation</h4>
-                                                <p className="font-md color-grey-500 mb-15">Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.</p>
-                                                <div className="box-button-offer"><a className="btn btn-default font-sm-bold pl-0 color-brand-1">Learn More
-                                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage2/identity.png" alt="Brand Identity" />
+                                            </div>
+                                            <h4 className="left-card-title">Brand Identity</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg></a></div>
+                                                    </svg>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
+                                
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage1/cross4.png" alt="Customer Service" />
+                                            </div>
+                                            <h4 className="left-card-title">Customer Service</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage1/cross5.png" alt="Analytics & Insights" />
+                                            </div>
+                                            <h4 className="left-card-title">Analytics & Insights</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </>}
 
+                            {social == 3 && <>
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage1/cross4.png" alt="Enterprise Security" />
+                                            </div>
+                                            <h4 className="left-card-title">Enterprise Security</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Advanced security features with compliance support for enterprise-level requirements. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage1/cross.png" alt="Social Media" />
+                                            </div>
+                                            <h4 className="left-card-title">Social Media</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage2/identity.png" alt="Brand Identity" />
+                                            </div>
+                                            <h4 className="left-card-title">Brand Identity</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage1/cross4.png" alt="Customer Service" />
+                                            </div>
+                                            <h4 className="left-card-title">Customer Service</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage1/cross5.png" alt="Analytics & Insights" />
+                                            </div>
+                                            <h4 className="left-card-title">Analytics & Insights</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-4 col-md-6 social-media">
+                                    <div className="left-aligned-card-wrapper">
+                                        <div className="left-aligned-card-container">
+                                            <div className="left-card-icon">
+                                                <img src="assets/imgs/page/homepage2/creation.png" alt="Content Planning" />
+                                            </div>
+                                            <h4 className="left-card-title">Content Planning</h4>
+                                            <div className="left-card-divider"></div>
+                                            <p className="left-card-description">
+                                                Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                            </p>
+                                            <div className="left-card-button-wrapper">
+                                                <a className="left-card-learn-more">
+                                                    Learn More
+                                                    <svg className="left-card-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </>}
 
-
+                        </div>
+                    </div>
+                </section>
+                <section className="members">
+                    <div className="image-slideshow">
+                        <div className="mover-1" />
+                        <div className="mover-2" />
+                    </div>
+                </section>
+                <section className="section mt-100 mb-50 bg-brand-1 pt-100 pb-100 bg-explore">
+                    <div className="container">
+                        <div className="text-center">
+                            <span className="font-xl-bold color-white text-uppercase">explore network</span>
+                            <h2 className="color-brand-2 mb-60 mt-15">
+                                Ready to capture every <br className="d-none d-lg-block" />wonderful
+                                moment
+                            </h2>
+                        </div>
+                        <div className="mt-30 mb-60">
+                            <Tab/>
                         </div>
                     </div>
                 </section>
