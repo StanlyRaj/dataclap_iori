@@ -40,60 +40,133 @@ TABLE CONTENT
 /*RESET*/
 
 :root {
-    /* Primary Blue Scale */
-    --color-primary-50: #f0f9ff;
-    --color-primary-100: #f9fcfe;
-    --color-primary-200: #bae6fd;
-    --color-primary-300: #7dd3fc;
-    --color-primary-400: #38bdf8;
-    --color-primary-500: #0ea5e9;
-    --color-primary-600: #0284c7;
-    --color-primary-700: #0369a1;
-    --color-primary-800: #075985;
-    --color-primary-900: #0c4a6e;
+    /* ===== PRIMARY BLUE SCALE (#0017E3 based) ===== */
+    --color-primary-50: #f0f4ff;
+    --color-primary-100: #e0e9ff;
+    --color-primary-200: #c7d6ff;
+    --color-primary-300: #a4baff;
+    --color-primary-400: #7d95ff;
+    --color-primary-500: #5c6fff;
+    --color-primary-600: #3d4bff;
+    --color-primary-700: #0017e3;  /* Your original blue */
+    --color-primary-800: #0012b5;
+    --color-primary-900: #000e8a;
     
-    /* Neutral Grays */
-    --color-gray-50: #f9fafb;
-    --color-gray-100: #f3f4f6;
-    --color-gray-200: #e5e7eb;
-    --color-gray-300: #d1d5db;
-    --color-gray-400: #9ca3af;
-    --color-gray-500: #6b7280;
-    --color-gray-600: #4b5563;
-    --color-gray-700: #374151;
-    --color-gray-800: #1f2937;
-    --color-gray-900: #111827;
+    /* ===== NEUTRAL GRAY SCALE (EFEFEF compatible) ===== */
+    --color-gray-50: #fafafa;
+    --color-gray-100: #f5f5f5;
+    --color-gray-200: #efefef;     /* Your card background */
+    --color-gray-300: #e0e0e0;
+    --color-gray-400: #bdbdbd;
+    --color-gray-500: #9e9e9e;
+    --color-gray-600: #757575;
+    --color-gray-700: #616161;
+    --color-gray-800: #424242;
+    --color-gray-900: #212121;
     
-    /* Base Colors */
+    /* ===== BASE COLORS ===== */
     --color-white: #ffffff;
     --color-black: #000000;
     --color-transparent: transparent;
+    --color-card-bg: #efefef;
     
-    /* Accent Teal */
-    --color-accent-teal-300: #5eead4;
-    --color-accent-teal-400: #2dd4bf;
-    --color-accent-teal-500: #14b8a6;
-    --color-accent-teal-600: #0d9488;
+    /* ===== WHITE VARIATIONS WITH ALPHA ===== */
+    --color-white-alpha-10: rgba(255, 255, 255, 0.1);
+    --color-white-alpha-20: rgba(255, 255, 255, 0.2);
+    --color-white-alpha-50: rgba(255, 255, 255, 0.5);
+    --color-white-alpha-80: rgba(255, 255, 255, 0.8);
+    --color-white-alpha-90: rgba(255, 255, 255, 0.9);
+    --color-white-alpha-95: rgba(255, 255, 255, 0.95);
     
-    /* Accent Coral */
-    --color-accent-coral-300: #fdba74;
-    --color-accent-coral-400: #fb923c;
-    --color-accent-coral-500: #f97316;
-    --color-accent-coral-600: #ea580c;
+    /* ===== BLACK VARIATIONS WITH ALPHA ===== */
+    --color-black-alpha-5: rgba(0, 0, 0, 0.05);
+    --color-black-alpha-10: rgba(0, 0, 0, 0.1);
+    --color-black-alpha-15: rgba(0, 0, 0, 0.15);
+    --color-black-alpha-20: rgba(0, 0, 0, 0.2);
+    --color-black-alpha-30: rgba(0, 0, 0, 0.3);
+    --color-black-alpha-50: rgba(0, 0, 0, 0.5);
     
-    /* Accent Gold */
-    --color-accent-gold-300: #fde047;
-    --color-accent-gold-400: #facc15;
-    --color-accent-gold-500: #eab308;
-    --color-accent-gold-600: #ca8a04;
+    /* ===== ACCENT PURPLE SCALE ===== */
+    --color-accent-teal-50: #faf5ff;
+    --color-accent-teal-100: #f3e8ff;
+    --color-accent-teal-200: #e9d5ff;
+    --color-accent-teal-300: #d8b4fe;
+    --color-accent-teal-400: #c084fc;
+    --color-accent-teal-500: #a855f7;
+    --color-accent-teal-600: #9333ea;
+    --color-accent-teal-700: #7c3aed;
+    --color-accent-teal-800: #6b21d8;
+    --color-accent-teal-900: #581c87;
     
-    /* Alpha/Shadow Variations */
-    --color-primary-500-alpha: rgba(14, 165, 233, 0.25);
-    --color-primary-900-alpha: rgba(12, 74, 110, 0.15);
-    --color-gray-900-alpha: rgba(17, 24, 39, 0.1);
-    --color-gray-900-alpha-strong: rgba(17, 24, 39, 0.25);
-    --color-black-alpha: rgba(0, 0, 0, 0.05);
+    /* ===== ACCENT MAGENTA SCALE ===== */
+    --color-accent-coral-50: #fdf4ff;
+    --color-accent-coral-100: #fae8ff;
+    --color-accent-coral-200: #f5d0fe;
+    --color-accent-coral-300: #f0abfc;
+    --color-accent-coral-400: #e879f9;
+    --color-accent-coral-500: #d946ef;
+    --color-accent-coral-600: #c026d3;
+    --color-accent-coral-700: #a21caf;
+    --color-accent-coral-800: #86198f;
+    --color-accent-coral-900: #701a75;
+    
+    /* ===== ACCENT INDIGO SCALE ===== */
+    --color-accent-gold-50: #eef2ff;
+    --color-accent-gold-100: #e0e7ff;
+    --color-accent-gold-200: #c7d2fe;
+    --color-accent-gold-300: #a5b4fc;
+    --color-accent-gold-400: #818cf8;
+    --color-accent-gold-500: #6366f1;
+    --color-accent-gold-600: #4f46e5;
+    --color-accent-gold-700: #4338ca;
+    --color-accent-gold-800: #3730a3;
+    --color-accent-gold-900: #312e81;
+    
+    /* ===== SUCCESS/ERROR/WARNING COLORS ===== */
+    --color-success-50: #f0fdf4;
+    --color-success-500: #22c55e;
+    --color-success-600: #16a34a;
+    --color-success-900: #14532d;
+    
+    --color-error-50: #fef2f2;
+    --color-error-500: #ef4444;
+    --color-error-600: #dc2626;
+    --color-error-900: #7f1d1d;
+    
+    --color-warning-50: #fffbeb;
+    --color-warning-500: #f59e0b;
+    --color-warning-600: #d97706;
+    --color-warning-900: #78350f;
+    
+    /* ===== PRIMARY COLOR ALPHA VARIATIONS ===== */
+    --color-primary-700-alpha-10: rgba(0, 23, 227, 0.1);
+    --color-primary-700-alpha-20: rgba(0, 23, 227, 0.2);
+    --color-primary-700-alpha-30: rgba(0, 23, 227, 0.3);
+    --color-primary-500-alpha-10: rgba(92, 111, 255, 0.1);
+    --color-primary-500-alpha-20: rgba(92, 111, 255, 0.2);
+    
+    /* ===== SHADOW COLORS ===== */
+    --shadow-sm: 0 1px 2px 0 var(--color-black-alpha-5);
+    --shadow-md: 0 4px 6px -1px var(--color-black-alpha-10), 0 2px 4px -1px var(--color-black-alpha-5);
+    --shadow-lg: 0 10px 15px -3px var(--color-black-alpha-10), 0 4px 6px -2px var(--color-black-alpha-5);
+    --shadow-xl: 0 20px 25px -5px var(--color-black-alpha-15), 0 10px 10px -5px var(--color-black-alpha-5);
+    
+    /* ===== BORDER COLORS ===== */
+    --border-light: var(--color-gray-200);
+    --border-medium: var(--color-gray-300);
+    --border-dark: var(--color-gray-400);
+    --border-primary: var(--color-primary-700);
+    --border-focus: var(--color-primary-500);
+    
+    /* ===== TEXT COLORS ===== */
+    --text-primary: var(--color-black);
+    --text-secondary: var(--color-gray-700);
+    --text-muted: var(--color-gray-500);
+    --text-disabled: var(--color-gray-400);
+    --text-white: var(--color-white);
+    --text-primary-color: var(--color-primary-700);
 }
+
 html,
 body,
 div,
@@ -621,7 +694,12 @@ h6 {
 .bg-11 {
   background-color: var(--color-primary-100) !important;
 }
-
+.bg-12{
+  background-color: var(--color-card-background) !important;
+}
+.bg-13{
+  background-color: var(--color-gray-200) !important;
+}
 a {
   color: var(--color-gray-900);
   text-decoration: none;
@@ -5734,7 +5812,7 @@ footer a {
   width: auto;
 }
 
-.list-ticks {
+/* .list-ticks {
   display: flex;
   flex-wrap: wrap;
 }
@@ -5749,7 +5827,32 @@ footer a {
   color: var(--color-accent-teal-500);
   height: 20px;
   margin-right: 10px;
+} */
+.list-ticks {
+  display: flex;
+  flex-direction: column;   /* vertical stack */
+  gap: 18px;                /* replaces margin-bottom on li */
+  padding: 0;
+  margin: 0;
 }
+
+.list-ticks li {
+  display: flex;            /* icon + text on one line */
+  align-items: flex-start;
+  width: 100%;
+  color: var(--color-gray-800);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.list-ticks li svg {
+  color: var(--color-accent-teal-500);
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  flex: 0 0 auto;
+}
+
 .list-ticks.list-ticks-2 li {
   width: 100%;
 }
@@ -10397,6 +10500,253 @@ footer.footer-4 {
 
 /* //////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////Industry-Cards/////////////////////////// */
+/* //////////////////////////////////////////////////////////////// */
+/* New Image Card CSS Classes */
+
+/* Dynamic Image Card CSS Classes */
+.image-showcase-card-dynamic {
+    background-color: var(--color-primary-50);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    /* Height is determined by image content - no fixed height */
+}
+
+.image-showcase-card-dynamic:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.image-showcase-top-dynamic {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    /* Height automatically adjusts to image aspect ratio */
+}
+
+.image-showcase-photo-dynamic {
+    width: 100%;
+    height: auto; /* Key: allows natural height based on image dimensions */
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-showcase-card-dynamic:hover .image-showcase-photo-dynamic {
+    transform: scale(1.05);
+}
+
+.image-showcase-content-dynamic {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    /* This section will be exactly 30% of the total card height */
+    min-height: calc(30vh / 7 * 3); /* Fallback minimum height */
+    flex-basis: 30%;
+}
+
+.image-showcase-title-dynamic {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1e293b;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.image-showcase-divider-dynamic {
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    border-radius: 2px;
+    margin-bottom: 16px;
+}
+
+.image-showcase-description-dynamic {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #64748b;
+    text-align: left;
+    margin: 0;
+    flex-grow: 1; /* Takes remaining space in the 30% content area */
+}
+
+/* Advanced Dynamic Height Control using CSS Grid */
+.image-showcase-card-dynamic-advanced {
+    background-color: var(--color-primary-50);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: grid;
+    grid-template-rows: 7fr 3fr; /* 70% image, 30% content */
+    margin-bottom: 30px;
+    height: fit-content;
+    min-height: 300px; /* Minimum card height for very small images */
+}
+
+.image-showcase-card-dynamic-advanced:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.image-showcase-top-dynamic-advanced {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-showcase-photo-dynamic-advanced {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-showcase-card-dynamic-advanced:hover .image-showcase-photo-dynamic-advanced {
+    transform: scale(1.05);
+}
+
+.image-showcase-content-dynamic-advanced {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.image-showcase-title-dynamic-advanced {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1e293b;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.image-showcase-divider-dynamic-advanced {
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    border-radius: 2px;
+    margin-bottom: 12px;
+}
+
+.image-showcase-description-dynamic-advanced {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #64748b;
+    text-align: left;
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limits to 3 lines in the 30% space */
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+}
+
+/* Responsive Design for Dynamic Cards */
+@media (max-width: 992px) {
+    .image-showcase-content-dynamic,
+    .image-showcase-content-dynamic-advanced {
+        padding: 20px;
+    }
+    
+    .image-showcase-title-dynamic {
+        font-size: 20px;
+    }
+    
+    .image-showcase-title-dynamic-advanced {
+        font-size: 18px;
+    }
+    
+    .image-showcase-description-dynamic {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-showcase-content-dynamic,
+    .image-showcase-content-dynamic-advanced {
+        padding: 16px;
+    }
+    
+    .image-showcase-title-dynamic,
+    .image-showcase-title-dynamic-advanced {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    
+    .image-showcase-divider-dynamic,
+    .image-showcase-divider-dynamic-advanced {
+        width: 32px;
+        margin-bottom: 10px;
+    }
+    
+    .image-showcase-description-dynamic {
+        font-size: 14px;
+    }
+    
+    .image-showcase-description-dynamic-advanced {
+        font-size: 13px;
+        -webkit-line-clamp: 2; /* Fewer lines on mobile */
+        line-clamp: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-showcase-card-dynamic-advanced {
+        min-height: 250px;
+    }
+    
+    .image-showcase-content-dynamic,
+    .image-showcase-content-dynamic-advanced {
+        padding: 14px;
+    }
+}
+
+
+
+
+/* //////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
 
 
 
