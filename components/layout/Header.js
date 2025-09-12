@@ -25,7 +25,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                         <div className="header-left">
                             <div className="header-logo">
                                 <Link className="d-flex" href="/index-3">
-                                    <img alt="Ecom" src="/assets/logo_white.svg" />
+                                    <img alt="Ecom" src="/assets/logo_name.svg" />
                                 </Link>
                             </div>
                             <div className="header-nav">
@@ -39,7 +39,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                                     <div className="dropdown-column">
                                                         <h3>Pre-trained</h3>
                                                         <ul>
-                                                            <li><Link href="/index-11">LLM EVALUATIONS</Link></li>
+                                                            <li><Link href="/LLM-Evals">LLM EVALUATIONS</Link></li>
                                                             <li><Link href="/index-11">GENERATIVE AI</Link></li>
                                                             <li><Link href="/index-11">SEARCH AND PERSONALIZATION</Link></li>
                                                         </ul>
