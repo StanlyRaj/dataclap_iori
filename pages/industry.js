@@ -53,76 +53,134 @@ const Industry = () => {
                         <div className="row align-items-end">
                             <div className="col-lg-6 mb-20">
                                 <h2 className="color-brand-1 mb-0">Real-World Use Cases</h2>
-                                <p className="color-grey-500 font-md mt-20">Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.</p>
+                                <p className="color-grey-500 font-md mt-20">
+                                    Discover powerful features to boost your productivity. You are always welcome to visit our little den. Professional in their craft! All products were super amazing with strong attention to details, comps and overall vibe.
+                                </p>
                             </div>
                         </div>
+
+                        {/* First Row of Cards */}
                         <div className="row mt-45">
                             <div className="col-lg-4">
-                                <div className="card-human">
-                                    <div className="card-image mb-15">
-                                        <img src="assets/imgs/page/homepage6/human1.png" alt="iori" />
+                                <div className="image-showcase-card-dynamic">
+                                    <div className="image-showcase-top-dynamic">
+                                        <img 
+                                            src="assets/imgs/page/homepage6/human1.png" 
+                                            alt="Cross Platform" 
+                                            className="image-showcase-photo-dynamic"
+                                        />
                                     </div>
-                                    <div className="card-info mb-30">
-                                        <h4 className="color-brand-1 mt-15 mb-10">Cross Platform</h4>
-                                        <p className="font-sm color-grey-500">Discover powerful features to boost your productivit. You are always welcome to visit our little den.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4">
-                                <div className="card-human">
-                                    <div className="card-info mb-30">
-                                        <h4 className="color-brand-1 mt-15 mb-10">Cross Platform</h4>
-                                        <p className="font-sm color-grey-500">Discover powerful features to boost your productivit. You are always welcome to visit our little den.</p>
-                                    </div>
-                                    <div className="card-image mb-15">
-                                        <img src="assets/imgs/page/homepage6/human2.png" alt="iori" />
+                                    <div className="image-showcase-content-dynamic">
+                                        <h4 className="image-showcase-title-dynamic">Cross Platform</h4>
+                                        <div className="image-showcase-divider-dynamic"></div>
+                                        <p className="image-showcase-description-dynamic">
+                                            Discover powerful features to boost your productivity. You are always welcome to visit our little den.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
+                            
                             <div className="col-lg-4">
-                                <div className="card-human">
-                                    <div className="card-image mb-15">
-                                        <img src="assets/imgs/page/homepage6/human3.png" alt="iori" />
+                                <div className="image-showcase-card-dynamic">
+                                    <div className="image-showcase-top-dynamic">
+                                        <img 
+                                            src="assets/imgs/page/homepage6/human2.png" 
+                                            alt="Team Collaboration" 
+                                            className="image-showcase-photo-dynamic"
+                                        />
                                     </div>
-                                    <div className="card-info mb-30">
-                                        <h4 className="color-brand-1 mt-15 mb-10">Cross Platform</h4>
-                                        <p className="font-sm color-grey-500">Discover powerful features to boost your productivit. You are always welcome to visit our little den.</p>
+                                    <div className="image-showcase-content-dynamic">
+                                        <h4 className="image-showcase-title-dynamic">Team Collaboration</h4>
+                                        <div className="image-showcase-divider-dynamic"></div>
+                                        <p className="image-showcase-description-dynamic">
+                                            Streamline your team's workflow with advanced collaboration tools and seamless integration.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="row mt-45 mt-75">
+                            
                             <div className="col-lg-4">
-                                <div className="card-human">
-                                    <div className="card-image mb-15"> <img src="assets/imgs/page/homepage12/human1.png" alt="iori" /></div>
-                                    <div className="card-info mb-30">
-                                        <h4 className="color-brand-1 mt-15 mb-10">Cross Platform</h4>
-                                        <p className="font-sm color-grey-500">Discover powerful features to boost your productivit. You are always welcome to visit our little den.</p>
+                                <div className="image-showcase-card-dynamic">
+                                    <div className="image-showcase-top-dynamic">
+                                        <img 
+                                            src="assets/imgs/page/homepage6/human3.png" 
+                                            alt="Analytics Dashboard" 
+                                            className="image-showcase-photo-dynamic"
+                                        />
                                     </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4">
-                                <div className="card-human">
-                                    <div className="card-info mb-30">
-                                        <h4 className="color-brand-1 mt-15 mb-10">Cross Platform</h4>
-                                        <p className="font-sm color-grey-500">Discover powerful features to boost your productivit. You are always welcome to visit our little den.</p>
-                                    </div>
-                                    <div className="card-image mb-15"> <img src="assets/imgs/page/homepage12/human2.png" alt="iori" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4">
-                                <div className="card-human">
-                                    <div className="card-image mb-15"> <img src="assets/imgs/page/homepage12/human3.png" alt="iori" /></div>
-                                    <div className="card-info mb-30">
-                                        <h4 className="color-brand-1 mt-15 mb-10">Cross Platform</h4>
-                                        <p className="font-sm color-grey-500">Discover powerful features to boost your productivit. You are always welcome to visit our little den.</p>
+                                    <div className="image-showcase-content-dynamic">
+                                        <h4 className="image-showcase-title-dynamic">Analytics Dashboard</h4>
+                                        <div className="image-showcase-divider-dynamic"></div>
+                                        <p className="image-showcase-description-dynamic">
+                                            Get comprehensive insights with detailed reporting and real-time performance metrics.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        {/* Second Row of Cards */}
+                        <div className="row mt-45">
+                            <div className="col-lg-4">
+                                <div className="image-showcase-card-dynamic">
+                                    <div className="image-showcase-top-dynamic">
+                                        <img 
+                                            src="assets/imgs/page/homepage12/human1.png" 
+                                            alt="Project Management" 
+                                            className="image-showcase-photo-dynamic"
+                                        />
+                                    </div>
+                                    <div className="image-showcase-content-dynamic">
+                                        <h4 className="image-showcase-title-dynamic">Project Management</h4>
+                                        <div className="image-showcase-divider-dynamic"></div>
+                                        <p className="image-showcase-description-dynamic">
+                                            Organize and track your projects with powerful management tools and intuitive workflows.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="col-lg-4">
+                                <div className="image-showcase-card-dynamic">
+                                    <div className="image-showcase-top-dynamic">
+                                        <img 
+                                            src="assets/imgs/page/homepage12/human2.png" 
+                                            alt="Customer Support" 
+                                            className="image-showcase-photo-dynamic"
+                                        />
+                                    </div>
+                                    <div className="image-showcase-content-dynamic">
+                                        <h4 className="image-showcase-title-dynamic">Customer Support</h4>
+                                        <div className="image-showcase-divider-dynamic"></div>
+                                        <p className="image-showcase-description-dynamic">
+                                            Deliver exceptional customer experiences with comprehensive support and communication tools.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="col-lg-4">
+                                <div className="image-showcase-card-dynamic">
+                                    <div className="image-showcase-top-dynamic">
+                                        <img 
+                                            src="assets/imgs/page/homepage12/human3.png" 
+                                            alt="Data Security" 
+                                            className="image-showcase-photo-dynamic"
+                                        />
+                                    </div>
+                                    <div className="image-showcase-content-dynamic">
+                                        <h4 className="image-showcase-title-dynamic">Data Security</h4>
+                                        <div className="image-showcase-divider-dynamic"></div>
+                                        <p className="image-showcase-description-dynamic">
+                                            Protect your valuable data with enterprise-grade security and compliance features.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
+
                 <section className="section mt-100">
                     <div className="container">
                         <div className="row">

@@ -3,7 +3,6 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 import Accordion from '../components/elements/Accordion';
 import Layout from '../components/layout/Layout';
-import ModalVideo from 'react-modal-video'
 
 const pagePrice = () => {
     const [activeIndex, setActiveIndex] = useState(1);
@@ -25,10 +24,6 @@ const pagePrice = () => {
                                 <h2 className="color-brand-1 mb-20">Choose The Best Plan</h2>
                                 <p className="font-lg color-gray-500">Pick your plan. <br className="d-none d-lg-block" /> Change whenever you want.</p>
                             </div>
-                            <div className="col-lg-4 col-md-4 text-md-end text-start"><a className="btn btn-default font-sm-bold pl-0">Compare plans
-                                <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg></a></div>
                         </div>
                         <div className="row mt-50">
                             <div className="col-xl-3 col-lg-6 col-md-6">
@@ -416,253 +411,54 @@ const pagePrice = () => {
                         </div>
                     </div>
                 </section>
-                <section className="section mt-110">
-                    <div className="container">
-                        <div className="row align-items-end">
-                            <div className="col-lg-6 mb-20">
-                                <h2 className="color-brand-1 mb-0">Crafting human connection through digital experience</h2>
-                            </div>
-                            <div className="col-lg-6 mb-20">
-                                <p className="color-grey-500 font-md mb-20">Discover powerful features to boost your productivit. You are always welcome to visit our little den. Professional in teir craft! All products were super amazing with strong attension to details, comps and overall vibe.</p>
-                                <Link className="btn btn-default p-0 font-sm-bold hover-up" href="#">
-                                    Contact Us
-                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                    </svg>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="row mt-45">
-                            <div className="col-lg-4">
-                                <div className="card-human">
-                                    <div className="card-image mb-15">
-                                        <img src="assets/imgs/page/homepage6/human1.png" alt="iori" />
-                                    </div>
-                                    <div className="card-info mb-30">
-                                        <h4 className="color-brand-1 mt-15 mb-10">Cross Platform</h4>
-                                        <p className="font-sm color-grey-500">Discover powerful features to boost your productivit. You are always welcome to visit our little den.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4">
-                                <div className="card-human">
-                                    <div className="card-info mb-30">
-                                        <h4 className="color-brand-1 mt-15 mb-10">Cross Platform</h4>
-                                        <p className="font-sm color-grey-500">Discover powerful features to boost your productivit. You are always welcome to visit our little den.</p>
-                                    </div>
-                                    <div className="card-image mb-15">
-                                        <img src="assets/imgs/page/homepage6/human2.png" alt="iori" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4">
-                                <div className="card-human">
-                                    <div className="card-image mb-15">
-                                        <img src="assets/imgs/page/homepage6/human3.png" alt="iori" />
-                                    </div>
-                                    <div className="card-info mb-30">
-                                        <h4 className="color-brand-1 mt-15 mb-10">Cross Platform</h4>
-                                        <p className="font-sm color-grey-500">Discover powerful features to boost your productivit. You are always welcome to visit our little den.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 <section className="section mt-50">
                     <div className="container">
-                        <div className="text-center">
-                            <h2 className="color-brand-1 mb-40">Compare Plans</h2>
-                        </div>
-                        <div className="table-responsive table-responsive-sm table-responsive-md">
-                            <table className="table table-compare">
-                                <thead>
-                                    <tr>
-                                        <th className="width-28 color-success">Data</th>
-                                        <th className="width-18">Free</th>
-                                        <th className="width-18">Standard</th>
-                                        <th className="width-18">Business</th>
-                                        <th className="width-18">Enterprise</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Requests Quota</td>
-                                        <td>50k Requests/Day</td>
-                                        <td>100k Requests/Day</td>
-                                        <td>500k Requests/Day</td>
-                                        <td>Unlimited</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Account Acess</td>
-                                        <td>35</td>
-                                        <td>85</td>
-                                        <td>120</td>
-                                        <td>Unlimited</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Service Analystic</td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <div className="row">
+                            <div className="col-lg-4">
+                                <div className="card-support">
+                                    <div className="card-image">
+                                        <div className="box-circle-img">
+                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                                             </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </div>
+                                    </div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-15">Daily Updates</h4>
+                                        <p className="font-md color-grey-500 mb-15">Share updates instantly within our project management software, and get the entire team collaborating</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4">
+                                <div className="card-support">
+                                    <div className="card-image">
+                                        <div className="box-circle-img">
+                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
                                             </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                        </div>
+                                    </div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-15">24/7 Support</h4>
+                                        <p className="font-md color-grey-500 mb-15">Share updates instantly within our project management software, and get the entire team collaborating</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4">
+                                <div className="card-support">
+                                    <div className="card-image">
+                                        <div className="box-circle-img">
+                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                             </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Achive Nodes</td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Enriched APIs</td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Rosetta APIs</td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Priority Support Response</td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Dedicated Account Manager</td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Custom SLAs</td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-disable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                        <td>
-                                            <svg className="w-6 h-6 icon-18 icon-enable" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                            </svg>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                        </div>
+                                    </div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-15">Weekly Reports</h4>
+                                        <p className="font-md color-grey-500 mb-15">Share updates instantly within our project management software, and get the entire team collaborating</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -680,10 +476,7 @@ const pagePrice = () => {
                                     </div>
                                     <div className="card-info">
                                         <h4 className="color-brand-1 mb-15">Daily Updates</h4>
-                                        <p className="font-md color-grey-500 mb-15">Share updates instantly within our project management software, and get the entire team collaborating</p><Link className="btn btn-default pl-0 font-sm-bold hover-up" href="#">Learn More
-                                            <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                            </svg></Link>
+                                        <p className="font-md color-grey-500 mb-15">Share updates instantly within our project management software, and get the entire team collaborating</p>
                                     </div>
                                 </div>
                             </div>
@@ -698,10 +491,7 @@ const pagePrice = () => {
                                     </div>
                                     <div className="card-info">
                                         <h4 className="color-brand-1 mb-15">24/7 Support</h4>
-                                        <p className="font-md color-grey-500 mb-15">Share updates instantly within our project management software, and get the entire team collaborating</p><Link className="btn btn-default pl-0 font-sm-bold hover-up" href="#">Learn More
-                                            <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                            </svg></Link>
+                                        <p className="font-md color-grey-500 mb-15">Share updates instantly within our project management software, and get the entire team collaborating</p>
                                     </div>
                                 </div>
                             </div>
@@ -716,10 +506,7 @@ const pagePrice = () => {
                                     </div>
                                     <div className="card-info">
                                         <h4 className="color-brand-1 mb-15">Weekly Reports</h4>
-                                        <p className="font-md color-grey-500 mb-15">Share updates instantly within our project management software, and get the entire team collaborating</p><Link className="btn btn-default pl-0 font-sm-bold hover-up" href="#">Learn More
-                                            <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                            </svg></Link>
+                                        <p className="font-md color-grey-500 mb-15">Share updates instantly within our project management software, and get the entire team collaborating</p>
                                     </div>
                                 </div>
                             </div>
@@ -870,18 +657,97 @@ const pagePrice = () => {
                         </div>
                     </div>
                 </section>
-                <section className="section mt-50">
+                                <section className="section mt-50">
                     <div className="container">
-                        <div className="box-newsletter">
-                            <div className="row align-items-center">
-                                <div className="col-lg-5 col-md-12">
-                                    <div className="box-image-newsletter"> <img className="img-main" src="assets/imgs/template/newsletter_img.png" alt="iori" />
+                        <div className="row align-items-end">
+                            <div className="col-lg-8 col-md-8">
+                                <h2 className="color-brand-1 mb-20">Project-Images with Description </h2>
+                                <p className="font-lg color-gray-500">Aenean velit nisl, aliquam eget diam eu, rhoncus tristique dolor.<br className="d-none d-lg-block" />Aenean vulputate sodales urna ut vestibulum</p>
+                            </div>
+                            <div className="col-lg-4 col-md-4 text-md-end text-start"><a className="btn btn-default font-sm-bold pl-0">View All
+                                <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg></a></div>
+                        </div>
+                        <div className="row mt-55">
+                            <div className="col-xl-3 col-lg-6 col-md-6">
+                                <div className="card-blog-grid card-blog-grid-2 hover-up">
+                                    <div className="card-image"><Link href="/blog-detail"><img src="assets/imgs/page/homepage2/news1.png" alt="iori" /></Link></div>
+                                    <div className="card-info"><Link href="/blog-detail">
+                                        <h6 className="color-brand-1">Easy Ways to Make Money While You Sleep</h6></Link>
+                                        <p className="font-sm color-grey-500 mt-20">Fusce dictum ullamcorper dui, id dignissim arcu volutpat vitae.</p>
+                                        <div className="mt-20 d-flex align-items-center border-top pt-20"><Link className="btn btn-border-brand-1 mr-15" href="/blog">Technology</Link><span className="date-post font-xs color-grey-300 mr-15">
+                                            <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>29 May 2022</span><span className="time-read font-xs color-grey-300">
+                                                <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>3 mins read</span></div>
                                     </div>
                                 </div>
-                                <div className="col-lg-6 col-md-12"><span className="font-lg color-brand-1">Newsletter</span>
-                                    <h2 className="color-brand-1 mb-15 mt-5">Subcribe our newsletter</h2>
-                                    <p className="font-md color-grey-500">By clicking the button, you are agreeing with our Term &amp; Conditions</p>
-                                    <button class="contact-button">Contact Us</button>
+                            </div>
+                            <div className="col-xl-3 col-lg-6 col-md-6">
+                                <div className="card-blog-grid card-blog-grid-2 hover-up">
+                                    <div className="card-image"><Link href="/blog-detail"><img src="assets/imgs/page/homepage2/news2.png" alt="iori" /></Link></div>
+                                    <div className="card-info"><Link href="/blog-detail">
+                                        <h6 className="color-brand-1">Tiktok video size guide: Everything you need to know</h6></Link>
+                                        <p className="font-sm color-grey-500 mt-20">Fusce dictum ullamcorper dui, id dignissim arcu volutpat vitae.</p>
+                                        <div className="mt-20 d-flex align-items-center border-top pt-20"><Link className="btn btn-border-brand-1 mr-15" href="/blog">Marketting</Link><span className="date-post font-xs color-grey-300 mr-15">
+                                            <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>29 May 2022</span><span className="time-read font-xs color-grey-300">
+                                                <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>3 mins read</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-xl-3 col-lg-6 col-md-6">
+                                <div className="card-blog-grid card-blog-grid-2 hover-up">
+                                    <div className="card-image"><Link href="/blog-detail"><img src="assets/imgs/page/homepage1/news2.png" alt="iori" /></Link></div>
+                                    <div className="card-info"><Link href="/blog-detail">
+                                        <h6 className="color-brand-1">How to convert video to MP4 for free online</h6></Link>
+                                        <p className="font-sm color-grey-500 mt-20">Fusce dictum ullamcorper dui, id dignissim arcu volutpat vitae.</p>
+                                        <div className="mt-20 d-flex align-items-center border-top pt-20"><Link className="btn btn-border-brand-1 mr-15" href="/blog">Media</Link><span className="date-post font-xs color-grey-300 mr-15">
+                                            <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>29 May 2022</span><span className="time-read font-xs color-grey-300">
+                                                <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>3 mins read</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-xl-3 col-lg-6 col-md-6">
+                                <div className="card-blog-grid card-blog-grid-2 hover-up">
+                                    <div className="card-image"><Link href="/blog-detail"><img src="assets/imgs/page/homepage2/news3.png" alt="iori" /></Link></div>
+                                    <div className="card-info"><Link href="/blog-detail">
+                                        <h6 className="color-brand-1">5 fastest ways to increase search engine rankings</h6></Link>
+                                        <p className="font-sm color-grey-500 mt-20">Fusce dictum ullamcorper dui, id dignissim arcu volutpat vitae.</p>
+                                        <div className="mt-20 d-flex align-items-center border-top pt-20"><Link className="btn btn-border-brand-1 mr-15" href="/blog">SEO</Link><span className="date-post font-xs color-grey-300 mr-15">
+                                            <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>29 May 2022</span><span className="time-read font-xs color-grey-300">
+                                                <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>3 mins read</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="section mt-100 mb-100">
+                    <div className="container">
+                        <div className="box-radius-border box-radius-border-help">
+                            <div className="row align-items-center">
+                                <div className="col-xl-6 col-lg-6"><img className="d-block" src="assets/imgs/page/help/answer.png" alt="iori" /></div>
+                                <div className="col-xl-6 col-lg-6">
+                                    <div className="box-info-answer">
+                                        <h2 className="color-brand-1 mt-10 mb-15">Ready to Validate Your AI?</h2>
+                                        <p className="color-grey-500 font-xl">Let our workforce evaluate your model with precision and care.</p>
+                                        <div className="box-button mt-30"> <Link className="btn btn-brand-1 hover-up font-md" href="#">Contact Us</Link></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

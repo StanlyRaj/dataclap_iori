@@ -111,7 +111,6 @@ const LLMEvals = () => {
                         <div className="row box-list-core-value">
                             <div className="col-lg-4 mb-70">
                                 <div className="box-core-value">
-                                    <div className="shape-left shape-1" />
                                     <h3 className="color-brand-1 mb-15">Why Choose Us?</h3>
                                     <p className="font-md color-grey-400">We break down barriers so teams can focus on what matters – working together to create products their customers love.</p>
                                 </div>
