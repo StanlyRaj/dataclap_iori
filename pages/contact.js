@@ -72,25 +72,17 @@ const ContactUs = () => {
             </Head>
 
             <Layout>
-                <section className="section banner-5">
-                        <div className="container">
-                            <div className="mt-65 pb-70 mb-100">
-                            <div className="row align-items-end">
-                                <div className="col-lg-6 mb-20">
-                                <span className="title-line color-brand-2">Great sales platform</span>
-                                <h2 className="color-brand-2 mt-10">
-                                    #1 Intelligence Software to Accelerate Your SaaS Sales
-                                </h2>
-                                </div>
-                                <div className="col-lg-6 mb-20">
-                                <p className="font-lg color-grey-50">
-                                    We're lively, not corporate. We have the energy and boldness of a startup 
-                                    and the expertise and pragmatism of a scale-up. All in one place.
-                                </p>
-                                </div>
+                <section className="section bg-brand-1 box-why-trusted-11">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-xl-5 col-lg-5 mb-30">
+                                <h2 className="color-white mb-5">See why we are <br className="d-none d-lg-block" />trusted the world over</h2>
                             </div>
+                            <div className="col-xl-7 col-lg-7 mb-30">
+                                <p className="font-lg color-white mb-20">Et quaerat deserunt et numquam voluptatem et laborum consectetur non consequatur temporibus ea repellat nihil vel consectetur dolores et rerum voluptas. Nam voluptas reiciendis non laborum perspiciatis eum omnis cumque ab impedit earum ex quos porro sit dolorem cupiditate ut ducimus autem.</p>
                             </div>
                         </div>
+                    </div>
                 </section>
                 <section className="section mt-70">
                     <div className="container">
