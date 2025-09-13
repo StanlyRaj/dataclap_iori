@@ -9,7 +9,7 @@ const ImageAnno = () => {
     return (
         <>
             <Layout>
-            <section className="section banner-5">
+                <section className="section banner-5">
                     <div className="container">
                         <div className="mt-65 mb-100">
                             <div className="row align-items-end">
@@ -20,17 +20,116 @@ const ImageAnno = () => {
                                     </h2>
                                 </div>
                                 <div className="col-lg-6 mb-20">
-                                    <p className="font-md color-grey-50 ">
-                                        We have worked on more than a million images and tens of thousands of hours of video data providing annotations for some of the most advanced applications of computer vision. DataClap’s goal for consistent data handling will make your machine learning classifiers more accurate.
+                                    <p className="color-grey-50">
+                                        We have worked on more than a million images and tens of thousands of hours of video data providing annotations for some of the most advanced applications of computer vision. DataClap's goal for consistent data handling will make your machine learning classifiers more accurate.
                                     </p>
                                 </div>
                             </div>
                             
-                            <div className="box-video-banner">
+                            <div className="box-video-banner-responsive">
                                 <ImageSlider />
                             </div>
                         </div>
                     </div>
+
+                    <style jsx>{`
+                        .box-video-banner-responsive {
+                            width: 100%;
+                            margin: 40px 0 0 0;
+                            padding: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        /* Desktop and tablet */
+                        @media (min-width: 769px) {
+                            .box-video-banner-responsive {
+                                margin: 50px 0 0 0;
+                            }
+                        }
+
+                        /* Mobile devices */
+                        @media (max-width: 768px) {
+                            .section.banner-5 .container {
+                                padding-left: 15px;
+                                padding-right: 15px;
+                            }
+
+                            .box-video-banner-responsive {
+                                margin: 30px 0 0 0;
+                                padding: 0;
+                            }
+
+                            /* Ensure text sections are also responsive */
+                            .col-lg-6.mb-20 {
+                                margin-bottom: 25px !important;
+                            }
+
+                            .mt-65 {
+                                margin-top: 40px !important;
+                            }
+
+                            .mb-100 {
+                                margin-bottom: 60px !important;
+                            }
+                        }
+
+                        /* Small mobile devices */
+                        @media (max-width: 480px) {
+                            .section.banner-5 .container {
+                                padding-left: 10px;
+                                padding-right: 10px;
+                            }
+
+                            .box-video-banner-responsive {
+                                margin: 25px 0 0 0;
+                            }
+
+                            .mt-65 {
+                                margin-top: 30px !important;
+                            }
+
+                            .mb-100 {
+                                margin-bottom: 40px !important;
+                            }
+
+                            .col-lg-6.mb-20 {
+                                margin-bottom: 20px !important;
+                            }
+
+                            /* Adjust text for better mobile readability */
+                            .color-brand-2.mt-10 {
+                                font-size: 1.8rem;
+                                line-height: 1.3;
+                            }
+
+                            .font-md {
+                                font-size: 0.95rem;
+                                line-height: 1.5;
+                            }
+                        }
+
+                        /* Extra small devices */
+                        @media (max-width: 360px) {
+                            .section.banner-5 .container {
+                                padding-left: 8px;
+                                padding-right: 8px;
+                            }
+
+                            .box-video-banner-responsive {
+                                margin: 20px 0 0 0;
+                            }
+
+                            .color-brand-2.mt-10 {
+                                font-size: 1.6rem;
+                            }
+
+                            .font-md {
+                                font-size: 0.9rem;
+                            }
+                        }
+                    `}</style>
                 </section>
                 <section className="section mt-110">
                     <div className="container">

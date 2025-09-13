@@ -41,9 +41,9 @@ const ImageSlider = () => {
         clearInterval(intervalRef.current);
       }
     };
-  }, [currentSlide]); // Reset timer when slide changes
+  }, [currentSlide]);
 
-  // Handle slider positioning
+  // Handle slider positioning (matching original VideoSlider logic)
   useEffect(() => {
     if (containerRef.current) {
       const translateValue = -currentSlide * (100 / images.length);
@@ -107,6 +107,7 @@ const ImageSlider = () => {
           margin: 0 auto;
           position: relative;
           padding: 0 20px;
+          box-sizing: border-box;
         }
 
         .video-slider-container {
@@ -117,18 +118,21 @@ const ImageSlider = () => {
           box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
           position: relative;
           background: #000;
+          box-sizing: border-box;
         }
 
         .video-slides {
           height: 100%;
           display: flex;
           transition: transform 0.5s ease-in-out;
+          box-sizing: border-box;
         }
 
         .video-slide {
           height: 100%;
           flex-shrink: 0;
           position: relative;
+          box-sizing: border-box;
         }
 
         .slider-video {
@@ -136,6 +140,7 @@ const ImageSlider = () => {
           height: 100%;
           object-fit: cover;
           display: block;
+          box-sizing: border-box;
         }
 
         .slider-controls-overlay {
@@ -152,6 +157,7 @@ const ImageSlider = () => {
           border-radius: 50px;
           width: fit-content;
           z-index: 10;
+          box-sizing: border-box;
         }
 
         .control-btn {
@@ -168,6 +174,7 @@ const ImageSlider = () => {
           transition: all 0.3s ease;
           backdrop-filter: blur(5px);
           border: 2px solid rgba(255, 255, 255, 0.3);
+          box-sizing: border-box;
         }
 
         .control-btn:hover {
@@ -183,6 +190,7 @@ const ImageSlider = () => {
         .slide-dots {
           display: flex;
           gap: 12px;
+          box-sizing: border-box;
         }
 
         .dot {
@@ -193,6 +201,7 @@ const ImageSlider = () => {
           background: rgba(255, 255, 255, 0.5);
           cursor: pointer;
           transition: all 0.3s ease;
+          box-sizing: border-box;
         }
 
         .dot:hover {
@@ -205,9 +214,11 @@ const ImageSlider = () => {
           transform: scale(1.3);
         }
 
+        /* Tablet breakpoint */
         @media (max-width: 1024px) {
           .video-slider-wrapper {
             max-width: 1000px;
+            padding: 0 20px;
           }
           
           .video-slider-container {
@@ -215,14 +226,17 @@ const ImageSlider = () => {
           }
         }
 
+        /* Mobile breakpoint */
         @media (max-width: 768px) {
           .video-slider-wrapper {
             max-width: 100%;
             padding: 0 15px;
+            margin: 0 auto;
           }
           
           .video-slider-container {
             height: 400px;
+            border-radius: 15px;
           }
           
           .control-btn {
@@ -236,11 +250,27 @@ const ImageSlider = () => {
             padding: 15px 25px;
             bottom: 15px;
           }
+
+          .slide-dots {
+            gap: 10px;
+          }
+
+          .dot {
+            width: 12px;
+            height: 12px;
+          }
         }
 
+        /* Small mobile breakpoint */
         @media (max-width: 480px) {
+          .video-slider-wrapper {
+            padding: 0 10px;
+            max-width: 100%;
+          }
+
           .video-slider-container {
             height: 300px;
+            border-radius: 12px;
           }
           
           .control-btn {
@@ -256,8 +286,44 @@ const ImageSlider = () => {
           }
           
           .dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
+          }
+
+          .slide-dots {
+            gap: 8px;
+          }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 360px) {
+          .video-slider-wrapper {
+            padding: 0 8px;
+          }
+
+          .video-slider-container {
+            height: 280px;
+            border-radius: 10px;
+          }
+
+          .control-btn {
+            width: 36px;
+            height: 36px;
+          }
+
+          .slider-controls-overlay {
+            gap: 12px;
+            padding: 10px 16px;
+            bottom: 8px;
+          }
+
+          .dot {
+            width: 8px;
+            height: 8px;
+          }
+
+          .slide-dots {
+            gap: 6px;
           }
         }
       `}</style>
