@@ -1,265 +1,147 @@
-import React, { useState } from 'react';
-import Layout from "../components/layout/Layout";
-import Link from 'next/link';
-import ImageSlider from '../components/slider/ImageSlider';
-import Offer3 from '../components/slider/Offer3';
+import React from 'react';
+import SwiperCore, { Autoplay, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const ImageAnno = () => {
-    const [isOpen, setOpen] = useState(false)
+SwiperCore.use([Autoplay, Navigation]);
+const Offer3 = () => {
+
+    const data = [
+        {
+            title: "Agriculture",
+            color: "head-bg-2",
+            description: "We help enable precision agriculture with our high quality annotation services that extracts information from image and video data. Our data enables AI models that improves yield, reduces wastage and water usage and protect crops from diseases.",
+            link: "/agriculture-services"
+        },
+        {
+            title: "E Commerce",
+            color: "head-bg-5",
+            description: "E commerce and content companies leverage our annotation services to improve the performance of their models for product and content recommendations.",
+            link: "/ecommerce-solutions"
+        },
+        {
+            title: "ADAS",
+            color: "head-bg-3",
+            description: "Autonomous vehicle technology will revolutionize the way people move by improving safety and efficiency. Some of our annotation capabilities include 2D and 3D bounding boxes, image segmentation, sensor fusion, 3D point cloud annotation and lane marking.",
+            link: "/adas-solutions"
+        },
+        {
+            title: "Geospatial",
+            color: "head-bg-4",
+            description: "Training data annotated by us enable computer vision based solutions that are used by geospatial companies to extract intelligence and insights from ultra high-volume satellite, aerial and drone imagery to optimize decision making for industries such as insurance, financial services and energy.",
+            link: "/geospatial-services"
+        },
+        {
+            title: "Insurance",
+            color: "head-bg-1",
+            description: "The Banking, Financial and Insurance sectors use AI, Machine Learning and Computer Vision solutions to improve operations and serve their customers in a better way. We help them build better AI.",
+            link: "/insurance-solutions"
+        },
+        {
+            title: "Manufacturing",
+            color: "head-bg-7",
+            description: "AI plays a big part in Industry 4.0 and our annotation services are helping the manufacturing industry in adopting new technologies to improve quality and efficiency.",
+            link: "/manufacturing-services"
+        },
+    ];
+
     return (
         <>
-            <Layout>
-            <section className="section banner-5">
-                    <div className="container">
-                        <div className="mt-65 mb-100">
-                            <div className="row align-items-end">
-                                <div className="col-lg-6 mb-20">
-                                    <span className="title-line color-brand-2">Image Annotation</span>
-                                    <h2 className="color-brand-2 mt-10">
-                                        Make the most of your <br />Image Data
-                                    </h2>
+            <style jsx>{`
+                .card-offer-style-3 {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .card-offer-style-3 .card-info {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .card-offer-style-3 .card-info p {
+                    flex: 1;
+                    display: flex;
+                    align-items: flex-start;
+                }
+                
+                .swiper-slide {
+                    height: auto;
+                    display: flex;
+                }
+            `}</style>
+            
+            <Swiper
+                slidesPerView={4}
+                spaceBetween={30}
+                loop={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false
+                }}
+                navigation={{
+                    prevEl: ".swiper-button-prev",
+                    nextEl: ".swiper-button-next",
+                }}
+                breakpoints={{
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                    },
+                    575: {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                    },
+                    767: {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                    },
+                    991: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1199: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    1350: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    },
+                }}
+                className="swiper-wrapper"
+            >
+                {data.map((item, i) => (
+                    <SwiperSlide key={i} className={`swiper-slide`}>
+                        <div className="card-offer-style-3">
+                            <div className="card-head bg-13">
+                                <div className="card-title">
+                                    <h4 className="color-brand-1">{item.title}</h4>
                                 </div>
-                                <div className="col-lg-6 mb-20">
-                                    <p className="font-md color-grey-50 ">
-                                        We have worked on more than a million images and tens of thousands of hours of video data providing annotations for some of the most advanced applications of computer vision. DataClap’s goal for consistent data handling will make your machine learning classifiers more accurate.
-                                    </p>
-                                </div>
                             </div>
-                            
-                            <div className="box-video-banner">
-                                <ImageSlider />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className="section mt-110">
-                    <div className="container">
-                        <div className="row align-items-end">
-                            <div className="col-lg-6 mb-20">
-                                <h2 className="color-brand-1 mb-0">Annotation Types</h2>
-                                <p className="color-grey-500 font-lg mt-20">
-                                    Here are some types of image annotations we provide.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* First Row of Cards */}
-                        <div className="row mt-45">
-                            <div className="col-lg-4">
-                                <div className="image-showcase-card-dynamic">
-                                    <div className="image-showcase-top-dynamic">
-                                        <img 
-                                            src="assets/imgs/page/homepage6/human1.png" 
-                                            alt="Cross Platform" 
-                                            className="image-showcase-photo-dynamic"
-                                        />
-                                    </div>
-                                    <div className="image-showcase-content-dynamic">
-                                        <h4 className="image-showcase-title-dynamic">Bounding Boxes</h4>
-                                        <div className="image-showcase-divider-dynamic"></div>
-                                        <p className="image-showcase-description-dynamic">
-                                            Discover powerful features to boost your productivity. You are always welcome to visit our little den.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div className="col-lg-4">
-                                <div className="image-showcase-card-dynamic">
-                                    <div className="image-showcase-top-dynamic">
-                                        <img 
-                                            src="assets/imgs/page/homepage6/human2.png" 
-                                            alt="Team Collaboration" 
-                                            className="image-showcase-photo-dynamic"
-                                        />
-                                    </div>
-                                    <div className="image-showcase-content-dynamic">
-                                        <h4 className="image-showcase-title-dynamic">Image Segmentation</h4>
-                                        <div className="image-showcase-divider-dynamic"></div>
-                                        <p className="image-showcase-description-dynamic">
-                                            Streamline your team's workflow with advanced collaboration tools and seamless integration.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div className="col-lg-4">
-                                <div className="image-showcase-card-dynamic">
-                                    <div className="image-showcase-top-dynamic">
-                                        <img 
-                                            src="assets/imgs/page/homepage6/human3.png" 
-                                            alt="Analytics Dashboard" 
-                                            className="image-showcase-photo-dynamic"
-                                        />
-                                    </div>
-                                    <div className="image-showcase-content-dynamic">
-                                        <h4 className="image-showcase-title-dynamic">Semantic Segmentation</h4>
-                                        <div className="image-showcase-divider-dynamic"></div>
-                                        <p className="image-showcase-description-dynamic">
-                                            Get comprehensive insights with detailed reporting and real-time performance metrics.
-                                        </p>
-                                    </div>
+                            <div className="card-info">
+                                <p className="font-xl color-grey-500 mt-10 mb-15">{item.description}</p>
+                                <div className="box-button-offer">
                                 </div>
                             </div>
                         </div>
-
-                        {/* Second Row of Cards */}
-                        <div className="row mt-45">
-                            <div className="col-lg-4">
-                                <div className="image-showcase-card-dynamic">
-                                    <div className="image-showcase-top-dynamic">
-                                        <img 
-                                            src="assets/imgs/page/homepage12/human1.png" 
-                                            alt="Project Management" 
-                                            className="image-showcase-photo-dynamic"
-                                        />
-                                    </div>
-                                    <div className="image-showcase-content-dynamic">
-                                        <h4 className="image-showcase-title-dynamic">Cuboids</h4>
-                                        <div className="image-showcase-divider-dynamic"></div>
-                                        <p className="image-showcase-description-dynamic">
-                                            Organize and track your projects with powerful management tools and intuitive workflows.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div className="col-lg-4">
-                                <div className="image-showcase-card-dynamic">
-                                    <div className="image-showcase-top-dynamic">
-                                        <img 
-                                            src="assets/imgs/page/homepage12/human2.png" 
-                                            alt="Customer Support" 
-                                            className="image-showcase-photo-dynamic"
-                                        />
-                                    </div>
-                                    <div className="image-showcase-content-dynamic">
-                                        <h4 className="image-showcase-title-dynamic">Key Points</h4>
-                                        <div className="image-showcase-divider-dynamic"></div>
-                                        <p className="image-showcase-description-dynamic">
-                                            Deliver exceptional customer experiences with comprehensive support and communication tools.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div className="col-lg-4">
-                                <div className="image-showcase-card-dynamic">
-                                    <div className="image-showcase-top-dynamic">
-                                        <img 
-                                            src="assets/imgs/page/homepage12/human3.png" 
-                                            alt="Data Security" 
-                                            className="image-showcase-photo-dynamic"
-                                        />
-                                    </div>
-                                    <div className="image-showcase-content-dynamic">
-                                        <h4 className="image-showcase-title-dynamic">Lines and splines</h4>
-                                        <div className="image-showcase-divider-dynamic"></div>
-                                        <p className="image-showcase-description-dynamic">
-                                            Protect your valuable data with enterprise-grade security and compliance features.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                                <section className="section mt-100">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12 text-center">
-                                <h2 className="color-brand-1 mb-20">Industries We Serve</h2>
-                                <p className="font-lg color-gray-500">
-                                    What makes us different from others? We give holistic solutions
-                                    <br className="d-none d-lg-block" />
-                                    with strategy, design &amp; technology.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="mt-50">
-                            <div className="box-swiper">
-                                <div className="swiper-container swiper-group-4">
-                                    <Offer3 />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className="section mt-30 pb-50 bg-core-value">
-                    <div className="container">
-                        <div className="row box-list-core-value">
-                            <div className="col-lg-4 mb-70">
-                                <div className="box-core-value">
-                                    <h3 className="color-brand-1 mb-15">Our Advantages</h3>
-                                    <p className="font-md color-grey-400">Understand why our clients choose to work with us</p>
-                                </div>
-                            </div>
-                            <div className="col-lg-4">
-                                <ul className="list-core-value">
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Optimized for Quality</h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">We have a two layer QC process that ensures the quality of the output. This is enabled by a short feedback loop process.</p>
-                                        </div>
-                                    </li>
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">End to End Solutions</h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">From data collection and cleaning to data annotation, we offer ened to end solutions for your training data needs.</p>
-                                        </div>
-                                    </li>
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Cost Efficient</h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">Our pricing is transparent and economical. We are more economical thatn contract workers and large annotation platforms.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="col-lg-4">
-                                <ul className="list-core-value">
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Completely Managed</h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">Our services are completely managed with dedicated account managers to ensure smooth operations.</p>
-                                        </div>
-                                    </li>
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Scalable Workforce</h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">Start with a single person and grow with us. We scale up our team based on your demands.</p>
-                                        </div>
-                                    </li>
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Data Security</h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">Data security is of paramount importance. We are GDPR compliant and are ISO 27001 certified.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className="section mt-100 mb-100">
-                    <div className="container">
-                        <div className="box-radius-border box-radius-border-help">
-                            <div className="row align-items-center">
-                                <div className="col-xl-6 col-lg-6"><img className="d-block" src="assets/imgs/page/help/answer.png" alt="iori" /></div>
-                                <div className="col-xl-6 col-lg-6">
-                                    <div className="box-info-answer">
-                                        <h2 className="color-brand-1 mt-10 mb-15">Ready to Validate Your AI?</h2>
-                                        <p className="color-grey-500 font-xl">Let our workforce evaluate your model with precision and care.</p>
-                                        <div className="box-button mt-30"> <Link className="btn btn-brand-1 hover-up font-md" href="#">Contact Us</Link></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </Layout>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+            <div className="box-button-slider-bottom">
+                <div className="swiper-button-prev swiper-button-prev-group-4">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </div>
+                <div className="swiper-button-next swiper-button-next-group-4">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </div>
+            </div>
         </>
     );
 };
 
-export default ImageAnno;
+export default Offer3;
