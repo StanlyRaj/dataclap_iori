@@ -9851,213 +9851,186 @@ footer.footer-4 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* //////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////// */ 
 
-/* //////////////////////////////////////////////////////////////// */ 
-/* //////////////////////////////////////////////////////////////// */ 
-
-
-
-
-
-
-/* //////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////// */ 
-
-/* ///////////////////////// VIDEO-SLIDER ///////////////////////// */ 
+/* ///////////  Image- Annotation Inudstry Cards //////////// */ 
 
 /* //////////////////////////////////////////////////////////////// */ 
 /* //////////////////////////////////////////////////////////////// */ 
 
 
 
-/* Video Slider Container */
-.video-slider-shell {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin: 0 auto;
+/* Additional CSS for Consistent Card Sizing in Offer3 */
+/* These styles work WITH your existing .card-offer-style-3 styles */
+
+/* Enhanced main card container for consistent height */
+.card-offer-style-3 {
+    height: 100% !important;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
 }
 
-/* Video Frame Container */
-.video-frame {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  border-radius: 20px;
-  box-shadow: 0 16px 40px rgba(17, 24, 39, 0.2);
-  background: #000;
-  overflow: hidden;
+.card-offer-style-3:hover {
+    transform: translateY(-5px);
 }
 
-/* Slider Wrapper - Controls overflow */
-.slider-wrapper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
+/* Enhanced card header - works with your existing padding and background */
+.card-offer-style-3 .card-head {
+    flex-shrink: 0; /* Prevent header from shrinking */
+    min-height: 90px; /* Consistent header height */
+    align-items: center; /* Override your flex-end to center */
 }
 
-/* Slides Container - Horizontal layout */
-.slides-container {
-  display: flex;
-  width: 300%; /* 3 videos × 100% = 300% */
-  height: 100%;
-  transition: transform 0.3s ease-in-out;
-  flex-shrink: 0;
+.card-offer-style-3 .card-title {
+    width: 100%;
 }
 
-/* Individual Slide */
-.slide {
-  width: 33.33%; /* 100% ÷ 3 videos = 33.33% */
-  height: 100%;
-  flex-shrink: 0;
-  display: block;
-  position: relative;
+.card-offer-style-3 .card-title h4 {
+    margin: 0;
+    line-height: 1.3;
 }
 
-/* Video Element */
-.video-element {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border: none;
-  outline: none;
+/* Enhanced card content area - works with your existing padding */
+.card-offer-style-3 .card-info {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Your existing padding: 30px 30px 15px 30px; is preserved */
 }
 
-/* Navigation Container */
-.navigation-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 12px 24px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 50px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+/* Description text with consistent height - works with your .font-xl class */
+.card-offer-style-3 .card-info p.font-xl {
+    flex: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limit to 4 lines for consistency */
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    /* Your existing font-xl and color-grey-500 styles are preserved */
 }
 
-/* Navigation Buttons */
-.nav-button {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #2563eb;
-  color: white;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+/* Override margin classes for better vertical control */
+.card-offer-style-3 .card-info p.mt-10 {
+    margin-top: 0 !important;
 }
 
-.nav-button:hover {
-  background: #1d4ed8;
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+.card-offer-style-3 .card-info p.mb-15 {
+    margin-bottom: 15px !important;
 }
 
-.nav-button:active {
-  transform: scale(0.95);
+/* Button area - always at bottom */
+.card-offer-style-3 .box-button-offer {
+    margin-top: auto;
+    min-height: 20px; /* Reserve minimal space */
 }
 
-/* Indicators Container */
-.indicators {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+/* Ensure Swiper slides maintain equal height */
+.swiper-wrapper {
+    align-items: stretch;
 }
 
-/* Individual Indicator */
-.indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: none;
-  background: #d1d5db;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.swiper-slide {
+    height: auto;
+    display: flex;
 }
 
-.indicator:hover {
-  background: #6b7280;
-  transform: scale(1.1);
+/* Responsive adjustments that respect your design system */
+@media (max-width: 1350px) {
+    .card-offer-style-3 {
+        min-height: 320px;
+    }
+    
+    .card-offer-style-3 .card-info p.font-xl {
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+    }
 }
 
-.indicator.active {
-  background: #2563eb;
-  transform: scale(1.3);
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+@media (max-width: 1199px) {
+    .card-offer-style-3 {
+        min-height: 300px;
+    }
+    
+    .card-offer-style-3 .card-head {
+        min-height: 85px;
+    }
+    
+    .card-offer-style-3 .card-info p.font-xl {
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+    }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .video-frame {
-    height: 300px;
-    border-radius: 16px;
-  }
-  
-  .navigation-container {
-    padding: 8px 16px;
-    gap: 12px;
-  }
-  
-  .nav-button {
-    width: 36px;
-    height: 36px;
-  }
-  
-  .indicator {
-    width: 10px;
-    height: 10px;
-  }
+@media (max-width: 991px) {
+    .card-offer-style-3 {
+        min-height: 280px;
+    }
+    
+    .card-offer-style-3 .card-head {
+        min-height: 80px;
+    }
+    
+    .card-offer-style-3 .card-info p.font-xl {
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+    }
 }
 
-@media (max-width: 480px) {
-  .video-frame {
-    height: 250px;
-    border-radius: 12px;
-  }
-  
-  .video-slider-shell {
-    gap: 16px;
-  }
-  
-  .navigation-container {
-    gap: 10px;
-    padding: 6px 12px;
-  }
+@media (max-width: 767px) {
+    .card-offer-style-3 {
+        min-height: 260px;
+    }
+    
+    .card-offer-style-3 .card-head {
+        min-height: 75px;
+    }
+    
+    .card-offer-style-3 .card-info p.font-xl {
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        font-size: 18px; /* Slightly smaller on mobile */
+    }
 }
 
-/* Loading State */
-.video-element:not([src]) {
-  background: #f3f4f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 575px) {
+    .card-offer-style-3 {
+        min-height: 240px;
+    }
+    
+    .card-offer-style-3 .card-head {
+        min-height: 70px;
+    }
+    
+    .card-offer-style-3 .card-info p.font-xl {
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
-.video-element:not([src])::before {
-  content: "Loading...";
-  color: #6b7280;
-  font-size: 16px;
-}
 
-/* Focus States for Accessibility */
-.nav-button:focus,
-.indicator:focus {
-  outline: 2px solid #2563eb;
-  outline-offset: 2px;
-}
+
+
+
+
+
 
 /* //////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////// */ 

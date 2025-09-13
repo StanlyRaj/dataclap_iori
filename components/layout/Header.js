@@ -33,7 +33,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                                         <h4>Pre-trained</h4>
                                                         <ul>
                                                             <li><Link href="/LLM-Evals">LLM EVALUATIONS</Link></li>
-                                                            <li><Link href="/index-11">IMAGE ANNOTATIONS</Link></li>
+                                                            <li><Link href="/Image-Anno">IMAGE ANNOTATIONS</Link></li>
                                                             <li><Link href="/index-11">SUPERVISED FINE TUNING</Link></li>
                                                         </ul>
                                                     </div>
@@ -61,16 +61,16 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                                 <li><Link href="/industry">Retail</Link></li>
                                                 <li><Link href="/industry">Geospatial</Link></li>
                                                 <li><Link href="/industry">Robotics</Link></li>
-                                                <li><Link href="/index-11">Mapping</Link></li>
-                                                <li><Link href="/index-11">Social Media</Link></li>
-                                                <li><Link href="/index-11">Manufacturing</Link></li>
-                                                <li><Link href="/index-11">Agriculture</Link></li>
-                                                <li><Link href="/index-11">Sports & Media</Link></li>
-                                                <li><Link href="/index-11">Finance & Insurance</Link></li>
-                                                <li><Link href="/index-11">Customer Service</Link></li>
-                                                <li><Link href="/index-11">RPA</Link></li>
-                                                <li><Link href="/index-11">Asset Management</Link></li>
-                                                <li><Link href="/index-11">Physical AI</Link></li>
+                                                <li><Link href="/industry">Mapping</Link></li>
+                                                <li><Link href="/industry">Social Media</Link></li>
+                                                <li><Link href="/industry">Manufacturing</Link></li>
+                                                <li><Link href="/industry">Agriculture</Link></li>
+                                                <li><Link href="/industry">Sports & Media</Link></li>
+                                                <li><Link href="/industry">Finance & Insurance</Link></li>
+                                                <li><Link href="/industry">Customer Service</Link></li>
+                                                <li><Link href="/industry">RPA</Link></li>
+                                                <li><Link href="/industry">Asset Management</Link></li>
+                                                <li><Link href="/industry">Physical AI</Link></li>
                                             </ul>
                                         </li>
                                         <li className="has-children"><Link href="#">Resources</Link>
