@@ -288,6 +288,206 @@ const pagePrice = () => {
                         </div>
                     </div>
                 </section>
+                <section className="section mt-100">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12 text-center">
+                                <h2 className="color-brand-1 mb-20">Why Clients Choose Dataclap</h2>
+                                <p className="font-lg color-gray-500">What makes us different from others? We give holistic solutions<br className="d-none d-lg-block" />with strategy, design &amp; technology.</p>
+                            </div>
+                        </div>
+                        <div className="row mt-50">
+                            <div className="col-lg-6">
+                                <div className="card-offer card-we-do hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage4/offer1.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-10"><Link className="color-brand-1" href="Seamless importing and round-tripping of Microsoft Project plans, Excel files & CSV files.">Free Pilot to validate quality & speed</Link></h4>
+                                        <p className="font-md color-grey-500 mb-5">Your site is not complete with only landings. Get essential inner pages using our ready demos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="card-offer card-we-do hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage4/offer2.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-10"><Link className="color-brand-1" href="What makes us different from others? We give holistic solutions with strategy, design & technology.">No Minimum Order Quantity – even 10 images are fine</Link></h4>
+                                        <p className="font-md color-grey-500 mb-5">Your site is not complete with only landings. Get essential inner pages</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="card-offer card-we-do hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage4/offer3.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-10"><Link className="color-brand-1" href="No lag time, no lost effort when priorities change, no email black hole. As team collaboration improves">Dedicated teams for ongoing projects</Link></h4>
+                                        <p className="font-md color-grey-500 mb-5">Your site is not complete with only landings. Get essential inner pages using our ready demos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="card-offer card-we-do hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage4/offer4.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-10"><Link className="color-brand-1" href="Share updates instantly within our project management software, and get the entire team collaborating">Platform agnostic – we work with your tools or ours</Link></h4>
+                                        <p className="font-md color-grey-500 mb-5">Your site is not complete with only landings. Get essential inner pages</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="card-offer card-we-do hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage4/offer5.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-10"><Link className="color-brand-1" href="Seamless importing and round-tripping of Microsoft Project plans, Excel files & CSV files.">100+ skilled annotators and global on-demand workforce</Link></h4>
+                                        <p className="font-md color-grey-500 mb-5">Your site is not complete with only landings. Get essential inner pages</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="card-offer card-we-do hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage4/offer6.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-10"><Link className="color-brand-1" href="What makes us different from others? We give holistic solutions with strategy, design & technology.">ISO 27001 certified & GDPR compliant</Link></h4>
+                                        <p className="font-md color-grey-500 mb-5">Your site is not complete with only landings. Get essential inner pages</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="card-offer card-we-do hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage4/offer5.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-10"><Link className="color-brand-1" href="Seamless importing and round-tripping of Microsoft Project plans, Excel files & CSV files.">SLAs and project managers for accountability</Link></h4>
+                                        <p className="font-md color-grey-500 mb-5">Your site is not complete with only landings. Get essential inner pages</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="card-offer card-we-do hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage4/offer6.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-10"><Link className="color-brand-1" href="What makes us different from others? We give holistic solutions with strategy, design & technology.">Subject matter experts (medical, engineering, STEM backgrounds)</Link></h4>
+                                        <p className="font-md color-grey-500 mb-5">Your site is not complete with only landings. Get essential inner pages</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* <div className="mt-40 mb-50 text-center"> <Link className="btn btn-brand-1 hover-up" href="#">Contact Sales </Link></div> */}
+                    </div>
+                </section>
+                <section className="section mt-100">
+                    <div className="container">
+                        <div className="row mt-50 align-items-center card-no-border">
+                            <div className="col-lg-6 mb-30">
+                                <h2 className="color-brand-1">What’s Included</h2>
+                                <div className="title-line mb-10 mt-10 font-md">We support a wide range of data types, annotation types, and services</div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="card-offer card-we-do hover-up ">
+                                    <div className="card-image mt-15"><img src="assets/imgs/page/homepage2/we-do3.png" alt="iori" /></div>
+                                    <div className="card-info mt-15">
+                                        <h4 className="color-brand-1 mb-10"><Link className="color-brand-1" href="What makes us different from others? We give holistic solutions with strategy, design & technology.">Data Types</Link></h4>
+                                        <p className="font-md color-grey-500 mb-5">Text, Image, Video, Audio, DICOM, Point Cloud</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="card-offer card-we-do hover-up">
+                                    <div className="card-image mt-15"><img src="assets/imgs/page/homepage2/we-do.png" alt="iori" /></div>
+                                    <div className="card-info mt-15">
+                                        <h4 className="color-brand-1 mb-10"><Link className="color-brand-1" href="No lag time, no lost effort when priorities change, no email black hole. As team collaboration improves">Annotation Types</Link></h4>
+                                        <p className="font-md color-grey-500 mb-5">Bounding boxes, Segmentation, Keypoints, Cuboids, Tracking, OCR, NER, Transcription & more</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="card-offer card-we-do hover-up">
+                                    <div className="card-image mt-15"><img src="assets/imgs/page/homepage2/we-do4.png" alt="iori" /></div>
+                                    <div className="card-info mt-15">
+                                        <h4 className="color-brand-1 mb-10"><Link className="color-brand-1" href="Share updates instantly within our project management software, and get the entire team collaborating">Additional Services</Link></h4>
+                                        <p className="font-md color-grey-500 mb-5">Data collection, Content moderation, RLHF, Red Teaming, Model fine-tuning</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="section mt-20 mb-40 mt-100">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12 text-center">
+                                <h2 className="color-brand-1 mb-20">Process Structure</h2>
+                                <p className="font-lg color-gray-500">Updated on September 24, 2023</p>
+                            </div>
+                        </div>
+                        <div className="table-box-help mt-50">
+                            <div className="table-responsive">
+                                <table className="table table-forum">
+                                    <thead>
+                                        <tr>
+                                            <th className="width-50">Process Structure</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div className="item-forum">
+                                                    <div className="item-image"> <img src="assets/imgs/page/homepage1/cross5.png" alt="iori" /></div>
+                                                    <div className="item-info">
+                                                        <h4 className="color-brand-1 mb-15">Consultation</h4>
+                                                        <p className="font-md color-grey-500">Share your project needs</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div className="item-forum">
+                                                    <div className="item-image"> <img src="assets/imgs/page/homepage2/creation.png" alt="iori" /></div>
+                                                    <div className="item-info">
+                                                        <h4 className="color-brand-1 mb-15">Free Pilot</h4>
+                                                        <p className="font-md color-grey-500">Try us risk-free</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div className="item-forum">
+                                                    <div className="item-image"> <img src="assets/imgs/page/homepage1/cross4.png" alt="iori" /></div>
+                                                    <div className="item-info">
+                                                        <h4 className="color-brand-1 mb-15">Feedback & Optimization</h4>
+                                                        <p className="font-md color-grey-500">Align with your expectations</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div className="item-forum">
+                                                    <div className="item-image"> <img src="assets/imgs/page/homepage1/cross2.png" alt="iori" /></div>
+                                                    <div className="item-info">
+                                                        <h4 className="color-brand-1 mb-15">Execution</h4>
+                                                        <p className="font-md color-grey-500">Scale with dedicated resources</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div className="item-forum">
+                                                    <div className="item-image"> <img src="assets/imgs/page/homepage3/certification.png" alt="iori" /></div>
+                                                    <div className="item-info">
+                                                        <h4 className="color-brand-1 mb-15">QC & Delivery</h4>
+                                                        <p className="font-md color-grey-500">3-tier quality checks, free rework if needed</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section className="section mt-50">
                     <div className="container">
                         <div className="text-center">
@@ -521,10 +721,7 @@ const pagePrice = () => {
                                     <h2 className="color-brand-1 mb-20">Frequently asked questions</h2>
                                     <p className="font-lg color-gray-500">Feeling inquisitive? Have a read through some of our FAQs or<br className="d-none d-lg-block" /> contact our supporters for help</p>
                                 </div>
-                                <div className="col-lg-4 col-md-4 text-md-end text-start"><a className="btn btn-default font-sm-bold pl-0">Contact Us
-                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                    </svg></a></div>
+                                <div className="col-lg-4 col-md-4 text-md-end text-start"></div>
                             </div>
                             <div className="row mt-50 mb-100">
                                 <div className="col-xl-3 col-lg-4">
@@ -550,10 +747,7 @@ const pagePrice = () => {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                             </svg></a></li>
                                     </ul>
-                                    <div className="mt-80 text-start mb-40"><Link className="btn btn-brand-1 hover-up" href="#">Contact Us</Link><a className="btn btn-default font-sm-bold hover-up" href="#">Support Center
-                                        <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                        </svg></a></div>
+                                    <div className="mt-80 text-start mb-40"><Link className="btn btn-brand-1 hover-up" href="#">Contact Us</Link></div>
                                 </div>
                                 <div className="col-xl-9 col-lg-8">
                                     <div className="tab-content tab-content-slider">

@@ -1,15 +1,70 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Accordion from '../components/elements/Accordion';
 import Layout from '../components/layout/Layout';
+import VideoSlider from '../components/slider/VideoSlider';
 
 const ContactUs = () => {
     const [activeIndex, setActiveIndex] = useState(1);
 
     const handleOnClick = (index) => {
-        setActiveIndex(index); // remove the curly braces
+        setActiveIndex(index);
     };
+
+    // HubSpot form integration
+    useEffect(() => {
+        // Function to load HubSpot script dynamically
+        const loadHubSpotScript = () => {
+            // Check if HubSpot script is already loaded
+            if (window.hbspt) {
+                createHubSpotForm();
+                return;
+            }
+
+            // Create script element
+            const script = document.createElement('script');
+            script.src = "//js.hsforms.net/forms/embed/v2.js"; // Replace with your actual HubSpot script URL
+            script.type = 'text/javascript';
+            script.charset = 'utf-8';
+            script.async = true;
+
+            // Add onload event to create form after script loads
+            script.onload = () => {
+                createHubSpotForm();
+            };
+
+            // Handle script load errors
+            script.onerror = () => {
+                console.error('Failed to load HubSpot script');
+            };
+
+            // Append script to document head
+            document.head.appendChild(script);
+        };
+
+        // Function to create HubSpot form
+        const createHubSpotForm = () => {
+            if (window.hbspt && window.hbspt.forms) {
+                window.hbspt.forms.create({
+                    portalId:  "7608056", // Replace with your actual portal ID
+                    formId:  "5dae9e3f-bb37-469d-8f5e-1a483b4b1ad2",   // Replace with your actual form ID
+                    region: "na1",   // Replace with your actual region
+                    target: '#hubspot-form-container' // Target the container div
+                });
+            }
+        };
+
+        // Load the script
+        loadHubSpotScript();
+
+        // Cleanup function (optional)
+        return () => {
+            // You can add cleanup logic here if needed
+            // Note: Usually we don't remove HubSpot scripts as they might be used elsewhere
+        };
+    }, []);
+
     return (
         <>
             <Head>
@@ -17,81 +72,25 @@ const ContactUs = () => {
             </Head>
 
             <Layout>
-                <section className="section banner-contact">
-                    <div className="container">
-                        <div className="banner-1">
-                            <div className="row align-items-center">
-                                <div className="col-lg-7"><span className="title-line line-48">Get in Touch</span>
-                                    <h1 className="color-brand-1 mb-20 mt-10">We’d love to hear<br className="d-none d-lg-block" />from you.</h1>
-                                    <div className="row">
-                                        <div className="col-lg-9">
-                                            <p className="font-md color-grey-500">Request a demo, ask a question, or get in touch here. If you’re interested in working at Iori Coporation, check out our<Link className="ml-3" href="/career"> careers page.</Link></p>
-                                        </div>
-                                    </div>
-                                    <div className="mt-30">
-                                        <h5 className="color-brand-1">Install App</h5>
-                                    </div>
-                                    <div className="box-button mt-20"><a className="btn-app mb-15 hover-up" href="#"><img src="assets/imgs/template/appstore-btn.png" alt="iori" /></a><a className="btn-app mb-15 hover-up" href="#"><img src="assets/imgs/template/google-play-btn.png" alt="iori" /></a><a className="btn btn-default mb-15 pl-10 font-sm-bold hover-up" href="#">Learn More
-                                        <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                        </svg></a></div>
+                <section className="section banner-5">
+                        <div className="container">
+                            <div className="mt-65 pb-70 mb-100">
+                            <div className="row align-items-end">
+                                <div className="col-lg-6 mb-20">
+                                <span className="title-line color-brand-2">Great sales platform</span>
+                                <h2 className="color-brand-2 mt-10">
+                                    #1 Intelligence Software to Accelerate Your SaaS Sales
+                                </h2>
                                 </div>
-                                <div className="col-lg-5 d-none d-lg-block">
-                                    <div className="box-banner-contact"><img src="assets/imgs/page/contact/banner.png" alt="iori" /></div>
+                                <div className="col-lg-6 mb-20">
+                                <p className="font-lg color-grey-50">
+                                    We're lively, not corporate. We have the energy and boldness of a startup 
+                                    and the expertise and pragmatism of a scale-up. All in one place.
+                                </p>
                                 </div>
+                            </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <section className="section mt-100">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-3 col-md-6 col-sm-6">
-                                <div className="card-small card-small-2">
-                                    <div className="card-image">
-                                        <div className="box-image"><img src="assets/imgs/page/contact/headphone.png" alt="iori" /></div>
-                                    </div>
-                                    <div className="card-info">
-                                        <h6 className="color-brand-1 mb-10">Help &amp; support</h6>
-                                        <p className="font-xs color-grey-500">Email <a className="color-success" href="mailto:support@alithemes.com">support@alithemes.com </a><br />For help with a current product or service or refer to FAQs and developer tools</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 col-sm-6">
-                                <div className="card-small card-small-2">
-                                    <div className="card-image">
-                                        <div className="box-image"><img src="assets/imgs/page/contact/phone.png" alt="iori" /></div>
-                                    </div>
-                                    <div className="card-info">
-                                        <h6 className="color-brand-1 mb-10">Call Us</h6>
-                                        <p className="font-xs color-grey-500">Call us to speak to a member of our team.<br />(+01) 234 567 89<br />(+01) 456 789 21</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 col-sm-6">
-                                <div className="card-small card-small-2">
-                                    <div className="card-image">
-                                        <div className="box-image"><img src="assets/imgs/page/contact/chart.png" alt="iori" /></div>
-                                    </div>
-                                    <div className="card-info">
-                                        <h6 className="color-brand-1 mb-10">Bussiness Department</h6>
-                                        <p className="font-xs color-grey-500">Contact the sales department about cooperation projects<br />(+01) 789 456 23</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 col-sm-6">
-                                <div className="card-small card-small-2">
-                                    <div className="card-image">
-                                        <div className="box-image"><img src="assets/imgs/page/contact/earth.png" alt="iori" /></div>
-                                    </div>
-                                    <div className="card-info">
-                                        <h6 className="color-brand-1 mb-10">Global branch</h6>
-                                        <p className="font-xs color-grey-500">Contact us to open our branches globally.<br />(+01) 234 567 89<br />(+01) 456 789 23</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </section>
                 <section className="section mt-70">
                     <div className="container">
@@ -125,46 +124,12 @@ const ContactUs = () => {
                             </div>
                             <div className="col-lg-7">
                                 <div className="box-form-contact">
-                                    <div className="row">
-                                        <div className="col-lg-6 col-sm-6">
-                                            <div className="form-group mb-25">
-                                                <input className="form-control icon-user" type="text" placeholder="Your name" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6 col-sm-6">
-                                            <div className="form-group mb-25">
-                                                <input className="form-control icon-email" type="text" placeholder="Email" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6 col-sm-6">
-                                            <div className="form-group mb-25">
-                                                <input className="form-control icon-phone" type="text" placeholder="Phone" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6 col-sm-6">
-                                            <div className="form-group mb-25">
-                                                <input className="form-control icon-company" type="text" placeholder="Company" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-12">
-                                            <div className="form-group mb-25">
-                                                <input className="form-control" type="text" placeholder="Subject" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-12">
-                                            <div className="form-group mb-25">
-                                                <textarea className="form-control textarea-control" placeholder="Write something" defaultValue={""} />
-                                            </div>
-                                        </div>
-                                        <div className="col-xl-4 col-lg-5 col-md-5 col-sm-6 col-9">
-                                            <div className="form-group">
-                                                <button className="btn btn-brand-1-full font-sm" type="submit">Send message
-                                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
+                                    {/* HubSpot form will be injected here */}
+                                    <div id="hubspot-form-container"></div>
+                                    
+                                    {/* Loading message while HubSpot form loads */}
+                                    <div id="form-loading" style={{padding: '20px', textAlign: 'center', color: '#666'}}>
+                                        Loading contact form...
                                     </div>
                                 </div>
                             </div>
@@ -179,10 +144,6 @@ const ContactUs = () => {
                                     <h2 className="color-brand-1 mb-20">Frequently asked questions</h2>
                                     <p className="font-lg color-gray-500">Feeling inquisitive? Have a read through some of our FAQs or<br className="d-none d-lg-block" /> contact our supporters for help</p>
                                 </div>
-                                <div className="col-lg-4 col-md-4 text-md-end text-start"><a className="btn btn-default font-sm-bold pl-0">Contact Us
-                                    <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                    </svg></a></div>
                             </div>
                             <div className="row mt-50 mb-100">
                                 <div className="col-xl-3 col-lg-4">
@@ -208,10 +169,7 @@ const ContactUs = () => {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg></a></li>
                                 </ul>
-                                    <div className="mt-80 text-start mb-40"><a className="btn btn-brand-1 hover-up" href="#">Contact Us</a><a className="btn btn-default font-sm-bold hover-up" href="#">Support Center
-                                        <svg className="w-6 h-6 icon-16 ml-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                        </svg></a></div>
+                                    <div className="mt-80 text-start mb-40"><a className="btn btn-brand-1 hover-up" href="#">Contact Us</a></div>
                                 </div>
                                 <div className="col-xl-9 col-lg-8">
                                 <div className="tab-content tab-content-slider">
@@ -237,7 +195,7 @@ const ContactUs = () => {
                         <div className="border-bottom" />
                     </section>
                 </div>
-                <section className="section mt-50">
+                <section className="section mt-50 mb-100">
                     <div className="container">
                         <div className="box-newsletter box-newsletter-2">
                             <div className="row align-items-center">
@@ -261,6 +219,67 @@ const ContactUs = () => {
                 </section>
             </Layout>
 
+            {/* Custom styles for HubSpot form */}
+            <style jsx>{`
+                #hubspot-form-container {
+                    min-height: 400px;
+                }
+                
+                #form-loading {
+                    display: block;
+                }
+                
+                /* Hide loading message when HubSpot form is loaded */
+                #hubspot-form-container .hbspt-form ~ #form-loading {
+                    display: none !important;
+                }
+                
+                /* Custom styling for HubSpot form to match your design */
+                #hubspot-form-container .hbspt-form {
+                    font-family: inherit;
+                }
+                
+                #hubspot-form-container .hs-form-field {
+                    margin-bottom: 25px;
+                }
+                
+                #hubspot-form-container .hs-input {
+                    width: 100% !important;
+                    padding: 12px 15px;
+                    border: 1px solid #e0e0e0;
+                    border-radius: 8px;
+                    font-size: 14px;
+                    background: #fff;
+                    transition: all 0.3s ease;
+                }
+                
+                #hubspot-form-container .hs-input:focus {
+                    border-color: #007bff;
+                    outline: none;
+                    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+                }
+                
+                #hubspot-form-container .hs-submit .hs-button {
+                    background: #007bff;
+                    color: white;
+                    border: none;
+                    padding: 12px 30px;
+                    border-radius: 8px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+                
+                #hubspot-form-container .hs-submit .hs-button:hover {
+                    background: #0056b3;
+                    transform: translateY(-1px);
+                }
+                
+                #hubspot-form-container .hs-form fieldset {
+                    max-width: none !important;
+                }
+            `}</style>
         </>
     );
 };
