@@ -20,13 +20,11 @@ const ContentMd = () => {
                                     </h2>
                                 </div>
                                 <div className="col-lg-6 mb-20">
-                                    <p className="color-grey-50 font-sm">
+                                    <p className="color-grey-50 font-lg">
                                         Deliver safer, trusted, and compliant user experiences with AI-powered and human-in-the-loop content moderation.
                                     </p>
                                 </div>
                             </div>
-                            
-                            
                             <div className="box-video-banner-responsive">
                                 <ImageSlider />
                             </div>
