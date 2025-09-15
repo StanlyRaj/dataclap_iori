@@ -30,7 +30,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                             <div className="mega-menu-dropdown">
                                                 <div className="mega-menu-container">
                                                     <div className="mega-menu-column">
-                                                        <h4>Pre-trained</h4>
+                                                        <h4>Pre-training</h4>
                                                         <ul>
                                                             <li><Link href="/LLM-Evals">LLM EVALUATIONS</Link></li>
                                                             <li><Link href="/Image-Anno">IMAGE ANNOTATIONS</Link></li>
@@ -38,11 +38,11 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                                         </ul>
                                                     </div>
                                                     <div className="mega-menu-column">
-                                                        <h4>Post-trained</h4>
+                                                        <h4>Post-training</h4>
                                                         <ul>
                                                             <li><Link href="/index-11">OCR/IDP</Link></li>
                                                             <li><Link href="/index-11">GENERATIVE AI</Link></li>
-                                                            <li><Link href="/index-11">CONTENT MODERATION</Link></li>
+                                                            <li><Link href="/Content-md">CONTENT MODERATION</Link></li>
                                                         </ul>
                                                     </div>
                                                     <div className="mega-menu-column">

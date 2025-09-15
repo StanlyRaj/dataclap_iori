@@ -64,7 +64,7 @@ const Sidebar = ({ openClass }) => {
                                                         <ul className={isActive.key == 2 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                             <li><Link href="/index-11">OCR/IDP</Link></li>
                                                             <li><Link href="/index-11">Generative AI</Link></li>
-                                                            <li><Link href="/index-11">Conent Moderation</Link></li>
+                                                            <li><Link href="/Content-md">Conent Moderation</Link></li>
                                                         </ul>
                                                     </li>
                                                     <li className={isActive.key == 5 ? "has-children active" : "has-children"} onClick={() => handleToggle(5)}>
