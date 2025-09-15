@@ -40,9 +40,8 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                                     <div className="mega-menu-column">
                                                         <h4>Post-training</h4>
                                                         <ul>
-                                                            <li><Link href="/index-11">OCR/IDP</Link></li>
+                                                            <li><Link href="/RedTeaming">RED TEAMING SERVICES</Link></li>
                                                             <li><Link href="/index-11">GENERATIVE AI</Link></li>
-                                                            <li><Link href="/Content-md">CONTENT MODERATION</Link></li>
                                                         </ul>
                                                     </div>
                                                     <div className="mega-menu-column">
@@ -50,6 +49,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                                         <ul>
                                                             <li><Link href="/index-11">TRAINING AS A SERVICE</Link></li>
                                                             <li><Link href="/index-11">SEARCH AND PERSONALIZATION</Link></li>
+                                                            <li><Link href="/Content-md">CONTENT MODERATION</Link></li>
                                                         </ul>
                                                     </div>
                                                 </div>
