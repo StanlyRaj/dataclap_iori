@@ -27,7 +27,7 @@ const Sidebar = ({ openClass }) => {
             <div className={`mobile-header-active mobile-header-wrapper-style perfect-scrollbar ${openClass}`}>
                 <div className="mobile-header-wrapper-inner">
                     <div className="mobile-header-content-area">
-                        <div className="mobile-logo"><Link className="d-flex" href="/"><img alt="IORI" src="assets/imgs/template/logo.svg" /></Link></div>
+                        <div className="mobile-logo"><Link className="d-flex" href="/"><img alt="DataClap" src="/assets/logo_name.svg" /></Link></div>
                         <div className="perfect-scroll">
 
                             <div className="mobile-menu-wrap mobile-header-border">
@@ -37,7 +37,7 @@ const Sidebar = ({ openClass }) => {
                                     className="nav nav-tabs nav-tabs-mobile mt-25"
                                     fill
                                 >
-                                    <Tab eventKey="menu" title="Menu">
+                                    <Tab eventKey="menu" title="Services">
                                         <div className="tab-pane">
                                             <nav className="mt-15">
                                                 <ul className="mobile-menu font-heading">
@@ -47,20 +47,11 @@ const Sidebar = ({ openClass }) => {
                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                                             </svg>
                                                         </span>
-                                                        <Link className="active" href="/">Home</Link>
+                                                        <Link className="active" href="/">Pre-Training</Link>
                                                         <ul className={isActive.key == 1 ? "sub-menu d-block" : "sub-menu d-none"}>
-                                                            <li><Link href="/">Homepage - 1</Link></li>
-                                                            <li><Link href="/index-2">Homepage - 2</Link></li>
-                                                            <li><Link href="/index-3">Homepage - 3</Link></li>
-                                                            <li><Link href="/index-4">Homepage - 4</Link></li>
-                                                            <li><Link href="/index-5">Homepage - 5</Link></li>
-                                                            <li><Link href="/index-6">Homepage - 6</Link></li>
-                                                            <li><Link href="/index-7">Homepage - 7</Link></li>
-                                                            <li><Link href="/index-8">Homepage - 8</Link></li>
-                                                            <li><Link href="/index-9">Homepage - 9</Link></li>
-                                                            <li><Link href="/index-10">Homepage - 10</Link></li>
-                                                            <li><Link href="/index-11">Homepage - 11</Link></li>
-                                                            <li><Link href="/index-12">Homepage - 12</Link></li>
+                                                            <li><Link className='active' href="/LLM-Evals">LLM Evals</Link></li>
+                                                            <li><Link href="/Image-Anno">Image Annotations</Link></li>
+                                                            <li><Link href="/index-11">Supervised Fine Tuning</Link></li>
                                                         </ul>
                                                     </li>
                                                     <li className={isActive.key == 2 ? "has-children active" : "has-children"} onClick={() => handleToggle(2)}>
@@ -69,39 +60,11 @@ const Sidebar = ({ openClass }) => {
                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                                             </svg>
                                                         </span>
-                                                        <Link href="#">Company</Link>
+                                                        <Link className="active" href="/">Post Training</Link>
                                                         <ul className={isActive.key == 2 ? "sub-menu d-block" : "sub-menu d-none"}>
-                                                            <li><Link href="/about">About Us</Link></li>
-                                                            <li><Link href="/service">Our Services</Link></li>
-                                                            <li><Link href="/pricing">Pricing Plan</Link></li>
-                                                            <li><Link href="/team">Meet Our Team</Link></li>
-                                                            <li><Link href="/help">Help Center</Link></li>
-                                                            <li><Link href="/term-conditions">Term and Conditions</Link></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li className={isActive.key == 3 ? "has-children active" : "has-children"} onClick={() => handleToggle(3)}>
-                                                        <span class="menu-expand">
-                                                            <svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                                            </svg>
-                                                        </span>
-                                                        <Link href="#">Career</Link>
-                                                        <ul className={isActive.key == 3 ? "sub-menu d-block" : "sub-menu d-none"}>
-                                                            <li><Link href="/career">Jobs Listing</Link></li>
-                                                            <li><Link href="/job-detail">Job Details</Link></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li className={isActive.key == 4 ? "has-children active" : "has-children"} onClick={() => handleToggle(4)}>
-                                                        <span class="menu-expand">
-                                                            <svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                                            </svg>
-                                                        </span>
-                                                        <Link href="/blog">Blog</Link>
-                                                        <ul className={isActive.key == 4 ? "sub-menu d-block" : "sub-menu d-none"}>
-                                                            <li><Link href="/blog">Blog Listing 1</Link></li>
-                                                            <li><Link href="/blog-2">Blog Listing 2</Link></li>
-                                                            <li><Link href="/blog-detail">Blog Details</Link></li>
+                                                            <li><Link href="/index-11">OCR/IDP</Link></li>
+                                                            <li><Link href="/index-11">Generative AI</Link></li>
+                                                            <li><Link href="/index-11">Conent Moderation</Link></li>
                                                         </ul>
                                                     </li>
                                                     <li className={isActive.key == 5 ? "has-children active" : "has-children"} onClick={() => handleToggle(5)}>
@@ -110,97 +73,98 @@ const Sidebar = ({ openClass }) => {
                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                                             </svg>
                                                         </span>
-                                                        <Link href="#">Shop</Link>
+                                                        <Link className="active" href="/">Others</Link>
                                                         <ul className={isActive.key == 5 ? "sub-menu d-block" : "sub-menu d-none"}>
-                                                            <li><Link href="/shop-grid">Products Listing 1</Link></li>
-                                                            <li><Link href="/shop-list">Products Listing 2</Link></li>
-                                                            <li><Link href="/product-detail">Product Details</Link></li>
+                                                            <li><Link href="/index-11">Training as a service</Link></li>
+                                                            <li><Link href="/index-11">Search and Personalization</Link></li>
                                                         </ul>
                                                     </li>
-                                                    <li className={isActive.key == 6 ? "has-children active" : "has-children"} onClick={() => handleToggle(6)}>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </Tab>
+                                    <Tab eventKey="account" title="Industries">
+                                        <div className="tab-pane">
+                                            <nav className="mt-15">
+                                                <ul className="mobile-menu font-heading">
+                                                    <li className={isActive.key == 1 ? "has-children active" : "has-children"} onClick={() => handleToggle(1)}>
+                                                        <span class="menu-expand">
+                                                            <svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <Link className="active" href="/">Industries</Link>
+                                                        <ul className={isActive.key == 1 ? "sub-menu d-block" : "sub-menu d-none"}>
+                                                            <li><Link href="/industry">ADAS</Link></li>
+                                                            <li><Link href="/industry">Retail</Link></li>
+                                                            <li><Link href="/industry">Geospatial</Link></li>
+                                                            <li><Link href="/industry">Robotics</Link></li>
+                                                            <li><Link href="/industry">Mapping</Link></li>
+                                                            <li><Link href="/industry">Social Media</Link></li>
+                                                            <li><Link href="/industry">Manufacturing</Link></li>
+                                                            <li><Link href="/industry">Agriculture</Link></li>
+                                                            <li><Link href="/industry">Sports & Media</Link></li>
+                                                            <li><Link href="/industry">Finance & Insurance</Link></li>
+                                                            <li><Link href="/industry">Customer Service</Link></li>
+                                                            <li><Link href="/industry">RPA</Link></li>
+                                                            <li><Link href="/industry">Asset Management</Link></li>
+                                                            <li><Link href="/industry">Physical AI</Link></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </Tab>
+                                    <Tab eventKey="company" title="Others">
+                                        <div className="tab-pane">
+                                            <nav className="mt-15">
+                                                <ul className="mobile-menu font-heading">
+                                                    <li className={isActive.key == 3 ? "has-children active" : "has-children"} onClick={() => handleToggle(3)}>
+                                                        <span class="menu-expand">
+                                                            <svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <Link href="#">Resources</Link>
+                                                        <ul className={isActive.key == 3 ? "sub-menu d-block" : "sub-menu d-none"}>
+                                                            <li><Link href="/blog">Blog</Link></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li className={isActive.key == 4 ? "has-children active" : "has-children"} onClick={() => handleToggle(4)}>
+                                                        <span class="menu-expand">
+                                                            <svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <Link href="/blog">Company</Link>
+                                                        <ul className={isActive.key == 4 ? "sub-menu d-block" : "sub-menu d-none"}>
+                                                            <li><Link href="/about">About us</Link></li>
+                                                            <li><Link href="/career">Careers</Link></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li className={isActive.key == 5 ? "has-children active" : "has-children"} onClick={() => handleToggle(5)}>
                                                         <span class="menu-expand">
                                                             <svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                                             </svg>
                                                         </span>
                                                         <Link href="#">Pages</Link>
-                                                        <ul className={isActive.key == 6 ? "sub-menu d-block" : "sub-menu d-none"}>
+                                                        <ul className={isActive.key == 5 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                             <li><Link href="/register">Register</Link></li>
                                                             <li><Link href="/login">Login</Link></li>
                                                             <li><Link href="/coming-soon">Coming soon</Link></li>
                                                             <li><Link href="/404">Error 404</Link></li>
+                                                            <li><Link href="/help.js">Help</Link></li>
+                                                            <li><Link href="/term-conditions">Terms and Conditions</Link></li>
                                                         </ul>
                                                     </li>
                                                     <li><Link href="/contact">Contact</Link></li>
+                                                    <li><Link href="/pricing">Pricing</Link></li>
                                                 </ul>
                                             </nav>
                                         </div>
                                     </Tab>
-                                    <Tab eventKey="account" title="Account">
-                                        <nav className="mt-15">
-                                            <ul className="mobile-menu font-heading">
-                                                <li><Link className="active" href="login">My Profile</Link></li>
-                                                <li><Link href="#">Work Preferences</Link></li>
-                                                <li><Link href="#">My Boosted Shots</Link></li>
-                                                <li><Link href="#">My Collections</Link></li>
-                                                <li><Link href="#">Account Settings</Link></li>
-                                                <li><Link href="#">Go Pro</Link></li>
-                                                <li><Link href="/register">Sign Out</Link></li>
-                                            </ul>
-                                        </nav>
-                                    </Tab>
-                                    <Tab eventKey="notification" title="Notification">
-                                        <p className="font-sm-bold color-brand-1 mt-30">Today</p>
-                                        <div className="notifications-item">
-                                            <div className="item-notify">
-                                                <div className="item-image"><img src="assets/imgs/template/user1.png" alt="iori" /></div>
-                                                <div className="item-info">
-                                                    <p className="color-grey-500 font-xs"><strong className="font-xs-bold">Steven Job</strong>like started a poll in your post “How to be a good trader in 2023”</p>
-                                                </div>
-                                                <div className="item-time"><span className="color-grey-500 font-xs">Just now</span></div>
-                                            </div>
-                                            <div className="item-notify">
-                                                <div className="item-image"><img src="assets/imgs/template/user2.png" alt="iori" /></div>
-                                                <div className="item-info">
-                                                    <p className="color-grey-500 font-xs"><strong className="font-xs-bold">Steven Job</strong>like started a poll in your post “How to be a good trader in 2023”</p>
-                                                </div>
-                                                <div className="item-time"><span className="color-grey-500 font-xs">Just now</span></div>
-                                            </div>
-                                        </div>
-                                        <p className="font-sm-bold color-brand-1 mt-30">Yesterday</p>
-                                        <div className="notifications-item">
-                                            <div className="item-notify">
-                                                <div className="item-image"><img src="assets/imgs/template/user3.png" alt="iori" /></div>
-                                                <div className="item-info">
-                                                    <p className="color-grey-500 font-xs"><strong className="font-xs-bold">Steven Job</strong>like started a poll in your post “How to be a good trader in 2023”</p>
-                                                </div>
-                                                <div className="item-time"><span className="color-grey-500 font-xs">Just now</span></div>
-                                            </div>
-                                            <div className="item-notify">
-                                                <div className="item-image"><img src="assets/imgs/template/user4.png" alt="iori" /></div>
-                                                <div className="item-info">
-                                                    <p className="color-grey-500 font-xs"><strong className="font-xs-bold">Steven Job</strong>like started a poll in your post “How to be a good trader in 2023”</p>
-                                                </div>
-                                                <div className="item-time"><span className="color-grey-500 font-xs">Just now</span></div>
-                                            </div>
-                                            <div className="item-notify">
-                                                <div className="item-image"><img src="assets/imgs/template/user5.png" alt="iori" /></div>
-                                                <div className="item-info">
-                                                    <p className="color-grey-500 font-xs"><strong className="font-xs-bold">Steven Job</strong>like started a poll in your post “How to be a good trader in 2023”</p>
-                                                </div>
-                                                <div className="item-time"><span className="color-grey-500 font-xs">Just now</span></div>
-                                            </div>
-                                        </div>
-                                    </Tab>
                                 </Tabs>
-                            </div>
-                            <div className="site-copyright color-grey-400 mt-0">
-                                <div className="box-download-app">
-                                    <p className="font-xs color-grey-400 mb-25">Download our Apps and get extra 15% Discount on your first Order…!</p>
-                                    <div className="mb-25"><Link className="mr-10" href="#"><img src="assets/imgs/template/appstore.png" alt="iori" /></Link><Link href="#"><img src="assets/imgs/template/google-play.png" alt="iori" /></Link></div>
-                                    <p className="font-sm color-grey-400 mt-20 mb-10">Secured Payment Gateways</p><img src="assets/imgs/template/payment-method.png" alt="iori" />
-                                </div>
-                                <div className="mb-0">Copyright 2022 © IORI - Marketplace Template.<br />Designed by<Link href="/http:/alithemes.com" target="_blank">&nbsp; AliThemes</Link></div>
                             </div>
                         </div>
                     </div>
