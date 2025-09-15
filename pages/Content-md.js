@@ -3,6 +3,8 @@ import Layout from "../components/layout/Layout";
 import Link from 'next/link';
 import ImageSlider from '../components/slider/ImageSlider';
 import Offer4 from '../components/slider/Offer4';
+import Knowledgebase2 from '../components/slider/KnowledgeBase2';
+import CWHITL from '../components/elements/CWHITL';
 
 const ContentMd = () => {
     const [isOpen, setOpen] = useState(false)
@@ -20,11 +22,12 @@ const ContentMd = () => {
                                     </h2>
                                 </div>
                                 <div className="col-lg-6 mb-20">
-                                    <p className="color-grey-50 font-lg">
-                                        Deliver safer, trusted, and compliant user experiences with AI-powered and human-in-the-loop content moderation.
+                                    <p className="color-grey-50 font-md">
+                                        Deliver safer, trusted, and compliant user experiences with AI-powered and human-in-the-loop content moderation. From social media to marketplaces, gaming, and beyond—our solutions ensure your digital ecosystem stays secure, inclusive, and aligned with your brand values.
                                     </p>
                                 </div>
                             </div>
+                            
                             <div className="box-video-banner-responsive">
                                 <ImageSlider />
                             </div>
@@ -32,24 +35,6 @@ const ContentMd = () => {
                     </div>
 
                     <style jsx>{`
-                        /* Fix for background not expanding with content */
-                        .section.banner-5 {
-                            min-height: auto;
-                            height: auto;
-                        }
-
-                        .section.banner-5 .mt-65.mb-100 {
-                            display: flex;
-                            flex-direction: column;
-                            min-height: 100%;
-                        }
-
-                        .section.banner-5 .row {
-                            flex: 1;
-                            display: flex;
-                            align-items: stretch;
-                        }
-
                         .box-video-banner-responsive {
                             width: 100%;
                             margin: 40px 0 0 0;
@@ -73,13 +58,6 @@ const ContentMd = () => {
                                 padding-right: 15px;
                             }
 
-                            /* Ensure the row expands to contain all content */
-                            .section.banner-5 .row {
-                                flex-direction: column;
-                                align-items: stretch !important;
-                                min-height: auto;
-                            }
-
                             .box-video-banner-responsive {
                                 margin: 30px 0 0 0;
                                 padding: 0;
@@ -88,18 +66,14 @@ const ContentMd = () => {
                             /* Ensure text sections are also responsive */
                             .col-lg-6.mb-20 {
                                 margin-bottom: 25px !important;
-                                width: 100%;
-                                max-width: 100%;
                             }
 
                             .mt-65 {
                                 margin-top: 40px !important;
-                                padding-bottom: 20px; /* Add padding to ensure background extends */
                             }
 
                             .mb-100 {
                                 margin-bottom: 60px !important;
-                                padding-top: 20px; /* Add padding to ensure background extends */
                             }
                         }
 
@@ -116,12 +90,10 @@ const ContentMd = () => {
 
                             .mt-65 {
                                 margin-top: 30px !important;
-                                padding-bottom: 25px;
                             }
 
                             .mb-100 {
                                 margin-bottom: 40px !important;
-                                padding-top: 25px;
                             }
 
                             .col-lg-6.mb-20 {
@@ -140,50 +112,23 @@ const ContentMd = () => {
                             }
                         }
 
-                        /* Extra small devices - Maximum flexibility */
+                        /* Extra small devices */
                         @media (max-width: 360px) {
                             .section.banner-5 .container {
                                 padding-left: 8px;
                                 padding-right: 8px;
-                                height: auto;
-                            }
-
-                            .section.banner-5 .mt-65.mb-100 {
-                                height: auto;
-                                min-height: fit-content;
-                                padding-bottom: 30px;
                             }
 
                             .box-video-banner-responsive {
                                 margin: 20px 0 0 0;
                             }
 
-                            .col-lg-6 p {
-                                line-height: 1.7;
-                                height: auto;
-                                word-break: break-word;
-                            }
-
                             .color-brand-2.mt-10 {
                                 font-size: 1.6rem;
-                                line-height: 1.4;
-                                margin-bottom: 20px;
                             }
 
-                            .font-sm {
+                            .font-md {
                                 font-size: 0.9rem;
-                                line-height: 1.7;
-                            }
-                        }
-
-                        /* Force background container to expand with any content size */
-                        @media (max-width: 768px) {
-                            .section.banner-5,
-                            .section.banner-5 .container,
-                            .section.banner-5 .mt-65.mb-100 {
-                                height: auto !important;
-                                min-height: fit-content !important;
-                                max-height: none !important;
                             }
                         }
                     `}</style>
@@ -405,6 +350,34 @@ const ContentMd = () => {
                                 <div className="swiper-container swiper-group-4">
                                     <Offer4 />
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="section pt-80">
+                    <div className="container">
+                        <div className="text-center">
+                            <h2 className="color-brand-1 mb-20">Custom Workflows & Human-in-the-Loop (HITL)</h2>
+                            <p className="font-lg color-gray-500">
+                                We understand no two platforms are alike.
+                                That’s why we provide custom workflows:
+                            </p>
+                        </div>
+                        <div className="row mt-50 mb-50">
+                            <div className="col-xl-12 col-lg-12 position-relative">
+                                <CWHITL />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="section mt-40 pt-50 pb-15 bg-grey-80">
+                    <div className="container">
+                        <div className="box-swiper">
+                            <div className="text-center">
+                            <h2 className="color-brand-1 mb-20">Why Choose Us</h2>
+                            </div>
+                            <div className="swiper-container swiper-group-3">
+                                <Knowledgebase2 />
                             </div>
                         </div>
                     </div>
