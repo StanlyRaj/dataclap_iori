@@ -34,7 +34,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                                         <ul>
                                                             <li><Link href="/LLM-Evals">LLM EVALUATIONS</Link></li>
                                                             <li><Link href="/Image-Anno">IMAGE ANNOTATIONS</Link></li>
-                                                            <li><Link href="/index-11">SUPERVISED FINE TUNING</Link></li>
+                                                            <li><Link href="/SFT">SUPERVISED FINE TUNING</Link></li>
                                                         </ul>
                                                     </div>
                                                     <div className="mega-menu-column">

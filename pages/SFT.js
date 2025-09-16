@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout";
 import Link from 'next/link';
 import VideoSlider from '../components/slider/VideoSlider';
 import Tab2 from '../components/elements/tab2';
-import Offer3 from '../components/slider/Offer3';
+import Offer6 from '../components/slider/Offer6';
 
 const SFT = () => {
     const [isOpen, setOpen] = useState(false)
@@ -39,37 +39,25 @@ const SFT = () => {
                         <div className="box-business-rd">
                             <div className="row align-items-center">
                                 <div className="col-lg-5">
-                                    <h3 className="color-brand-1 mt-10 mb-15">Why Evals Matter</h3>
-                                    <p className="font-xl color-grey-400">AI models don’t just fail when they’re inaccurate. They fail when:</p>
+                                    <h3 className="color-brand-1 mt-10 mb-15">What is SFT?</h3>
+                                    <p className="font-lg color-grey-400">Supervised Fine-Tuning is the process of training an existing AI model on curated, labeled examples relevant to your business. <br /><br />By showing the model how it should behave in your context, SFT makes it more accurate, safer, and aligned with your goals.</p>
                                     <div className="mt-20">
-                                        <ul className="list-ticks">
+                                        <ul className="list-ticks pt-15">
                                             <li>
                                                 <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                                 </svg>
-                                                <p className="font-lg color-grey-400">Datasets are mislabeled or biased</p>
+                                                <p className="font-md color-grey-400">For language models (LLMs): This means a chatbot that speaks in your brand voice, avoids risky outputs, and consistently provides useful answers.</p>
                                             </li>
                                             <li>
                                                 <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                                 </svg>
-                                                <p className="font-lg color-grey-400">Models hallucinate or produce unsafe content</p>
-                                            </li>
-                                            <li>
-                                                <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                                </svg>
-                                                <p className="font-lg color-grey-400">Edge cases and adversarial prompts go untested</p>
-                                            </li>
-                                            <li>
-                                                <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                                </svg>
-                                                <p className="font-lg color-grey-400">Evals as a Service ensures your AI is trustworthy, robust, and aligned — before it reaches production.</p>
+                                                <p className="font-md color-grey-400">For computer vision systems: This means reliable recognition, detection, or classification that works in your unique environment, from factory floors to medical labs.</p>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div className="mt-50 ml-20 text-start"> <Link className="btn btn-brand-1 hover-up font-md" href="/contact">Talk to Our Evaluation Experts</Link></div>
+                                    <div className="mt-50 ml-20 text-start"> <Link className="btn btn-brand-1 hover-up font-md" href="/contact">Talk to Our Experts</Link></div>
                                 </div>
                                 <div className="col-lg-7">
                                     <div className="box-business-service">
@@ -93,56 +81,44 @@ const SFT = () => {
                         </div>
                     </div>
                 </section>
-                <section className="section mt-50 mb-30 bg-brand-1 pt-100 pb-100 bg-explore">
-                    <div className="container">
-                        <div className="text-center">
-                            <span className="font-xl-bold color-white text-uppercase">What We Offer</span>
-                                    <h2 className="color-brand-2 mb-60 mt-15">
-                                        Our Evaluation Services
-                                    </h2>
-                        </div>
-                        <div className="mt-30 mb-60">
-                            <Tab2 />
-                        </div>
-                    </div>
-                </section>
-                <section className="section mt-30 pb-50 bg-core-value">
+                <section className="section pt-0 pb-50 bg-core-value mb-40 mt-100">
                     <div className="container">
                         <div className="row box-list-core-value">
                             <div className="col-lg-4 mb-70">
-                                <div className="box-core-value">
-                                    <h3 className="color-brand-1 mb-15">Why Choose Us?</h3>
+                                <div className="box-core-value pl-0">
+                                    <h1 className="color-brand-1 mb-15">Why SFT Matters</h1>
                                     <p className="font-md color-grey-400">We break down barriers so teams can focus on what matters – working together to create products their customers love.</p>
+                                    <div className="mt-30"></div>
                                 </div>
                             </div>
                             <div className="col-lg-4">
-                                <ul className="list-core-value">
+                                <ul className="list-core-value list-core-value-white">
                                     <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Human-first evaluations </h5>
+                                        <h5 className="color-brand-1 mb-5">Domain Expertise</h5>
                                         <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">Our company exists to help merchants sell more. We make every decision and measure every outcome based on how well it serves our customers.</p>
+                                            <p className="font-md color-grey-500 mb-20">Adapt models to your industry vocabulary, workflows, and standards.</p>
                                         </div>
                                     </li>
                                     <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Open-source powered</h5>
+                                        <h5 className="color-brand-1 mb-5">Reliability</h5>
                                         <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">We’re honest, transparent and committed to doing what’s best for our customers and our company. We openly collaborate in pursuit of the truth. We have no tolerance for politics, hidden agendas or passive-aggressive behavior.</p>
+                                            <p className="font-md color-grey-500 mb-20">Reduce errors, hallucinations, or misclassifications in production.</p>
                                         </div>
                                     </li>
                                     <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Scalable workforce</h5>
+                                        <h5 className="color-brand-1 mb-5">Compliance & Safety</h5>
                                         <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">Our company exists to help merchants sell more. We make every decision and measure every outcome based on how well it serves our customers.</p>
+                                            <p className="font-md color-grey-500 mb-20">Ensure outputs meet regulatory and ethical standards.</p>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                             <div className="col-lg-4">
-                                <ul className="list-core-value">
+                                <ul className="list-core-value list-core-value-white">
                                     <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Custom eval design</h5>
+                                        <h5 className="color-brand-1 mb-5">Efficiency</h5>
                                         <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">Being the world's leading commerce platform requires unrivaled vision, innovation and execution. We never settle. We challenge our ideas of what’s possible in order to better meet the needs of our customers.</p>
+                                            <p className="font-md color-grey-500 mb-20">Save time and costs by fine-tuning existing models instead of building from scratch.</p>
                                         </div>
                                     </li>
                                     <li> <span className="ticked" />
@@ -151,13 +127,83 @@ const SFT = () => {
                                             <p className="font-md color-grey-500 mb-20">Integrity is the foundation for everything we do. We are admired and respected for our commitment to honesty, trust, and transparency. </p>
                                         </div>
                                     </li>
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Stronger united</h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">We’ve created a positive and inclusive culture that fosters open, honest, and meaningful relationships.</p>
-                                        </div>
-                                    </li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="section mt-110">
+                    <div className="container">
+                        <div className="row align-items-end">
+                            <div className="col-lg-6 mb-20">
+                                <h2 className="color-brand-1 mb-0">Our SFT Services</h2>
+                                <p className="color-grey-500 font-lg mt-20">
+                                    Here are some types of SFT services we provide.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* First Row of Cards */}
+                        <div className="row mt-45">
+                            <div className="col-lg-4">
+                                <div className="image-showcase-card-dynamic">
+                                    <div className="image-showcase-top-dynamic">
+                                        <img 
+                                            src="assets/imgs/page/homepage6/human1.png" 
+                                            alt="Cross Platform" 
+                                            className="image-showcase-photo-dynamic"
+                                        />
+                                    </div>
+                                    <div className="image-showcase-content-dynamic">
+                                        <h4 className="color-brand-1 mb-15">Large Language Models (LLMs)</h4>
+                                        <p className='pb-10 font-xl'>We fine-tune models for:</p>
+                                        <ul className="custom-bullets font-lg color-grey-500 mb-15 pl-15">
+                                            <li>Customer support and virtual assistants</li>
+                                            <li>Summarization and knowledge management</li>
+                                            <li>Industry-specific applications (finance, healthcare, legal, retail)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="col-lg-4">
+                                <div className="image-showcase-card-dynamic">
+                                    <div className="image-showcase-top-dynamic">
+                                        <img 
+                                            src="assets/imgs/page/homepage6/human2.png" 
+                                            alt="Team Collaboration" 
+                                            className="image-showcase-photo-dynamic"
+                                        />
+                                    </div>
+                                    <div className="image-showcase-content-dynamic">
+                                        <h4 className="color-brand-1 mb-15">Computer Vision Systems</h4>
+                                        <p className='pb-10 font-xl'>We adapt vision models for:</p>
+                                        <ul className="custom-bullets font-lg color-grey-500 mb-15 pl-15">
+                                            <li>Quality inspection in manufacturing</li>
+                                            <li>Medical imaging analysis</li>
+                                            <li>Autonomous navigation and robotics</li>
+                                            <li>Security and surveillance</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="col-lg-4">
+                                <div className="image-showcase-card-dynamic">
+                                    <div className="image-showcase-top-dynamic">
+                                        <img 
+                                            src="assets/imgs/page/homepage6/human3.png" 
+                                            alt="Analytics Dashboard" 
+                                            className="image-showcase-photo-dynamic"
+                                        />
+                                    </div>
+                                    <div className="image-showcase-content-dynamic">
+                                        <h4 className="color-brand-1 mb-15">Multimodal AI</h4>
+                                        <ul className="custom-bullets font-lg color-grey-500 mb-15 pl-15">
+                                            <li>For systems that combine text, images, and video, we fine-tune models to keep results safe, consistent, and aligned across multiple input types.</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -166,7 +212,7 @@ const SFT = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 text-center">
-                                <h2 className="color-brand-1 mb-20">How It Works</h2>
+                                <h2 className="color-brand-1 mb-20">Our Process</h2>
                                 <p className="font-lg color-gray-500">Updated on September 24, 2023</p>
                             </div>
                         </div>
@@ -184,8 +230,8 @@ const SFT = () => {
                                                 <div className="item-forum">
                                                     <div className="item-image"> <img src="assets/imgs/page/homepage1/cross5.png" alt="iori" /></div>
                                                     <div className="item-info">
-                                                        <h4 className="color-brand-1 mb-15">1. Define goals</h4>
-                                                        <p className="font-ls color-grey-500">Accuracy? Robustness? Safety?</p>
+                                                        <h4 className="color-brand-1 mb-15">Discovery & Scoping</h4>
+                                                        <p className="font-ls color-grey-500">We align on goals, risks, and success metrics.</p>
                                                     </div>
                                                 </div>
                                             </td>
@@ -195,8 +241,8 @@ const SFT = () => {
                                                 <div className="item-forum">
                                                     <div className="item-image"> <img src="assets/imgs/page/homepage2/creation.png" alt="iori" /></div>
                                                     <div className="item-info">
-                                                        <h4 className="color-brand-1 mb-15">2. Design evals</h4>
-                                                        <p className="font-ls color-grey-500">Benchmarks + custom test sets.</p>
+                                                        <h4 className="color-brand-1 mb-15">Data Curation</h4>
+                                                        <p className="font-ls color-grey-500">We prepare high-quality examples for fine-tuning.</p>
                                                     </div>
                                                 </div>
                                             </td>
@@ -206,8 +252,8 @@ const SFT = () => {
                                                 <div className="item-forum">
                                                     <div className="item-image"> <img src="assets/imgs/page/homepage1/cross4.png" alt="iori" /></div>
                                                     <div className="item-info">
-                                                        <h4 className="color-brand-1 mb-15">3. Run evaluations</h4>
-                                                        <p className="font-ls color-grey-500">Automated checks + human review.</p>
+                                                        <h4 className="color-brand-1 mb-15">Fine-Tuning & Testing</h4>
+                                                        <p className="font-ls color-grey-500">We train the model and validate its performance.</p>
                                                     </div>
                                                 </div>
                                             </td>
@@ -217,8 +263,19 @@ const SFT = () => {
                                                 <div className="item-forum">
                                                     <div className="item-image"> <img src="assets/imgs/page/homepage1/cross2.png" alt="iori" /></div>
                                                     <div className="item-info">
-                                                        <h4 className="color-brand-1 mb-15">4. Deliver insights</h4>
-                                                        <p className="font-ls color-grey-500">Reports with actionable recommendations.</p>
+                                                        <h4 className="color-brand-1 mb-15">Deployment-Ready Delivery</h4>
+                                                        <p className="font-ls color-grey-500"> You receive a refined model with clear evaluation results.</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div className="item-forum">
+                                                    <div className="item-image"> <img src="assets/imgs/page/homepage1/cross2.png" alt="iori" /></div>
+                                                    <div className="item-info">
+                                                        <h4 className="color-brand-1 mb-15">Ongoing Support </h4>
+                                                        <p className="font-ls color-grey-500">Continuous monitoring and re-tuning as your data and needs evolve.</p>
                                                     </div>
                                                 </div>
                                             </td>
@@ -229,11 +286,11 @@ const SFT = () => {
                         </div>
                     </div>
                 </section>
-<section className="section mt-100">
+                <section className="section mt-100">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 text-center">
-                                <h2 className="color-brand-1 mb-20">Industries We Serve</h2>
+                                <h2 className="color-brand-1 mb-20">Industries We Support</h2>
                                 <p className="font-lg color-gray-500">
                                     What makes us different from others? We give holistic solutions
                                     <br className="d-none d-lg-block" />
@@ -244,7 +301,59 @@ const SFT = () => {
                         <div className="mt-50">
                             <div className="box-swiper">
                                 <div className="swiper-container swiper-group-4">
-                                    <Offer3 />
+                                    <Offer6 />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="section mt-100">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12 text-center">
+                                <h2 className="color-brand-1 mb-20">Why Partner With Us</h2>
+                                <p className="font-lg color-gray-500">We're lively, not corporate. We have the energy and boldness of a startup and <br className="d-none d-lg-block" />the expertise and pragmatism of a scale-up. All in one place.</p>
+                            </div>
+                        </div>
+                        <div className="row mt-65">
+                            <div className="col-lg-3 col-md-6 col-sm-6">
+                                <div className="card-small card-small-2">
+                                    <div className="card-image">
+                                        <div className="box-image"><img src="/assets/imgs/page/homepage1/free.svg" alt="iori" /></div></div>
+                                    <div className="card-info">
+                                        <h6 className="color-brand-1 mb-10">Connected</h6>
+                                        <p className="font-md color-grey-500">Proven expertise in both language and vision models</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-md-6 col-sm-6">
+                                <div className="card-small card-small-2">
+                                    <div className="card-image">
+                                        <div className="box-image"><img src="/assets/imgs/page/homepage1/cross.png" alt="iori" /></div></div>
+                                    <div className="card-info">
+                                        <h6 className="color-brand-1 mb-10">Inclusive</h6>
+                                        <p className="font-md color-grey-500">Human-in-the-loop quality assurance</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-md-6 col-sm-6">
+                                <div className="card-small card-small-2">
+                                    <div className="card-image">
+                                        <div className="box-image"><img src="/assets/imgs/page/homepage2/identity.png" alt="iori" /></div></div>
+                                    <div className="card-info">
+                                        <h6 className="color-brand-1 mb-10">Flexible</h6>
+                                        <p className="font-md color-grey-500">Flexible engagement models, from pilots to enterprise rollouts</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-md-6 col-sm-6">
+                                <div className="card-small card-small-2">
+                                    <div className="card-image">
+                                        <div className="box-image"><img src="/assets/imgs/page/career/persuasion.png" alt="iori" /></div></div>
+                                    <div className="card-info">
+                                        <h6 className="color-brand-1 mb-10">Persuasion</h6>
+                                        <p className="font-md color-grey-500">Actionable insights with clear, easy-to-use reports</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -257,8 +366,8 @@ const SFT = () => {
                                 <div className="col-lg-6"><img className="d-block" src="assets/imgs/page/homepage2/img-marketing.png" alt="iori" /></div>
                                 <div className="col-lg-6">
                                     <div className="box-info-video">
-                                        <h2 className="color-brand-1 mt-15 mb-20">Ready to Validate Your AI?</h2>
-                                        <p className="font-md color-grey-500">Let our workforce evaluate your model with precision and care.</p>
+                                        <h2 className="color-brand-1 mt-15 mb-20">Make Your AI Work For You</h2>
+                                        <p className="font-md color-grey-500">Generic AI is a starting point. Supervised Fine-Tuning makes it your competitive advantage. With our SFT services, you can trust that your models will be safer, more reliable, and better aligned with your business goals.</p>
                                         <div className="box-button text-start mt-65"> <Link className="btn btn-brand-1 hover-up font-md" href="#">Contact Us</Link></div>
                                     </div>
                                 </div>

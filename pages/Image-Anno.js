@@ -14,13 +14,13 @@ const ImageAnno = () => {
                         <div className="mt-65 mb-100">
                             <div className="row align-items-end">
                                 <div className="col-lg-6 mb-20">
-                                    <span className="title-line color-brand-2">Image Annotation</span>
-                                    <h2 className="color-brand-2 mt-10">
+                                    <span className="title-line color-black-text">Image Annotation</span>
+                                    <h2 className="color-black-text mt-10">
                                         Make the most of your <br />Image Data
                                     </h2>
                                 </div>
                                 <div className="col-lg-6 mb-20">
-                                    <p className="color-grey-50">
+                                    <p className="font-lg color-black-text">
                                         We have worked on more than a million images and tens of thousands of hours of video data providing annotations for some of the most advanced applications of computer vision. DataClap's goal for consistent data handling will make your machine learning classifiers more accurate.
                                     </p>
                                 </div>
@@ -263,7 +263,7 @@ const ImageAnno = () => {
                         </div>
                     </div>
                 </section>
-                                <section className="section mt-100">
+                <section className="section mt-100">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 text-center">
@@ -340,16 +340,16 @@ const ImageAnno = () => {
                         </div>
                     </div>
                 </section>
-                <section className="section mt-100 mb-100">
+                <section className="section mt-50 pt-50 pb-40">
                     <div className="container">
-                        <div className="box-radius-border box-radius-border-help">
+                        <div className="box-cover-border">
                             <div className="row align-items-center">
-                                <div className="col-xl-6 col-lg-6"><img className="d-block" src="assets/imgs/page/help/answer.png" alt="iori" /></div>
-                                <div className="col-xl-6 col-lg-6">
-                                    <div className="box-info-answer">
-                                        <h2 className="color-brand-1 mt-10 mb-15">Ready to Validate Your AI?</h2>
-                                        <p className="color-grey-500 font-xl">Let our workforce evaluate your model with precision and care.</p>
-                                        <div className="box-button mt-30"> <Link className="btn btn-brand-1 hover-up font-md" href="#">Contact Us</Link></div>
+                                <div className="col-lg-6"><img className="d-block" src="assets/imgs/page/homepage2/img-marketing.png" alt="iori" /></div>
+                                <div className="col-lg-6">
+                                    <div className="box-info-video">
+                                        <h2 className="color-brand-1 mt-15 mb-20">Ready to Validate Your AI?</h2>
+                                        <p className="font-md color-grey-500">Let our workforce evaluate your model with precision and care.</p>
+                                        <div className="box-button text-start mt-65"> <Link className="btn btn-brand-1 hover-up" href="#">Contact Us</Link></div>
                                     </div>
                                 </div>
                             </div>

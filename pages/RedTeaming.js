@@ -14,13 +14,13 @@ const RedTeaming = () => {
                             <div className="mt-65 mb-100">
                             <div className="row align-items-end">
                                 <div className="col-lg-6 mb-20">
-                                <span className="title-line color-brand-2">Red Teaming Services for AI</span>
-                                <h2 className="color-brand-2 mt-10">
+                                <span className="title-line color-black-text">Red Teaming Services for AI</span>
+                                <h2 className="color-black-text mt-10">
                                     Put Your AI to the Test <br />Before the World Does
                                 </h2>
                                 </div>
                                 <div className="col-lg-6 mb-20">
-                                <p className="font-md color-grey-50">
+                                <p className="font-lg color-black-text">
                                    AI is powerful, but it’s not perfect. Models can be tricked, biased, or produce unexpected results—sometimes with serious consequences. Our Red Teaming services are designed to challenge your AI like a real attacker or edge-case user would, helping you spot hidden risks before they reach customers or regulators.
                                 </p>
                                 </div>
@@ -293,9 +293,9 @@ const RedTeaming = () => {
                                 <div className="col-lg-6"><img className="d-block" src="assets/imgs/page/homepage2/img-marketing.png" alt="iori" /></div>
                                 <div className="col-lg-6">
                                     <div className="box-info-video">
-                                        <h2 className="color-brand-1 mt-15 mb-20">Want to talk to a marketing expert?</h2>
-                                        <p className="font-md color-grey-500">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum — semper quis lectus nulla. Interactively transform magnetic growth strategies whereas prospective "outside the box" thinking.</p>
-                                        <div className="box-button text-start mt-65"> <Link className="btn btn-brand-1 hover-up" href="#">Contact Us</Link></div>
+                                        <h2 className="color-brand-1 mt-15 mb-20">Ready to Validate Your AI?</h2>
+                                        <p className="font-md color-grey-500">Let our workforce evaluate your model with precision and care.</p>
+                                        <div className="box-button text-start mt-65"> <Link className="btn btn-brand-1 hover-up font-md" href="#">Contact Us</Link></div>
                                     </div>
                                 </div>
                             </div>
