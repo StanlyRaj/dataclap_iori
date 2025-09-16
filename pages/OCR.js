@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ImageSlider from '../components/slider/ImageSlider';
 import Offer7 from '../components/slider/Offer7';
 
-const ImageAnno = () => {
+const OCR = () => {
     const [isOpen, setOpen] = useState(false)
     return (
         <>
@@ -448,4 +448,4 @@ const ImageAnno = () => {
     );
 };
 
-export default ImageAnno;
+export default OCR;
