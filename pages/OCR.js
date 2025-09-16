@@ -316,7 +316,7 @@ const OCR = () => {
                         </div>
                     </div>
                 </section>
-                                <section className="section mt-100">
+                <section className="section mt-100">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 text-center">

@@ -89,9 +89,9 @@ const Knowledgebase2 = () => {
                             <img src="assets/imgs/page/help/icon1.svg" alt="Scalable Content Moderation" />
                         </div>
                         <div className="card-info">
-                            <h5 className="color-brand-1 mb-15">Scalable</h5>
+                            <h5 className="color-brand-1 mb-15">Asynchronous</h5>
                             <ul className="font-md color-grey-500">
-                                <li>Handle millions of content items daily.</li>
+                                <li>Posts, comments, reviews, profiles, images.</li>
                             </ul>
                         </div>
                     </div>
@@ -103,9 +103,9 @@ const Knowledgebase2 = () => {
                             <img src="assets/imgs/page/help/icon2.svg" alt="Accurate AI Moderation" />
                         </div>
                         <div className="card-info">
-                            <h5 className="color-brand-1 mb-15">Accurate</h5>
+                            <h5 className="color-brand-1 mb-15">Metadata</h5>
                             <ul className="font-md color-grey-500">
-                                <li>AI trained on diverse datasets, reducing bias and false positives.</li>
+                                <li>Tags, Product Listings, Ads</li>
                             </ul>
                         </div>
                     </div>
@@ -117,9 +117,9 @@ const Knowledgebase2 = () => {
                             <img src="assets/imgs/page/help/icon3.svg" alt="Compliant Moderation" />
                         </div>
                         <div className="card-info">
-                            <h5 className="color-brand-1 mb-15">Compliant</h5>
+                            <h5 className="color-brand-1 mb-15">Synchronous</h5>
                             <ul className="font-md color-grey-500">
-                                <li>Aligned with global and regional regulations.</li>
+                                <li>Live video, voice chat, real-time streams</li>
                             </ul>
                         </div>
                     </div>
@@ -131,9 +131,9 @@ const Knowledgebase2 = () => {
                             <img src="assets/imgs/page/help/icon1.svg" alt="Flexible Workflows" />
                         </div>
                         <div className="card-info">
-                            <h5 className="color-brand-1 mb-15">Flexible</h5>
+                            <h5 className="color-brand-1 mb-15">Structured + unstructured data sources</h5>
                             <ul className="font-md color-grey-500">
-                                <li>Custom workflows tailored to your platform's risk profile.</li>
+                                <li>(JSON, XML, APIs)</li>
                             </ul>
                         </div>
                     </div>
@@ -157,4 +157,4 @@ const Knowledgebase2 = () => {
     );
 };
 
-export default Knowledgebase2;
+export default Knowledgebase2; 

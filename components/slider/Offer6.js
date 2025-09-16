@@ -106,7 +106,7 @@ const Offer3 = () => {
                 className="swiper-wrapper"
             >
                 {data.map((item, i) => (
-                    <SwiperSlide key={i} className={`swiper-slide`}>
+                    <SwiperSlide key={i} className={`swiper-slide-2`}>
                         <div className="card-offer-style-3">
                             <div className="card-head bg-13">
                                 <div className="card-title">

@@ -34,7 +34,7 @@ const SFT = () => {
                         </div>
                     </div>
                 </section>
-                <section className="section mb-100">
+                <section className="section">
                     <div className="container">
                         <div className="box-business-rd">
                             <div className="row align-items-center">
@@ -81,7 +81,7 @@ const SFT = () => {
                         </div>
                     </div>
                 </section>
-                <section className="section pt-0 pb-50 bg-core-value mb-40 mt-100">
+                <section className="section pt-0 pb-50 bg-core-value mb-30 mt-50">
                     <div className="container">
                         <div className="row box-list-core-value">
                             <div className="col-lg-4 mb-70">
@@ -318,8 +318,6 @@ const SFT = () => {
                         <div className="row mt-65">
                             <div className="col-lg-3 col-md-6 col-sm-6">
                                 <div className="card-small card-small-2">
-                                    <div className="card-image">
-                                        <div className="box-image"><img src="/assets/imgs/page/homepage1/free.svg" alt="iori" /></div></div>
                                     <div className="card-info">
                                         <h6 className="color-brand-1 mb-10">Connected</h6>
                                         <p className="font-md color-grey-500">Proven expertise in both language and vision models</p>
@@ -328,8 +326,6 @@ const SFT = () => {
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6">
                                 <div className="card-small card-small-2">
-                                    <div className="card-image">
-                                        <div className="box-image"><img src="/assets/imgs/page/homepage1/cross.png" alt="iori" /></div></div>
                                     <div className="card-info">
                                         <h6 className="color-brand-1 mb-10">Inclusive</h6>
                                         <p className="font-md color-grey-500">Human-in-the-loop quality assurance</p>
@@ -338,8 +334,6 @@ const SFT = () => {
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6">
                                 <div className="card-small card-small-2">
-                                    <div className="card-image">
-                                        <div className="box-image"><img src="/assets/imgs/page/homepage2/identity.png" alt="iori" /></div></div>
                                     <div className="card-info">
                                         <h6 className="color-brand-1 mb-10">Flexible</h6>
                                         <p className="font-md color-grey-500">Flexible engagement models, from pilots to enterprise rollouts</p>
@@ -348,8 +342,6 @@ const SFT = () => {
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6">
                                 <div className="card-small card-small-2">
-                                    <div className="card-image">
-                                        <div className="box-image"><img src="/assets/imgs/page/career/persuasion.png" alt="iori" /></div></div>
                                     <div className="card-info">
                                         <h6 className="color-brand-1 mb-10">Persuasion</h6>
                                         <p className="font-md color-grey-500">Actionable insights with clear, easy-to-use reports</p>

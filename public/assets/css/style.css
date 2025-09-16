@@ -9945,8 +9945,11 @@ footer.footer-4 {
 .swiper-wrapper {
     align-items: stretch;
 }
-
-.swiper-slide {
+/* .swiper-slide {
+    height: auto;
+    display: flex;
+} */
+ .swiper-slide-2 {
     height: auto;
     display: flex;
 }
@@ -11166,7 +11169,6 @@ outline: none;
   background-color: var(--color-white);
   border: 1px solid var(--color-primary-200);
   box-shadow: 0px 0px 20px 0px rgba(14, 41, 50, 0.17);
-  border-bottom: 8px solid var(--color-accent-teal-300);
   display: none;
 }
 

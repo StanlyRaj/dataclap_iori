@@ -32,47 +32,62 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                                     <div className="mega-menu-column">
                                                         <h4>Pre-training</h4>
                                                         <ul>
-                                                            <li><Link href="/LLM-Evals">LLM EVALUATIONS</Link></li>
-                                                            <li><Link href="/Image-Anno">IMAGE ANNOTATIONS</Link></li>
-                                                            <li><Link href="/SFT">SUPERVISED FINE TUNING</Link></li>
+                                                            <li><Link href="/LLM-Evals">LLM Evals</Link></li>
+                                                            <li><Link href="/Image-Anno">Image Annotation</Link></li>
+                                                            <li><Link href="/SFT">Supervised Fine-Tuning</Link></li>
                                                             <li><Link href="/OCR">OCR /IDP</Link></li>
                                                         </ul>
                                                     </div>
                                                     <div className="mega-menu-column">
                                                         <h4>Post-training</h4>
                                                         <ul>
-                                                            <li><Link href="/RedTeaming">RED TEAMING SERVICES</Link></li>
-                                                            <li><Link href="/index-11">GENERATIVE AI</Link></li>
+                                                            <li><Link href="/RedTeaming">Red Teaming Services</Link></li>
+                                                            <li><Link href="/index-11">Generative AI</Link></li>
                                                         </ul>
                                                     </div>
                                                     <div className="mega-menu-column">
                                                         <h4>Others</h4>
                                                         <ul>
-                                                            <li><Link href="/index-11">TRAINING AS A SERVICE</Link></li>
-                                                            <li><Link href="/Search">SEARCH AND PERSONALIZATION</Link></li>
-                                                            <li><Link href="/Content-md">CONTENT MODERATION</Link></li>
+                                                            <li><Link href="/index-11">Training as a Service</Link></li>
+                                                            <li><Link href="/Search">Search and Personalization</Link></li>
+                                                            <li><Link href="/Content-md">Content Moderation</Link></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
-                                        <li className="has-children"><Link href="#">Industries</Link>
-                                            <ul className="sub-menu">
-                                                <li><Link href="/industry">ADAS</Link></li>
-                                                <li><Link href="/industry">Retail</Link></li>
-                                                <li><Link href="/industry">Geospatial</Link></li>
-                                                <li><Link href="/industry">Robotics</Link></li>
-                                                <li><Link href="/industry">Mapping</Link></li>
-                                                <li><Link href="/industry">Social Media</Link></li>
-                                                <li><Link href="/industry">Manufacturing</Link></li>
-                                                <li><Link href="/industry">Agriculture</Link></li>
-                                                <li><Link href="/industry">Sports & Media</Link></li>
-                                                <li><Link href="/industry">Finance & Insurance</Link></li>
-                                                <li><Link href="/industry">Customer Service</Link></li>
-                                                <li><Link href="/industry">RPA</Link></li>
-                                                <li><Link href="/industry">Asset Management</Link></li>
-                                                <li><Link href="/industry">Physical AI</Link></li>
-                                            </ul>
+                                        <li className="has-children services-mega-menu">
+                                            <Link className="active" href="/">Industries</Link>
+                                            <div className="mega-menu-dropdown">
+                                                <div className="mega-menu-container">
+                                                    <div className="mega-menu-column">
+                                                        <ul>
+                                                            <li><Link href="/industry">Manufacturing</Link></li>
+                                                            <li><Link href="/industry">Agriculture</Link></li>
+                                                            <li><Link href="/industry">Sports & Media</Link></li>
+                                                            <li><Link href="/industry">Finance & Insurance</Link></li>
+                                                            <li><Link href="/industry">Mapping</Link></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className="mega-menu-column">
+                                                        <ul>
+                                                            <li><Link href="/industry">Customer Service</Link></li>
+                                                            <li><Link href="/industry">RPA</Link></li>
+                                                            <li><Link href="/industry">Asset Management</Link></li>
+                                                            <li><Link href="/industry">Physical AI</Link></li>
+                                                            <li><Link href="/industry">E-Commerce and Content</Link></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className="mega-menu-column">
+                                                        <ul>
+                                                            <li><Link href="/industry">ADAS</Link></li>
+                                                            <li><Link href="/industry">Retail</Link></li>
+                                                            <li><Link href="/industry">Geospatial</Link></li>
+                                                            <li><Link href="/industry">Robotics</Link></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </li>
                                         <li className="has-children"><Link href="#">Resources</Link>
                                             <ul className="sub-menu">

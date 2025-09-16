@@ -3,38 +3,61 @@ import SwiperCore, { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 SwiperCore.use([Autoplay, Navigation]);
-const Offer2 = () => {
+const Offer3 = () => {
 
     const data = [
         {
             title: "Generative AI",
             color: "head-bg-2",
-            description: "Testing safety, reasoning, and hallucinations",
+            description: "Testing safety, reasoning, and hallucinations.We help enable precision agriculture with our high quality annotation services that extracts information from image and video data. Our data enables AI models that improves yield, reduces wastage and water usage and protect crops from diseases.",
             link: "/cross-platform-services"
         },
         {
             title: "Computer Vision",
             color: "head-bg-5",
-            description: "Auditing detection and recognition models",
+            description: "Auditing detection and recognition models.We help enable precision agriculture with our high quality annotation services that extracts information from image and video data. Our data enables AI models that improves yield, reduces wastage and water usage and protect crops from diseases.",
             link: "/business-strategy-consulting"
         },
         {
             title: "Healthcare AI",
             color: "head-bg-3",
-            description: "Ensuring fairness and compliance in medical data",
+            description: "Ensuring fairness and compliance in medical data.We help enable precision agriculture with our high quality annotation services that extracts information from image and video data. Our data enables AI models that improves yield, reduces wastage and water usage and protect crops from diseases.",
             link: "/local-marketing-solutions"
         },
         {
             title: "Financial services AI",
             color: "head-bg-4",
-            description: "Stress-testing risk-sensitive applications",
+            description: "Stress-testing risk-sensitive applications.We help enable precision agriculture with our high quality annotation services that extracts information from image and video data. Our data enables AI models that improves yield, reduces wastage and water usage and protect crops from diseases.",
             link: "/social-media-management"
         },
     ];
-
-
     return (
         <>
+            <style jsx>{`
+                .card-offer-style-3 {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .card-offer-style-3 .card-info {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .card-offer-style-3 .card-info p {
+                    flex: 1;
+                    display: flex;
+                    align-items: flex-start;
+                }
+                
+                .swiper-slide {
+                    height: auto;
+                    display: flex;
+                }
+            `}</style>
+            
             <Swiper
                 slidesPerView={4}
                 spaceBetween={30}
@@ -108,4 +131,4 @@ const Offer2 = () => {
     );
 };
 
-export default Offer2;
+export default Offer3;

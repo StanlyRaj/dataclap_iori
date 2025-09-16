@@ -718,58 +718,14 @@ const ContentMd = () => {
                         </div>
                     </div>
                 </section>
-                <section className="section mt-30 pb-50 bg-core-value">
+                <section className="section mt-40 pt-50 pb-15 bg-grey-80">
                     <div className="container">
-                        <div className="row box-list-core-value">
-                            <div className="col-lg-4 mb-70">
-                                <div className="box-core-value">
-                                    <h3 className="color-brand-1 mb-15">Content Types We Moderate</h3>
-                                    <p className="font-md color-grey-400">Understand why our clients choose <br />to work with us</p>
-                                </div>
+                        <div className="box-swiper">
+                            <div className="text-center">
+                            <h2 className="color-brand-1 mb-20">Why Choose Us</h2>
                             </div>
-                            <div className="col-lg-4">
-                                <ul className="list-core-value">
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Asynchronous</h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">posts, comments, reviews, profiles, images.</p>
-                                        </div>
-                                    </li>
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Synchronous</h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">live video, voice chat, real-time streams</p>
-                                        </div>
-                                    </li>
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Cost Efficient</h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">Our pricing is transparent and economical. We are more economical thatn contract workers and large annotation platforms.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="col-lg-4">
-                                <ul className="list-core-value">
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Metadata</h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">tags, product listings, ads.</p>
-                                        </div>
-                                    </li>
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Structured + unstructured data sources </h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">(JSON, XML, APIs).</p>
-                                        </div>
-                                    </li>
-                                    <li> <span className="ticked" />
-                                        <h5 className="color-brand-1 mb-5">Cost Efficient</h5>
-                                        <div className="box-border-dashed">
-                                            <p className="font-md color-grey-500 mb-20">Our pricing is transparent and economical. We are more economical thatn contract workers and large annotation platforms.</p>
-                                        </div>
-                                    </li>
-                                </ul>
+                            <div className="swiper-container swiper-group-3">
+                                <Knowledgebase2 />
                             </div>
                         </div>
                     </div>
@@ -795,30 +751,125 @@ const ContentMd = () => {
                         </div>
                     </div>
                 </section>
-                <section className="section pt-80">
+                <section className="section mt-100">
                     <div className="container">
-                        <div className="text-center">
-                            <h2 className="color-brand-1 mb-20">Custom Workflows & Human-in-the-Loop (HITL)</h2>
-                            <p className="font-lg color-gray-500">
-                                We understand no two platforms are alike.
-                                That's why we provide custom workflows:
-                            </p>
+                        <div className="row align-items-end">
+                            <div className="col-lg-8 col-md-8">
+                                <h2 className="color-brand-1 mb-20">Custom Workflows & <br />Human-in-the-Loop (HITL)</h2>
+                                <p className="font-lg pt-10 color-gray-500">We understand no two platforms are alike. That’s why we provide <strong>custom workflows</strong></p>
+                            </div>
+                            <div className="col-lg-4 col-md-4 text-md-end text-start"></div>
                         </div>
-                        <div className="row mt-50 mb-50">
-                            <div className="col-xl-12 col-lg-12 position-relative">
-                                <CWHITL />
+                        <div className="row mt-50">
+                            <div className="col-lg-4 col-md-6 col-sm-6">
+                                <div className="card-offer hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage1/cross.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-15">AI + HITL Review</h4>
+                                        <p className="font-md color-grey-500 mb-15">Automated filters handle scale; trained human moderators validate edge cases.</p>
+                                        <div className="box-button-offer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 col-sm-6">
+                                <div className="card-offer hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage1/cross2.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-15">Escalation Pathways</h4>
+                                        <p className="font-md color-grey-500 mb-15">Critical cases are flagged for immediate review.</p>
+                                        <div className="box-button-offer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 col-sm-6">
+                                <div className="card-offer hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage1/cross3.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-15">Red Teaming & Stress Testing</h4>
+                                        <p className="font-md color-grey-500 mb-15">Simulate adversarial attacks and content evasion tactics.</p>
+                                        <div className="box-button-offer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 col-sm-6">
+                                <div className="card-offer hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage1/cross4.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-15">Feedback Loops</h4>
+                                        <p className="font-md color-grey-500 mb-15">Continuous improvement of AI models using annotated data from real cases.</p>
+                                        <div className="box-button-offer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 col-sm-6">
+                                <div className="card-offer hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage1/cross5.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-15">Multilingual Support</h4>
+                                        <p className="font-md color-grey-500 mb-15">Moderation across 20+ languages and dialects.</p>
+                                        <div className="box-button-offer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 col-sm-6">
+                                <div className="card-offer hover-up">
+                                    <div className="card-image"><img src="assets/imgs/page/homepage1/cross4.png" alt="iori" /></div>
+                                    <div className="card-info">
+                                        <h4 className="color-brand-1 mb-15">Feedback Loops</h4>
+                                        <p className="font-md color-grey-500 mb-15">Continuous improvement of AI models using annotated data from real cases.</p>
+                                        <div className="box-button-offer"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section className="section mt-40 pt-50 pb-15 bg-grey-80">
+                <section className="section mt-30 pb-50 bg-core-value">
                     <div className="container">
-                        <div className="box-swiper">
-                            <div className="text-center">
-                            <h2 className="color-brand-1 mb-20">Why Choose Us</h2>
+                        <div className="row box-list-core-value">
+                            <div className="col-lg-4 mb-70">
+                                <div className="box-core-value">
+                                    <h3 className="color-brand-1 mb-15">Why Choose Us</h3>
+                                    <p className="font-md color-grey-400">Hear from our users who have saved thousands on their Startup and SaaS solution spend.</p>
+                                </div>
                             </div>
-                            <div className="swiper-container swiper-group-3">
-                                <Knowledgebase2 />
+                            <div className="col-lg-4">
+                                <ul className="list-core-value">
+                                    <li> <span className="ticked" />
+                                        <h5 className="color-brand-1 mb-5">Scalable</h5>
+                                        <div className="box-border-dashed">
+                                            <p className="font-md color-grey-500 mb-20">Handle millions of content items daily.</p>
+                                        </div>
+                                    </li>
+                                    <li> <span className="ticked" />
+                                        <h5 className="color-brand-1 mb-5">Accurate</h5>
+                                        <div className="box-border-dashed">
+                                            <p className="font-md color-grey-500 mb-20">AI trained on diverse datasets, reducing bias and false positives.</p>
+                                        </div>
+                                    </li>
+                                    <li> <span className="ticked" />
+                                        <h5 className="color-brand-1 mb-5">Compliant</h5>
+                                        <div className="box-border-dashed">
+                                            <p className="font-md color-grey-500 mb-20">Stay aligned with global and regional regulations.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="col-lg-4">
+                                <ul className="list-core-value">
+                                    <li> <span className="ticked" />
+                                        <h5 className="color-brand-1 mb-5">Flexible</h5>
+                                        <div className="box-border-dashed">
+                                            <p className="font-md color-grey-500 mb-20">Custom workflows tailored to your platform’s risk profile.</p>
+                                        </div>
+                                    </li>
+                                    <li> <span className="ticked" />
+                                        <h5 className="color-brand-1 mb-5">Human-Centric</h5>
+                                        <div className="box-border-dashed">
+                                            <p className="font-md color-grey-500 mb-20">Expert moderators ensure nuanced understanding and fairness.</p>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

@@ -184,7 +184,7 @@ const LLMEvals = () => {
                                                 <div className="item-forum">
                                                     <div className="item-image"> <img src="assets/imgs/page/homepage1/cross5.png" alt="iori" /></div>
                                                     <div className="item-info">
-                                                        <h4 className="color-brand-1 mb-15">1. Define goals</h4>
+                                                        <h4 className="color-brand-1 mb-15">Define goals</h4>
                                                         <p className="font-ls color-grey-500">Accuracy? Robustness? Safety?</p>
                                                     </div>
                                                 </div>
@@ -195,7 +195,7 @@ const LLMEvals = () => {
                                                 <div className="item-forum">
                                                     <div className="item-image"> <img src="assets/imgs/page/homepage2/creation.png" alt="iori" /></div>
                                                     <div className="item-info">
-                                                        <h4 className="color-brand-1 mb-15">2. Design evals</h4>
+                                                        <h4 className="color-brand-1 mb-15">Design evals</h4>
                                                         <p className="font-ls color-grey-500">Benchmarks + custom test sets.</p>
                                                     </div>
                                                 </div>
@@ -206,7 +206,7 @@ const LLMEvals = () => {
                                                 <div className="item-forum">
                                                     <div className="item-image"> <img src="assets/imgs/page/homepage1/cross4.png" alt="iori" /></div>
                                                     <div className="item-info">
-                                                        <h4 className="color-brand-1 mb-15">3. Run evaluations</h4>
+                                                        <h4 className="color-brand-1 mb-15">Run evaluations</h4>
                                                         <p className="font-ls color-grey-500">Automated checks + human review.</p>
                                                     </div>
                                                 </div>
@@ -217,7 +217,7 @@ const LLMEvals = () => {
                                                 <div className="item-forum">
                                                     <div className="item-image"> <img src="assets/imgs/page/homepage1/cross2.png" alt="iori" /></div>
                                                     <div className="item-info">
-                                                        <h4 className="color-brand-1 mb-15">4. Deliver insights</h4>
+                                                        <h4 className="color-brand-1 mb-15">Deliver insights</h4>
                                                         <p className="font-ls color-grey-500">Reports with actionable recommendations.</p>
                                                     </div>
                                                 </div>

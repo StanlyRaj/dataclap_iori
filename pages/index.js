@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
-import Layout from "../components/layout/Layout";
 import Link from 'next/link';
+import Head from 'next/head';
+import React, { useState } from 'react';
+import Layout from '../components/layout/Layout';
 import HeroSlider from '../components/slider/HeroSlider';
 import Tab from '../components/elements/Tab';
 import Offer from '../components/slider/Offer';
-import Brand from '../components/slider/Brand';
 
-const HomePage3 = () => {
+const HomePage1 = () => {
     const [isOpen, setOpen] = useState(false)
-
-    const [pricing, setPricing] = useState(1);
-
-    const handlePricing = (index) => {
-        setPricing(index); // remove the curly braces
-    };
+    const [activeIndex, setActiveIndex] = useState(1);
 
     const [social, setSocial] = useState(1);
     
@@ -21,8 +16,15 @@ const HomePage3 = () => {
         setSocial(index); // remove the curly braces
     };
 
+    const handleOnClick = (index) => {
+        setActiveIndex(index); // remove the curly braces
+    };
     return (
         <>
+            <Head>
+                <title>DataClap</title>
+            </Head>
+
             <Layout>
                 <section className="section banner-11">
                     <div className="box-banner-home11">
@@ -644,4 +646,4 @@ const HomePage3 = () => {
     );
 };
 
-export default HomePage3;
+export default HomePage1;

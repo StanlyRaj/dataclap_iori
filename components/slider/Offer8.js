@@ -78,7 +78,7 @@ const Offer4 = () => {
                 }}
                 className="swiper-wrapper"
             >
-                <SwiperSlide className="swiper-slide">
+                <SwiperSlide className="swiper-slide-2">
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
@@ -96,7 +96,7 @@ const Offer4 = () => {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide className="swiper-slide">
+                <SwiperSlide className="swiper-slide-2">
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
@@ -114,7 +114,7 @@ const Offer4 = () => {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide className="swiper-slide">
+                <SwiperSlide className="swiper-slide-2">
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
@@ -132,7 +132,7 @@ const Offer4 = () => {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide className="swiper-slide">
+                <SwiperSlide className="swiper-slide-2">
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
@@ -150,7 +150,7 @@ const Offer4 = () => {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide className="swiper-slide">
+                <SwiperSlide className="swiper-slide-2">
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
@@ -168,7 +168,7 @@ const Offer4 = () => {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide className="swiper-slide">
+                <SwiperSlide className="swiper-slide-2">
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
@@ -186,7 +186,7 @@ const Offer4 = () => {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide className="swiper-slide">
+                <SwiperSlide className="swiper-slide-2">
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
@@ -204,7 +204,7 @@ const Offer4 = () => {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide className="swiper-slide">
+                <SwiperSlide className="swiper-slide-2">
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
@@ -222,7 +222,7 @@ const Offer4 = () => {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide className="swiper-slide">
+                <SwiperSlide className="swiper-slide-2">
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
