@@ -49,7 +49,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                                         <h4>Others</h4>
                                                         <ul>
                                                             <li><Link href="/index-11">TRAINING AS A SERVICE</Link></li>
-                                                            <li><Link href="/index-11">SEARCH AND PERSONALIZATION</Link></li>
+                                                            <li><Link href="/Search">SEARCH AND PERSONALIZATION</Link></li>
                                                             <li><Link href="/Content-md">CONTENT MODERATION</Link></li>
                                                         </ul>
                                                     </div>
