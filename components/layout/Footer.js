@@ -11,7 +11,7 @@ const Footer = () => {
                             {/* Column 1 - Company Details */}
                             <div className="footer-column company-details">
                                 <div className="company-logo">
-                                    <img alt="dataclap" src="/assets/logo_name.svg" />
+                                    <img alt="dataclap" src="/assets/logo_white-1.svg" />
                                 </div>
                                 <div className="company-info">
                                     <p className="company-address">

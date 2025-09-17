@@ -82,7 +82,7 @@ const Offer4 = () => {
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
-                                <h4 className="color-brand-1">E-Commerce & Retail</h4>
+                                <h4 className="color-black-text">E-Commerce & Retail</h4>
                             </div>
                         </div>
                         <div className="card-info">
@@ -100,7 +100,7 @@ const Offer4 = () => {
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
-                                <h4 className="color-brand-1">Media, Entertainment & Streaming</h4>
+                                <h4 className="color-black-text">Media, Entertainment & Streaming</h4>
                             </div>
                         </div>
                         <div className="card-info">
@@ -118,7 +118,7 @@ const Offer4 = () => {
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
-                                <h4 className="color-brand-1">Travel, Hospitality & Mobility</h4>
+                                <h4 className="color-black-text">Travel, Hospitality & Mobility</h4>
                             </div>
                         </div>
                         <div className="card-info">
@@ -136,7 +136,7 @@ const Offer4 = () => {
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
-                                <h4 className="color-brand-1">Enterprise Knowledge Management</h4>
+                                <h4 className="color-black-text">Enterprise Knowledge Management</h4>
                             </div>
                         </div>
                         <div className="card-info">
@@ -154,7 +154,7 @@ const Offer4 = () => {
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
-                                <h4 className="color-brand-1">Healthcare & Life Sciences</h4>
+                                <h4 className="color-black-text">Healthcare & Life Sciences</h4>
                             </div>
                         </div>
                         <div className="card-info">
@@ -172,7 +172,7 @@ const Offer4 = () => {
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
-                                <h4 className="color-brand-1">Financial Services</h4>
+                                <h4 className="color-black-text">Financial Services</h4>
                             </div>
                         </div>
                         <div className="card-info">
@@ -190,7 +190,7 @@ const Offer4 = () => {
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
-                                <h4 className="color-brand-1">Voice, Conversational AI & Assistants</h4>
+                                <h4 className="color-black-text">Voice, Conversational AI & Assistants</h4>
                             </div>
                         </div>
                         <div className="card-info">
@@ -208,7 +208,7 @@ const Offer4 = () => {
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
-                                <h4 className="color-brand-1">Education & EdTechs</h4>
+                                <h4 className="color-black-text">Education & EdTechs</h4>
                             </div>
                         </div>
                         <div className="card-info">
@@ -226,7 +226,7 @@ const Offer4 = () => {
                     <div className="card-offer-style-3">
                         <div className="card-head bg-13">
                             <div className="card-title">
-                                <h4 className="color-brand-1">Marketplaces & Classifieds</h4>
+                                <h4 className="color-black-text">Marketplaces & Classifieds</h4>
                             </div>
                         </div>
                         <div className="card-info">
