@@ -19,12 +19,19 @@ const Layout = ({ children }) => {
             document.body.classList.remove("mobile-menu-active");
         }
     }
+
     return (
         <>
             <PageHead />
-            <div className="body-overlay-1" onClick={handleRemove} />
+            {/* Only render overlay when sidebar is visible */}
+            {openClass === "sidebar-visible" && (
+                <div className="body-overlay-1" onClick={handleRemove} />
+            )}
             <Header handleOpen={handleOpen} handleRemove={handleRemove} openClass={openClass} addClass="header-home7" />
-            <Sidebar openClass={openClass} />
+            {/* Only render sidebar when it should be visible */}
+            {openClass === "sidebar-visible" && (
+                <Sidebar openClass={openClass} handleRemove={handleRemove} />
+            )}
             <main className="main">
                 {children}
             </main>
