@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Layout from "../components/layout/Layout";
 import Link from 'next/link';
 import VideoSlider from '../components/slider/VideoSlider';
-import Offer8 from '../components/slider/Offer8';
+import Offer9 from '../components/slider/Offer9';
 
 const GenAI = () => {
     const [isOpen, setOpen] = useState(false)
@@ -123,8 +123,8 @@ const GenAI = () => {
                                     </div>
                                     <div className="image-showcase-content-dynamic">
                                         <h4 className="color-black-text mb-15">Instruction Tuning & Supervised Fine-Tuning (SFT)</h4>
-                                        <p className='pb-10 font-xl'>We design and annotate instruction-response pairs tailored to your model objective:</p>
-                                        <ul className="custom-bullets font-lg color-grey-500 mb-15 pl-15">
+                                        <p className='pb-10 font-lg'>We design and annotate instruction-response pairs tailored to your model objective:</p>
+                                        <ul className="custom-bullets font-md color-black-text mb-15 pl-15">
                                             <li>Prompt engineering & prompt variants to cover tone, format, and domain constraints</li>
                                             <li>Multi-turn conversations and context window construction</li>
                                             <li>Role-based responses (assistant/persona conditioning)</li>
@@ -138,18 +138,19 @@ const GenAI = () => {
                                 <div className="image-showcase-card-dynamic">
                                     <div className="image-showcase-top-dynamic">
                                         <img 
-                                            src="assets/imgs/page/homepage6/human2.png" 
-                                            alt="Team Collaboration" 
+                                            src="assets/imgs/page/homepage12/human1.png" 
+                                            alt="Project Management" 
                                             className="image-showcase-photo-dynamic"
                                         />
                                     </div>
                                     <div className="image-showcase-content-dynamic">
-                                        <h4 className="color-black-text mb-15">Human-in-the-Loop (HITL)</h4>
-                                        <p className='pb-10 font-xl'>Embed humans where models fail or where high-stakes decisions matter:</p>
-                                        <ul className="custom-bullets font-lg color-grey-500 mb-15 pl-15">
-                                            <li>Real-time human review for critical outputs</li>
-                                            <li>Active learning loops — human labels guide sampling for next training batches</li>
-                                            <li>Onboarding and calibration of reviewers to keep decision consistency</li>
+                                        <h4 className="color-black-text mb-15">Evaluation, QA & Red-teaming</h4>
+                                        <p className='pb-10 font-lg'>Measure and harden model behavior:</p>
+                                        <ul className="custom-bullets font-md color-black-text mb-15 pl-15">
+                                            <li>Automated and human evaluation metrics (accuracy, helpfulness, factuality, bias)</li>
+                                            <li>Adversarial prompt generation & stress tests</li>
+                                            <li>Hallucination detection workflows & factual grounding pipelines</li>
+                                            <li>Annotator-led root cause analysis and mitigation plans</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -166,8 +167,8 @@ const GenAI = () => {
                                     </div>
                                     <div className="image-showcase-content-dynamic">
                                         <h4 className="color-black-text mb-15">Annotation & Data Labeling</h4>
-                                        <p className='pb-10 font-xl'>High-accuracy annotation across modalities:</p>
-                                        <ul className="custom-bullets font-lg color-grey-500 mb-15 pl-15">
+                                        <p className='pb-10 font-lg'>High-accuracy annotation across modalities:</p>
+                                        <ul className="custom-bullets font-md color-black-text mb-15 pl-15">
                                             <li>Text: intents, entities, spans, relation labels, toxicity/safety tags, correctness checks</li>
                                             <li>Code: docstring generation, code synthesis verification, unit test generation</li>
                                             <li>Multimodal: OCR + alignment, image captioning, bounding boxes, visual question answering pairs</li>
@@ -184,19 +185,18 @@ const GenAI = () => {
                                 <div className="image-showcase-card-dynamic">
                                     <div className="image-showcase-top-dynamic">
                                         <img 
-                                            src="assets/imgs/page/homepage12/human1.png" 
-                                            alt="Project Management" 
+                                            src="assets/imgs/page/homepage6/human2.png" 
+                                            alt="Team Collaboration" 
                                             className="image-showcase-photo-dynamic"
                                         />
                                     </div>
                                     <div className="image-showcase-content-dynamic">
-                                        <h4 className="color-black-text mb-15">Evaluation, QA & Red-teaming</h4>
-                                        <p className='pb-10 font-xl'>Measure and harden model behavior:</p>
-                                        <ul className="custom-bullets font-lg color-grey-500 mb-15 pl-15">
-                                            <li>Automated and human evaluation metrics (accuracy, helpfulness, factuality, bias)</li>
-                                            <li>Adversarial prompt generation & stress tests</li>
-                                            <li>Hallucination detection workflows & factual grounding pipelines</li>
-                                            <li>Annotator-led root cause analysis and mitigation plans</li>
+                                        <h4 className="color-black-text mb-15">Human-in-the-Loop (HITL)</h4>
+                                        <p className='pb-10 font-lg'>Embed humans where models fail or where high-stakes decisions matter:</p>
+                                        <ul className="custom-bullets font-md color-black-text mb-15 pl-15">
+                                            <li>Real-time human review for critical outputs</li>
+                                            <li>Active learning loops — human labels guide sampling for next training batches</li>
+                                            <li>Onboarding and calibration of reviewers to keep decision consistency</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -213,8 +213,8 @@ const GenAI = () => {
                                     </div>
                                     <div className="image-showcase-content-dynamic">
                                         <h4 className="color-black-text mb-15">Synthetic Data & Augmentation</h4>
-                                        <p className='pb-10 font-xl'>Generate controlled synthetic examples and validate them:</p>
-                                        <ul className="custom-bullets font-lg color-grey-500 mb-15 pl-15">
+                                        <p className='pb-10 font-lg'>Generate controlled synthetic examples and validate them:</p>
+                                        <ul className="custom-bullets font-md color-black-text mb-15 pl-15">
                                             <li>Bootstrapping prompt templates + human vetting</li>
                                             <li>Back-translation, paraphrase pools, and negative example mining</li>
                                             <li>Synthetic-to-real parity testing and drift monitoring</li>
@@ -314,48 +314,11 @@ const GenAI = () => {
                         </div>
                     </div>
                 </section>
-                <section className="section mt-100">
-                    <div className="container">
-                        <div className="row mt-50 align-items-center card-no-border">
-                            <div className="col-lg-6 mb-30">
-                                <h2 className="color-black-text">Use cases</h2>
-                                <div className="mb-10 mt-10 font-md">Personalization is more than recommending “similar items.” It’s about adapting to user behavior, context, and evolving intent. We support personalization efforts through:</div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="card-offer card-we-do hover-up ">
-                                    <div className="card-image mt-15"><img src="assets/imgs/page/homepage2/we-do3.png" alt="iori" /></div>
-                                    <div className="card-info mt-15">
-                                        <h4 className="color-black-text mb-10"><Link className="color-black-text" href="What makes us different from others? We give holistic solutions with strategy, design & technology.">Contextual Understanding</Link></h4>
-                                        <p className="font-md color-grey-500 mb-5">Labeling datasets with demographic, linguistic, or regional attributes.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="card-offer card-we-do hover-up">
-                                    <div className="card-image mt-15"><img src="assets/imgs/page/homepage2/we-do.png" alt="iori" /></div>
-                                    <div className="card-info mt-15">
-                                        <h4 className="color-black-text mb-10"><Link className="color-black-text" href="No lag time, no lost effort when priorities change, no email black hole. As team collaboration improves">Preference Modeling</Link></h4>
-                                        <p className="font-md color-grey-500 mb-5">Creating datasets that help algorithms predict “next-best” content or product choices.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="card-offer card-we-do hover-up">
-                                    <div className="card-image mt-15"><img src="assets/imgs/page/homepage2/we-do4.png" alt="iori" /></div>
-                                    <div className="card-info mt-15">
-                                        <h4 className="color-black-text mb-10"><Link className="color-black-text" href="Share updates instantly within our project management software, and get the entire team collaborating">Behavioral Data Annotation</Link></h4>
-                                        <p className="font-md color-grey-500 mb-5">Mapping user actions (clicks, dwell time, purchases) to meaningful training signals.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className="section mt-100">
+                                <section className="section mt-100">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 text-center">
-                                <h2 className="color-black-text mb-20">Industries We Serve</h2>
+                                <h2 className="color-black-text mb-20">Use Cases</h2>
                                 <p className="font-lg color-gray-500">
                                     What makes us different from others? We give holistic solutions
                                     <br className="d-none d-lg-block" />
@@ -366,17 +329,17 @@ const GenAI = () => {
                         <div className="mt-50">
                             <div className="box-swiper">
                                 <div className="swiper-container swiper-group-4">
-                                    <Offer8 />
+                                    <Offer9 />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section className="section mt-100">
+                                <section className="section mt-100">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 text-center">
-                                <h2 className="color-black-text mb-20">The Business Impact</h2>
+                                <h2 className="color-black-text mb-20">Why choose us</h2>
                             </div>
                         </div>
                         <div className="row mt-50">
@@ -385,7 +348,7 @@ const GenAI = () => {
                                     <div className="card-image"><img src="assets/imgs/page/homepage4/offer1.png" alt="iori" /></div>
                                     <div className="card-info">
                                         <h4 className="color-black-text mb-10"><Link className="color-black-text" href="Seamless importing and round-tripping of Microsoft Project plans, Excel files & CSV files.">Higher User Engagement</Link></h4>
-                                        <p className="font-md color-grey-500 mb-5">When users find what they need faster, they stay longer.</p>
+                                        <p className="font-md color-grey-500 mb-5">Domain-matched annotators and SMEs, not generic crowdsourcing</p>
                                     </div>
                                 </div>
                             </div>
@@ -393,8 +356,8 @@ const GenAI = () => {
                                 <div className="card-offer card-we-do hover-up">
                                     <div className="card-image"><img src="assets/imgs/page/homepage4/offer2.png" alt="iori" /></div>
                                     <div className="card-info">
-                                        <h4 className="color-black-text mb-10"><Link className="color-black-text" href="What makes us different from others? We give holistic solutions with strategy, design & technology.">Increased Conversions</Link></h4>
-                                        <p className="font-md color-grey-500 mb-5">Relevant search results directly translate into purchase decisions.</p>
+                                        <h4 className="color-black-text mb-10"><Link className="color-black-text" href="What makes us different from others? We give holistic solutions with strategy, design & technology.">Tight HITL integration</Link></h4>
+                                        <p className="font-md color-grey-500 mb-5">We don’t just label — we design feedback loops that make models measurably better</p>
                                     </div>
                                 </div>
                             </div>
@@ -403,7 +366,7 @@ const GenAI = () => {
                                     <div className="card-image"><img src="assets/imgs/page/homepage4/offer3.png" alt="iori" /></div>
                                     <div className="card-info">
                                         <h4 className="color-black-text mb-10"><Link className="color-black-text" href="No lag time, no lost effort when priorities change, no email black hole. As team collaboration improves">Reduced Churn</Link></h4>
-                                        <p className="font-md color-grey-500 mb-5">Personalization fosters loyalty by making users feel understood.</p>
+                                        <p className="font-md color-grey-500 mb-5">Compliance, traceability, and enterprise SLAs for production deployments.</p>
                                     </div>
                                 </div>
                             </div>
@@ -412,14 +375,13 @@ const GenAI = () => {
                                     <div className="card-image"><img src="assets/imgs/page/homepage4/offer4.png" alt="iori" /></div>
                                     <div className="card-info">
                                         <h4 className="color-black-text mb-10"><Link className="color-black-text" href="Share updates instantly within our project management software, and get the entire team collaborating">Scalable Efficiency</Link></h4>
-                                        <p className="font-md color-grey-500 mb-5">Ongoing HITL processes keep models sharp without overburdening internal teams.</p>
+                                        <p className="font-md color-grey-500 mb-5">Transparent metrics and continuous improvement — you see quality changes across iterations</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                
                 <section className="section mt-50 pt-50 pb-40">
                     <div className="container">
                         <div className="box-cover-border">

@@ -42,7 +42,7 @@ const Header = ({ handleOpen, handleRemove, openClass, addClass }) => {
                                                         <h4>Post-training</h4>
                                                         <ul>
                                                             <li><Link href="/RedTeaming">Red Teaming Services</Link></li>
-                                                            <li><Link href="/index-11">Generative AI</Link></li>
+                                                            <li><Link href="/GenAI">Generative AI</Link></li>
                                                         </ul>
                                                     </div>
                                                     <div className="mega-menu-column">
