@@ -14,15 +14,7 @@ const Footer = () => {
                                     <img alt="dataclap" src="/assets/logo_white-1.svg" />
                                 </div>
                                 <div className="company-info">
-                                    <p className="company-address">
-                                        4517 Washington Ave.<br />
-                                        Manchester, Kentucky 39495
-                                    </p>
-                                    <div className="company-hours">
-                                        <strong>Hours:</strong> 8:00 - 17:00, Mon - Sat
-                                    </div>
                                     <div className="social-section">
-                                        <h6 className="social-title">Follow Us</h6>
                                         <div className="social-links">
                                             <Link className="social-icon linkedin" href="#" />
                                             <Link className="social-icon youtube" href="#" />
@@ -63,19 +55,20 @@ const Footer = () => {
                             <div className="footer-column services-col">
                                 <h5 className="column-title">Services</h5>
                                 <div className="service-group">
-                                    <h6 className="service-heading">AI & ML SOLUTIONS</h6>
+                                    <h6 className="service-heading">Pre-Training</h6>
                                     <ul className="service-submenu">
-                                        <li><Link href="#">LLM Evaluations</Link></li>
-                                        <li><Link href="#">Model Training</Link></li>
-                                        <li><Link href="#">AI Consulting</Link></li>
+                                        <li><Link href="/LLM-Evals">LLM Evals</Link></li>
+                                        <li><Link href="/Image-Anno">Image Annotation</Link></li>
+                                        <li><Link href="/SFT">Supervised Fine-Tuning</Link></li>
+                                        <li><Link href="/OCR">OCR /IDP</Link></li>
+                                        <li><Link href="/CollectData">Data Collection</Link></li>
                                     </ul>
                                 </div>
                                 <div className="service-group">
-                                    <h6 className="service-heading">DATA SERVICES</h6>
+                                    <h6 className="service-heading">Post-Training</h6>
                                     <ul className="service-submenu">
-                                        <li><Link href="#">Data Collection</Link></li>
-                                        <li><Link href="#">Data Processing</Link></li>
-                                        <li><Link href="#">Quality Assurance</Link></li>
+                                        <li><Link href="/RedTeaming">Red Teaming Services</Link></li>
+                                        <li><Link href="/GenAI">Generative AI</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -84,21 +77,23 @@ const Footer = () => {
                             <div className="footer-column services-col">
                                 <h5 className="column-title invisible">Services</h5>
                                 <div className="service-group">
-                                    <h6 className="service-heading">ANNOTATION</h6>
+                                <h6 className="service-heading">Others</h6>
                                     <ul className="service-submenu">
-                                        <li><Link href="#">Image Annotation</Link></li>
-                                        <li><Link href="#">Video Annotation</Link></li>
-                                        <li><Link href="#">LiDAR Annotation</Link></li>
+                                        <li><Link href="/index-11">Training as a Service</Link></li>
+                                        <li><Link href="/Search">Search and Personalization</Link></li>
+                                        <li><Link href="/Content-md">Content Moderation</Link></li>
                                     </ul>
                                 </div>
-                                <div className="service-group">
-                                    <h6 className="service-heading">AUTOMATION</h6>
-                                    <ul className="service-submenu">
-                                        <li><Link href="#">Workflow Automation</Link></li>
-                                        <li><Link href="#">Human in the Loop</Link></li>
-                                        <li><Link href="#">Process Optimization</Link></li>
-                                    </ul>
-                                </div>
+                            </div>
+
+                            {/* Column 6 - Resources */}
+                            <div className="footer-column resources-col">
+                                <h5 className="column-title">Resources</h5>
+                                <ul className="footer-menu">
+                                    <li><Link href="/pricing">Pricing</Link></li>
+                                    <li><Link href="/contact">Contact</Link></li>
+                                    <li><Link href="/careers">Careers</Link></li>
+                                </ul>
                             </div>
                         </div>
                     </div>

@@ -10539,16 +10539,16 @@ footer.footer-4 {
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* Enhanced CSS Grid with Better Responsive Behavior */
+/* Enhanced CSS Grid with Better Responsive Behavior - Updated for 6 columns */
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr repeat(4, 1fr);
-  gap: var(--footer-gap-desktop);
+  grid-template-columns: 1.2fr repeat(5, 1.1fr);
+  gap: 48px;
   align-items: start;
   animation: fadeInUp 0.8s ease-out;
 }
@@ -10569,16 +10569,13 @@ footer.footer-4 {
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: transform var(--footer-transition-normal);
-}
-
-.footer-column:hover {
-  transform: translateY(-2px);
+  /* Removed hover transform effect */
 }
 
 /* Company Details with Improved Typography */
 .company-details {
-  max-width: 320px;
+  max-width: 280px;
+  padding-right: 20px;
 }
 
 .company-logo {
@@ -10727,8 +10724,8 @@ outline: none;
 
 /* Enhanced Column Titles */
 .column-title {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 21px;
+  font-weight: 400;
   color: var(--footer-accent-color);
   margin: 0 0 24px 0;
   font-family: 'Inter', sans-serif;
@@ -10814,23 +10811,19 @@ outline: none;
 
 /* Service Groups with Enhanced Styling */
 .service-group {
-  margin-bottom: 24px;
-  padding: 12px 0;
+  margin-bottom: 28px;
+  padding: 0;
   border-radius: 8px;
-  transition: background var(--footer-transition-normal);
+  /* Removed background hover effect */
 }
 
 .service-group:last-child {
   margin-bottom: 0;
 }
 
-.service-group:hover {
-  background: var(--footer-bg-primary);
-}
-
 .service-heading {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 300;
   color: var(--footer-hover-color);
   margin: 0 0 12px 0;
   font-family: 'Inter', sans-serif;
@@ -10986,7 +10979,18 @@ outline: none;
   top: 6px;
 }
 
-/* Enhanced Responsive Design with Better Breakpoints */
+/* Enhanced Responsive Design with Better Breakpoints - Updated for 6 columns */
+@media (max-width: 1200px) {
+  .footer-grid {
+    grid-template-columns: 1fr repeat(5, 1fr);
+    gap: 36px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+  }
+}
+
 @media (max-width: 1024px) {
   .footer-main {
     padding: var(--footer-padding-tablet);
@@ -10994,7 +10998,7 @@ outline: none;
   
   .footer-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--footer-gap-tablet);
+    gap: 32px;
   }
   
   .company-details {
@@ -11002,6 +11006,7 @@ outline: none;
     max-width: 100%;
     margin-bottom: 20px;
     text-align: center;
+    padding-right: 0;
   }
   
   .column-title.invisible {
@@ -11122,7 +11127,6 @@ outline: none;
     gap: 20px !important;
   }
 }
-
 
 
 /* //////////////////////////////////////////////////////////////// */
