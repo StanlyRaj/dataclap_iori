@@ -116,7 +116,7 @@ const GenAI = () => {
                                 <div className="image-showcase-card-dynamic">
                                     <div className="image-showcase-top-dynamic">
                                         <img 
-                                            src="assets/imgs/page/homepage6/human1.png" 
+                                            src="assets/images/tools/gai_3.png" 
                                             alt="Cross Platform" 
                                             className="image-showcase-photo-dynamic"
                                         />
@@ -138,7 +138,7 @@ const GenAI = () => {
                                 <div className="image-showcase-card-dynamic">
                                     <div className="image-showcase-top-dynamic">
                                         <img 
-                                            src="assets/imgs/page/homepage12/human1.png" 
+                                            src="assets/images/tools/gai_3.png" 
                                             alt="Project Management" 
                                             className="image-showcase-photo-dynamic"
                                         />
@@ -160,7 +160,7 @@ const GenAI = () => {
                                 <div className="image-showcase-card-dynamic">
                                     <div className="image-showcase-top-dynamic">
                                         <img 
-                                            src="assets/imgs/page/homepage6/human3.png" 
+                                            src="assets/images/tools/gai_3.png" 
                                             alt="Analytics Dashboard" 
                                             className="image-showcase-photo-dynamic"
                                         />
