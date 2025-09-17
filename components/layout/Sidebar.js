@@ -48,11 +48,6 @@ const Sidebar = ({ openClass, handleRemove }) => {
         <div className={`mobile-header-active mobile-header-wrapper-style perfect-scrollbar ${openClass}`}>
             <div className="mobile-header-wrapper-inner">
                 <div className="mobile-header-content-area">
-                    <div className="mobile-logo">
-                        <Link className="d-flex" href="/">
-                            <img alt="DataClap" src="/assets/logo_name.svg" />
-                        </Link>
-                    </div>
                     <div className="perfect-scroll">
                         <div className="mobile-menu-wrap mobile-header-border">
                             <Tabs
@@ -75,7 +70,9 @@ const Sidebar = ({ openClass, handleRemove }) => {
                                                     <ul className={isActive.key == 1 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                         <li><Link className='active' href="/LLM-Evals">LLM Evals</Link></li>
                                                         <li><Link href="/Image-Anno">Image Annotations</Link></li>
-                                                        <li><Link href="/index-11">Supervised Fine Tuning</Link></li>
+                                                        <li><Link href="/SFT">Supervised Fine Tuning</Link></li>
+                                                        <li><Link href="/CollectData">Data Collection</Link></li>
+                                                        <li><Link href="/OCR">OCR / IDP</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className={isActive.key == 2 ? "has-children active" : "has-children"} onClick={() => handleToggle(2)}>
@@ -86,9 +83,8 @@ const Sidebar = ({ openClass, handleRemove }) => {
                                                     </span>
                                                     <Link className="active" href="/">Post Training</Link>
                                                     <ul className={isActive.key == 2 ? "sub-menu d-block" : "sub-menu d-none"}>
-                                                        <li><Link href="/index-11">OCR/IDP</Link></li>
+                                                        <li><Link href="/index-11">Red Teaming</Link></li>
                                                         <li><Link href="/index-11">Generative AI</Link></li>
-                                                        <li><Link href="/Content-md">Content Moderation</Link></li>
                                                     </ul>
                                                 </li>
                                                 <li className={isActive.key == 5 ? "has-children active" : "has-children"} onClick={() => handleToggle(5)}>
@@ -101,6 +97,7 @@ const Sidebar = ({ openClass, handleRemove }) => {
                                                     <ul className={isActive.key == 5 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                         <li><Link href="/index-11">Training as a service</Link></li>
                                                         <li><Link href="/index-11">Search and Personalization</Link></li>
+                                                        <li><Link href="/Content-md">Content Moderation</Link></li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -111,30 +108,22 @@ const Sidebar = ({ openClass, handleRemove }) => {
                                     <div className="tab-pane">
                                         <nav className="mt-15">
                                             <ul className="mobile-menu font-heading">
-                                                <li className={isActive.key == 1 ? "has-children active" : "has-children"} onClick={() => handleToggle(1)}>
-                                                    <span className="menu-expand">
-                                                        <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <Link className="active" href="/">Industries</Link>
-                                                    <ul className={isActive.key == 1 ? "sub-menu d-block" : "sub-menu d-none"}>
-                                                        <li><Link href="/industry">ADAS</Link></li>
-                                                        <li><Link href="/industry">Retail</Link></li>
-                                                        <li><Link href="/industry">Geospatial</Link></li>
-                                                        <li><Link href="/industry">Robotics</Link></li>
-                                                        <li><Link href="/industry">Mapping</Link></li>
-                                                        <li><Link href="/industry">Social Media</Link></li>
-                                                        <li><Link href="/industry">Manufacturing</Link></li>
-                                                        <li><Link href="/industry">Agriculture</Link></li>
-                                                        <li><Link href="/industry">Sports & Media</Link></li>
-                                                        <li><Link href="/industry">Finance & Insurance</Link></li>
-                                                        <li><Link href="/industry">Customer Service</Link></li>
-                                                        <li><Link href="/industry">RPA</Link></li>
-                                                        <li><Link href="/industry">Asset Management</Link></li>
-                                                        <li><Link href="/industry">Physical AI</Link></li>
-                                                    </ul>
-                                                </li>
+                                                <ul className={isActive.key == 1 ? "sub-menu d-block" : "sub-menu d-none"}>
+                                                    <li><Link href="/industry">ADAS</Link></li>
+                                                    <li><Link href="/industry">Retail</Link></li>
+                                                    <li><Link href="/industry">Geospatial</Link></li>
+                                                    <li><Link href="/industry">Robotics</Link></li>
+                                                    <li><Link href="/industry">Mapping</Link></li>
+                                                    <li><Link href="/industry">Social Media</Link></li>
+                                                    <li><Link href="/industry">Manufacturing</Link></li>
+                                                    <li><Link href="/industry">Agriculture</Link></li>
+                                                    <li><Link href="/industry">Sports & Media</Link></li>
+                                                    <li><Link href="/industry">Finance & Insurance</Link></li>
+                                                    <li><Link href="/industry">Customer Service</Link></li>
+                                                    <li><Link href="/industry">RPA</Link></li>
+                                                    <li><Link href="/industry">Asset Management</Link></li>
+                                                    <li><Link href="/industry">Physical AI</Link></li>
+                                                </ul>
                                             </ul>
                                         </nav>
                                     </div>
